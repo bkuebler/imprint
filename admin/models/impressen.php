@@ -1,0 +1,127 @@
+<?php
+/**
+ * @version		3.0 $Id$
+ * @package		Joomla
+ * @subpackage	Impressum
+ * @copyright	(C) 2011 Mathias Gebhardt
+ * @license		GNU/GPL, see LICENSE.txt
+ * Impressum is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+
+ * Impressum is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with Impressum; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+// No direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
+// import the Joomla modellist library
+jimport('joomla.application.component.modellist');
+
+/**
+ * Impressen model class.
+ * 
+ * @package		Joomal
+ * @subpackage	Impressum
+ * @since		3.0
+ */
+class ImpressumModelImpressen extends JModelList
+{
+	
+	/**
+	 * Constructor.
+	 *
+	 * @param	array	An optional associative array of configuration settings.
+	 * @since	3.0
+	 */
+	public function __construct($config = array())
+	{
+		if (empty($config['filter_fields'])) {
+			$config['filter_fields'] = array(
+				'name',
+				'id',
+				'aktiv',
+			);
+		}
+
+		parent::__construct($config);
+	}
+	
+	/**
+	 * Method to auto-populate the model state.
+	 *
+	 * Note. Calling getState in this method will result in recursion.
+	 *
+	 * @return	void
+	 * @since	3.0
+	 */
+	protected function populateState($ordering = null, $direction = null)
+	{
+		// Initialise variables.
+		$app = JFactory::getApplication();
+
+		$search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
+		$this->setState('filter.search', $search);
+
+		// List state information.
+		parent::populateState('name', 'asc');
+	}
+
+
+	/**
+	 * Method to get a store id based on model configuration state.
+	 *
+	 * This is necessary because the model is used by the component and
+	 * different modules that might need different sets of data or different
+	 * ordering requirements.
+	 *
+	 * @param	string	$id	A prefix for the store id.
+	 *
+	 * @return	string	A store id.
+	 * @since	3.0
+	 */
+	protected function getStoreId($id = '')
+	{
+		// Compile the store id.
+		$id	.= ':'.$this->getState('filter.search');
+
+		return parent::getStoreId($id);
+	}
+	
+	/**
+	 * Method to build an SQL query to load the list data.
+	 *
+	 * @return	string  An SQL query
+	 */
+	protected function getListQuery()
+	{
+		$db = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		$query->select('id, name, aktiv');
+		$query->from('#__impressum');
+		
+		// Filter by search in title
+		$search = $this->getState('filter.search');
+		if (!empty($search)) {
+			if (stripos($search, 'id:') === 0) {
+				$query->where('id = '.(int) substr($search, 3));
+			} else {
+				$search = $db->Quote('%'.$db->getEscaped($search, true).'%');
+				$query->where('name LIKE '.$search);
+			}
+		}
+		
+		// Add the list ordering clause.
+		$orderCol	= $this->state->get('list.ordering');
+		$orderDirn	= $this->state->get('list.direction');
+		$query->order($db->getEscaped($orderCol.' '.$orderDirn));
+		
+		return $query;
+	}
+}

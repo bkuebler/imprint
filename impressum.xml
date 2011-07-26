@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension type="component" version="1.7.0" method="upgrade">
+	<name>COM_IMPRESSUM</name>
+	
+	<creationDate>22.07.2011</creationDate>
+	<author>Mathias Gebhardt</author>
+	<authorEmail>gebhardtmathias@aol.com</authorEmail>
+	<copyright>Copyright (c) 2011 Mathias Gebhardt</copyright>
+	<license>GNU/GPL, see LICENSE.txt</license>
+	<version>3.0</version>
+	<description>COM_IMPRESSUM_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>impressum.php</filename>
+		<filename>controller.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+  
+	<languages folder="site">
+		<language tag="de-DE">language/de-DE/de-DE.com_impressum.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_impressum.ini</language>
+	</languages>
+	
+	<media destination="com_impressum" folder="media" >
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	
+	<administration>
+		<menu img="../media/com_impressum/images/recht.png">COM_IMPRESSUM</menu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>impressum.php</filename>
+			
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		
+		<languages folder="admin">
+			<language tag="de-DE">language/de-DE/de-DE.com_impressum.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_impressum.sys.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_impressum.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_impressum.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

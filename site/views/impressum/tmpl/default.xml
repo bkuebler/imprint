@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_IMPRESSUM_IMPRESSUM_VIEW_DEFAULT_TITLE">
+		<message>COM_IMPRESSUM_IMPRESSUM_VIEW_DEFAULT_DESC</message>
+	</layout>
+	<fields
+		name="request"
+		addfieldpath="/administrator/components/com_impressum/models/fields"
+	>
+		<fieldset name="request">
+			<field
+				name="id"
+				type="impressen"
+				label="COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_LABEL"
+				description="COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_DESC"
+			/>
+		</fieldset>
+	</fields>
+</metadata>
