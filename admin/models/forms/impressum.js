@@ -20,7 +20,8 @@
 
 /**
  * Method to validate the name text box.
- * 
+ *  
+ * @author	mgebhardt
  * @since	3.0
  */
 window.addEvent('domready', function() {

@@ -34,19 +34,22 @@ jimport('joomla.application.component.model');
 class ImpressumModelImpressum extends JModel
 {
 	
-	/**
+	/** 
+	 * @author	mgebhardt
 	 * @var		int		The id of the imressum; 0 for default impressum.
 	 * @since	3.0
 	 */
 	protected $id;
 	
-	/**
+	/** 
+	 * @author	mgebhardt
 	 * @var		object	The impressum object.
 	 * @since	3.0
 	 */
 	protected $impressum;
 	
-	/**
+	/** 
+	 * @author	mgebhardt
 	 * @var		string	The name of the website.
 	 * @since	3.0
 	 */
@@ -54,7 +57,8 @@ class ImpressumModelImpressum extends JModel
 	
 	/**
 	 * Method to laod the impressum from database.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @return	mixed	The impressum object or false if impressum not found.
 	 * @since	3.0
 	 */
@@ -163,7 +167,8 @@ class ImpressumModelImpressum extends JModel
 	
 	/**
 	 * Method to get the impressum id from URL.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @return	int	The impressum id or 0 for default impressum.
 	 * @since	3.0
 	 */
@@ -178,7 +183,8 @@ class ImpressumModelImpressum extends JModel
 	
 	/**
 	 * Method to get the name of the website.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @return	string	The name of the website.
 	 * @since	3.0
 	 */

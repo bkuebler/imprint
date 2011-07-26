@@ -37,10 +37,11 @@ class ImpressumModelImpressum extends JModelAdmin
 	
 	/**
 	 * Method override to check if you can edit an existing record.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	array	$data	An array of input data.
 	 * @param	string	$key	The name of the key for the primary key.
-	 *
+	 * 
 	 * @return	boolean
 	 * @since	3.0
 	 */
@@ -52,10 +53,12 @@ class ImpressumModelImpressum extends JModelAdmin
 	
 	/**
 	 * Returns a reference to the a Table object, always creating it.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	type	The table type to instantiate
 	 * @param	string	A prefix for the table class name. Optional.
 	 * @param	array	Configuration array for model. Optional.
+	 * 
 	 * @return	JTable	A database object
 	 * @since	3.0
 	 */
@@ -66,9 +69,11 @@ class ImpressumModelImpressum extends JModelAdmin
 	
 	/**
 	 * Method to get the record form.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	array	$data		Data for the form.
 	 * @param	boolean	$loadData	True if the form is to load its own data (default case), false if not.
+	 * 
 	 * @return	mixed	A JForm object on success, false on failure
 	 * @since	3.0
 	 */
@@ -85,7 +90,8 @@ class ImpressumModelImpressum extends JModelAdmin
 
 	/**
 	 * Method to get the script that have to be included on the form
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return string	Script files
 	 */
 	public function getScript() 
@@ -95,7 +101,8 @@ class ImpressumModelImpressum extends JModelAdmin
 	
 	/**
 	 * Method to get the data that should be injected in the form.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return	mixed	The data for the form.
 	 * @since	3.0
 	 */
@@ -111,7 +118,8 @@ class ImpressumModelImpressum extends JModelAdmin
 	}
 	/**
 	 * Method to change the home state of one or more items.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	int		$pk	A list of the primary keys to change.
 	 * @return	boolean	True on success.
 	 * @since	3.0
@@ -161,7 +169,8 @@ class ImpressumModelImpressum extends JModelAdmin
 	
 	/**
 	* Method to delete one or more records.
-	*
+	* 
+	* @author	mgebhardt
 	* @param	array    $pks  An array of record primary keys.
 	*
 	* @return	boolean  True if successful, false if an error occurs.

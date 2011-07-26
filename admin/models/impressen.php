@@ -36,7 +36,8 @@ class ImpressumModelImpressen extends JModelList
 	
 	/**
 	 * Constructor.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	array	An optional associative array of configuration settings.
 	 * @since	3.0
 	 */
@@ -57,7 +58,8 @@ class ImpressumModelImpressen extends JModelList
 	 * Method to auto-populate the model state.
 	 *
 	 * Note. Calling getState in this method will result in recursion.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return	void
 	 * @since	3.0
 	 */
@@ -82,7 +84,8 @@ class ImpressumModelImpressen extends JModelList
 	 * ordering requirements.
 	 *
 	 * @param	string	$id	A prefix for the store id.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return	string	A store id.
 	 * @since	3.0
 	 */
@@ -96,7 +99,8 @@ class ImpressumModelImpressen extends JModelList
 	
 	/**
 	 * Method to build an SQL query to load the list data.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return	string  An SQL query
 	 */
 	protected function getListQuery()

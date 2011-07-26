@@ -35,7 +35,8 @@ JFormHelper::loadFieldClass('list');
  */
 class JFormFieldImpressen extends JFormFieldList
 {
-	/**
+	/** 
+	 * @author	mgebhardt
 	 * @var		string	The field type.
 	 * @since	3.0
 	 */
@@ -43,7 +44,8 @@ class JFormFieldImpressen extends JFormFieldList
  
 	/**
 	 * Method to get a list of options for a list input.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return	array	An array of JHtml options.
 	 * @since	3.0
 	 */

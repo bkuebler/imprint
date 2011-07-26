@@ -36,7 +36,8 @@ class ImpressumViewImpressen extends JView
 {
 	/**
 	 * Impressen view display method.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @param	string	$tpl	The name of the template file to parse; automatically 
 	 * 							searches through the template paths. 
 	 * @since	3.0
@@ -72,10 +73,11 @@ class ImpressumViewImpressen extends JView
 	}
 	
 	/**
-	* Method to create the toolbar.
-	* 
-	* @since	3.0
-	*/
+	 * Method to create the toolbar.
+	 *  
+	 * @author	mgebhardt
+	 * @since	3.0
+	 */
 	protected function addToolBar() 
 	{
 		$canDo = ImpressumHelper::getActions();
@@ -105,7 +107,8 @@ class ImpressumViewImpressen extends JView
 	
 	/**
 	 * Method to set up the document properties
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @since	3.0
 	 */
 	protected function setDocument() 

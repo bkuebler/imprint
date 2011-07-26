@@ -37,7 +37,8 @@ class ImpressumTableImpressum extends JTable
 	
 	/**
 	 * Constructor.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param		object			Database connector object
 	 * @since		3.0
 	 */
@@ -48,7 +49,8 @@ class ImpressumTableImpressum extends JTable
 	
 	/**
 	 * Overloaded bind function
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param       array           named array
 	 * @return      null|string     null is operation was satisfactory, otherwise returns an error
 	 * @since 		3.0
@@ -67,7 +69,8 @@ class ImpressumTableImpressum extends JTable
 
 	/**
 	 * Overloaded load function
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param		int		$pk primary key
 	 * @param		boolean	$reset reset data
 	 * @return		boolean
@@ -93,7 +96,8 @@ class ImpressumTableImpressum extends JTable
 	 * Method to compute the default name of the asset.
 	 * The default name is in the form `table_name.id`
 	 * where id is the value of the primary key of the table.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return		string
 	 * @since		3.0
 	 */
@@ -105,7 +109,8 @@ class ImpressumTableImpressum extends JTable
 
 	/**
 	 * Method to return the title to use for the asset table.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return		string
 	 * @since		3.0
 	 */
@@ -116,7 +121,8 @@ class ImpressumTableImpressum extends JTable
 
 	/**
 	 * Get the parent asset id for the record
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @return		int
 	 * @since		3.0
 	 */

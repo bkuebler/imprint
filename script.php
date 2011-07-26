@@ -33,7 +33,8 @@ class com_impressumInstallerScript
 {
 	/**
 	 * Method to install the component.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	object	$parent	Is the class calling this method.
 	 * @since	3.0
 	 */
@@ -47,7 +48,8 @@ class com_impressumInstallerScript
  
 	/**
 	 * Method to uninstall the component.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	object	$parent	Is the class calling this method.
 	 * @since	3.0
 	 */
@@ -59,7 +61,8 @@ class com_impressumInstallerScript
  
 	/**
 	 * Method to update the component.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	object	$parent	Is the class calling this method.
 	 * @since	3.0
 	 */
@@ -71,7 +74,8 @@ class com_impressumInstallerScript
  
 	/**
 	 * Method to run before an install/update/uninstall method.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	object	$parent	Is the class calling this method.
 	 * @param	string	$type	Is the type of change (install, update or discover_install).
 	 * @since	3.0
@@ -84,7 +88,8 @@ class com_impressumInstallerScript
  
 	/**
 	 * Method to run after an install/update/uninstall method.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	string	$type	Is the type of change (install, update or discover_install).
 	 * @param	object	$parent	Is the class calling this method.
 	 * @since	3.0

@@ -34,24 +34,10 @@ jimport( 'joomla.application.component.controllerform' );
 class ImpressumControllerImpressum extends JControllerForm
 {
 	
-	/** 
+	/**
+	 * @author	mgebhardt 
 	 * @var		string	The URL view list variable.
 	 * @since	3.0
 	 */
-	protected $view_list = 'impressen';
-	
-//	function cancel($key = null)
-//	{
-//		
-//		
-//		return parent::cancel($key);
-//	}
-//	
-//	function save($key = null, $urlVar = null)
-//	{
-//		$this->view_list = 'impressen';
-//		
-//		return parent::save($key, $urlVar);
-//	}
-	
+	protected $view_list = 'impressen';	
 }

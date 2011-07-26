@@ -36,7 +36,8 @@ class ImpressumViewImpressum extends JView
 	
 	/**
 	 * Execute and display a template script.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @param	string	The name of the template file to parse; automatically 
 	 * 					searches through the template paths.
 	 * @since	3.0

@@ -36,7 +36,8 @@ class ImpressumController extends JController
 
 	/**
 	 * Typical view method for MVC based architecture
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @param	boolean		If true, the view output will be cached 
  	 * @return	JController	This object to support chaining. 
 	 * @since	3.0

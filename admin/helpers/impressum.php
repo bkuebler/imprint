@@ -34,7 +34,8 @@ abstract class ImpressumHelper
 	
 	/**
 	 * Method to get user actions.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @param	int		$id	The impressum id.
 	 * @return	object	The action the user can do.
 	 * @since	3.0

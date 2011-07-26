@@ -37,7 +37,8 @@ class ImpressumControllerImpressen extends JControllerAdmin
 	
 	/**
 	 * Constructor.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @param	array	An optional associative array of configuration settings.
 	 * @since	3.0
 	 */
@@ -49,7 +50,8 @@ class ImpressumControllerImpressen extends JControllerAdmin
 	
 	/**
 	 * Proxy for getModel.
-	 * 
+	 *  
+	 * @author	mgebhardt
 	 * @since	3.0
 	 */
 	public function getModel($name = 'Impressum', $prefix = 'ImpressumModel') 
@@ -60,7 +62,8 @@ class ImpressumControllerImpressen extends JControllerAdmin
 	
 	/**
 	 * Method to set the home property for a list of items.
-	 *
+	 * 
+	 * @author	mgebhardt
 	 * @since	3.0
 	 */
 	function setDefault()
@@ -91,6 +94,4 @@ class ImpressumControllerImpressen extends JControllerAdmin
 		}
 		$this->setRedirect(JRoute::_('index.php?option='.$this->option.'&view='.$this->view_list, false));
 	}
-	
-	// @TODO: You muss not delet the default Impressum! Creat method to check this.
 }
