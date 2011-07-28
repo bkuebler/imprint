@@ -42,10 +42,10 @@
 {
 	echo JText::_( 'COM_IMPRESSUM_TECHNIKPERSON' ) . ': ' . $this->impressum->technikperson;
 	if ($this->impressum->technikemail)
-		echo "(".JHTML::_('email.cloak', $this->impressum->technikemail).")" . '<br>';
+		echo " (".JHTML::_('email.cloak', $this->impressum->technikemail).")" . '<br />';
 }
 if ($this->impressum->technikwebsite)
-	echo JText::_( 'COM_IMPRESSUM_TECHNIKWEBSITE' ) . '<a href="http://' . $this->impressum->technikwebsite . '" target="blank">' . $this->impressum->technikwebsite . '</a>';
+	echo JText::_( 'COM_IMPRESSUM_TECHNIKWEBSITE' ) . ' <a href="http://' . $this->impressum->technikwebsite . '" target="blank">' . $this->impressum->technikwebsite . '</a>';
 ?>
 		</td>
 	</tr>

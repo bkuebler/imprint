@@ -43,7 +43,7 @@ if ($this->impressum->vertreter)
 	{
 		echo $this->impressum->vertretertitel.': '.$this->impressum->vertreter;
   		if ($this->impressum->vertreteremail)
-  			echo "(".JHTML::_('email.cloak', $this->impressum->vertreteremail).")" . '<br>';
+  			echo " (".JHTML::_('email.cloak', $this->impressum->vertreteremail).")" . '<br />';
 	}
 else if ($this->impressum->vertreter)
 	if ($this->impressum->vertretertitel=="")
@@ -64,7 +64,7 @@ if ($this->impressum->inhaltperson)
 {
 	echo JText::_( 'COM_IMPRESSUM_INHALTPERSON' ) . ': ' . $this->impressum->inhaltperson;
 	if ($this->impressum->inhaltemail)
-		echo "(".JHTML::_('email.cloak', $this->impressum->inhaltemail).")";
+		echo " (".JHTML::_('email.cloak', $this->impressum->inhaltemail).")";
 }
 ?>
 		</td>

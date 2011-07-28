@@ -25,7 +25,7 @@
 	<tr>
 <?php if ($this->impressum->params->get('show_icons')=="1"): ?>
 		<td style="width: 20px" align="left">
-			<img src="<?php echo JURI::root(); ?>media/com_impressum/images/home.png" border="" />
+			<img src="<?php echo JURI::root(); ?>media/com_impressum/images/home.png" border="" alt="" />
 		</td>
 <?php endif; ?>
 		<td>
