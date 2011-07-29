@@ -27,21 +27,23 @@ $params = $this->form->getFieldsets('params');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_impressum&view=impressum&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="impressum-form" class="form-validate">
 	<div class="width-60 fltlft">
+		<?php echo JHtml::_('tabs.start', 'impressum-tabs'); ?>
 <?php foreach ($this->form->getFieldsets() as $name => $fieldset): ?>
-<?php if (substr($name, 0, 6) == 'params') continue; ?>
+	<?php if (substr($name, 0, 6) == 'params') continue; ?>
+		<?php echo JHtml::_('tabs.panel', JText::_($fieldset->label), $name); ?>
 		<fieldset class="adminform">
-			<legend><?php echo JText::_($fieldset->label); ?></legend>
 			<ul class="adminformlist">
-<?php foreach($this->form->getFieldset($name) as $field): ?>
+	<?php foreach($this->form->getFieldset($name) as $field): ?>
 				<li><?php echo $field->label;echo $field->input;?></li>
-<?php endforeach; ?>
+	<?php endforeach; ?>
 			</ul>
 		</fieldset>
-<?php endforeach; ?>	
+<?php endforeach; ?>
+		<?php echo JHtml::_('tabs.end'); ?>
 	</div>
 
 	<div class="width-40 fltrt">
-		<?php echo JHtml::_('sliders.start', 'projektwoche-slider'); ?>
+		<?php echo JHtml::_('sliders.start', 'impressum-slider'); ?>
 
 <?php foreach ($params as $name => $fieldset): ?>
 		<?php echo JHtml::_('sliders.panel', JText::_($fieldset->label), $name.'-params');?>
