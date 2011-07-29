@@ -3,12 +3,12 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRESSUM</name>
 	
-	<creationDate>22.07.2011</creationDate>
+	<creationDate>29.07.2011</creationDate>
 	<author>Mathias Gebhardt</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011 Mathias Gebhardt</copyright>
 	<license>GNU/GPL, see LICENSE.txt</license>
-	<version>3.0.1</version>
+	<version>3.1</version>
 	<description>COM_IMPRESSUM_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>

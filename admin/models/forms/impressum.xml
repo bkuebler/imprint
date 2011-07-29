@@ -460,6 +460,11 @@
 			description="COM_IMPRESSUM_IMPRESSUM_HERSTELLER_DESC"
 			size="60" maxlength="255" 
 		/>
+		<field name="templateemail" type="text" 
+			label="COM_IMPRESSUM_IMPRESSUM_TEMPLATEEMAIL" 
+			description="COM_IMPRESSUM_IMPRESSUM_TEMPLATEEMAIL_DESC"
+			size="60" maxlength="255" 
+		/>
 		<field name="templatewebsite" type="text" 
 			label="COM_IMPRESSUM_IMPRESSUM_WEBSITE" 
 			description="COM_IMPRESSUM_IMPRESSUM_WEBSITE_DESC"

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -39,7 +39,10 @@
 	<?php endif; ?>
 		<td align="left">
 		<?php echo JText::_( 'COM_IMPRESSUM_TEMPLATENAME' ) . ': ' . $this->impressum->templatename . '<br />' ?>
-		<?php echo JText::_( 'COM_IMPRESSUM_TEMPLATEHERSTELLER' ) . ': ' . $this->impressum->templatehersteller . '<br />' ?>
+		<?php echo JText::_( 'COM_IMPRESSUM_TEMPLATEHERSTELLER' ) . ': ' . $this->impressum->templatehersteller;
+			if ($this->impressum->templateemail)
+				echo " (".JHTML::_('email.cloak', $this->impressum->templateemail).")"; ?>
+			<br />
 		<?php if ($this->impressum->templatewebsite)
 			echo JText::_( 'COM_IMPRESSUM_TEMPLATEWEBSITE' ) .
 				': <a href="http://' . $this->impressum->templatewebsite . '" target="_blank">' .

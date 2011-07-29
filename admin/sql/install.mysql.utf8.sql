@@ -1,4 +1,4 @@
-/* version 3.0 $Id$ */
+/* version 3.1 $Id$ */
  
 DROP TABLE IF EXISTS `#__impressum`;
 
@@ -81,6 +81,7 @@ CREATE TABLE `#__impressum` (
                  `templatename` varchar(255) NOT NULL default '',        
                  `templatehersteller` varchar(255) NOT NULL default '',  
                  `templatewebsite` varchar(255) NOT NULL default '',
+                 `templateemail` varchar(255) NOT NULL default '',
                  `contacturl` varchar(255) NOT NULL default '',   
                  `agburl` varchar(255) NOT NULL default '',                                                 
                  `image` varchar(255) NOT NULL default '',               
