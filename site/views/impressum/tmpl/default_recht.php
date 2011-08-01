@@ -98,7 +98,7 @@ if ($this->impressum->inhaltperson)
 		{
 				echo $this->impressum->vertretertitel2.': '.$this->impressum->vertreter2;
 				if ($this->impressum->vertreteremail2)
-					echo "(".JHTML::_('email.cloak', $this->impressum->vertreteremail2).")" . '<br>';
+					echo "(".JHTML::_('email.cloak', $this->impressum->vertreteremail2).")" . '<br />';
 		}
 	else if ($this->impressum->vertreter2)
 	{
@@ -113,7 +113,7 @@ if ($this->impressum->inhaltperson)
 	{
 		echo JText::_( 'COM_IMPRESSUM_VERTRETER' ).': '.$this->impressum->vertreter2;
 		if ($this->impressum->vertreteremail2)
-			echo "(".JHTML::_('email.cloak', $this->impressum->vertreteremail2).")" . '<br>';
+			echo "(".JHTML::_('email.cloak', $this->impressum->vertreteremail2).")" . '<br />';
 	}
 	if ($this->impressum->ustidnr2)
 		echo JText::_( 'COM_IMPRESSUM_USTIDNR' ) .': '.$this->impressum->ustidnr2.'<br />';
