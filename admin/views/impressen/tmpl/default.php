@@ -32,7 +32,7 @@ JHtml::_('behavior.tooltip');
                 <tbody><?php echo $this->loadTemplate('body');?></tbody>
         </table>
         <div>
-        		<input type="hidden" name="view" value="impressen">
+        		<input type="hidden" name="view" value="impressen" />
                 <input type="hidden" name="task" value="" />
                 <input type="hidden" name="boxchecked" value="0" />
                 <input type="hidden" name="filter_order" value="<?php echo $this->listOrder; ?>" />
