@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.1 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt

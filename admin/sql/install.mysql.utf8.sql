@@ -1,4 +1,4 @@
-/* version 3.1 $Id$ */
+/* version 3.0.1 $Id$ */
  
 DROP TABLE IF EXISTS `#__impressum`;
 
