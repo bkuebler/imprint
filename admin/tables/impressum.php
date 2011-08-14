@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.01 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -82,7 +82,7 @@ class ImpressumTableImpressum extends JTable
 		{
 			// Convert the params field to a registry.
 			$params = new JRegistry;
-			$params->loadJSON($this->params);
+			$params->loadString($this->params);
 			$this->params = $params;
 			return true;
 		}
