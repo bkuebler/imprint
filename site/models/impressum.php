@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -74,9 +74,9 @@ class ImpressumModelImpressum extends JModel
 			$query->select('*');
 			$query->from('#__impressum');
 			if ($default)
-				$query->where('aktiv = 1');
+				$query->where('`default` = 1');
 			else
-				$query->where("id = $this->id");
+				$query->where("`id` = $this->id");
 			$db->setQuery((string)$query);
 			$db->query();
 			if($db->getNumRows() == 0)

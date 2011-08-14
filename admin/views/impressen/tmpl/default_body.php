@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -28,7 +28,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 			<?php echo JHtml::_('grid.ID', $i, $item->id); ?>
 		</td>
 		<td class="center">
-			<?php echo JHtml::_('jgrid.isdefault', $item->aktiv, $i, 'impressen.', !$item->aktiv);?>
+			<?php echo JHtml::_('jgrid.isdefault', $item->default, $i, 'impressen.', !$item->default);?>
 		</td>
 		<td>
 			<a href="<?php echo JRoute::_('index.php?option=com_impressum&task=impressum.edit&id=' . $item->id); ?>">

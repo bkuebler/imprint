@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -87,10 +87,10 @@ class ImpressumControllerImpressen extends JControllerAdmin
 			$cid = $cid[0];
 
 			// Publish the items.
-			if (!$model->setAktiv($cid))
+			if (!$model->setDefault($cid))
 				JError::raiseWarning(500, $model->getError());
 
-			$this->setMessage(JText::_('COM_IMPRESSUM_IMPRESSEN_AKTIV_SET'));
+			$this->setMessage(JText::_('COM_IMPRESSUM_IMPRESSEN_DEFAULT_SET'));
 		}
 		$this->setRedirect(JRoute::_('index.php?option='.$this->option.'&view='.$this->view_list, false));
 	}

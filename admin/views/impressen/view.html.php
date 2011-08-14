@@ -92,7 +92,7 @@ class ImpressumViewImpressen extends JView
 		}
 		if ($canDo->get('core.edit.state')) 
 		{
-			JToolBarHelper::makeDefault('impressen.setDefault', 'COM_IMPRESSUM_IMPRESSEN_TOOLBAR_SET_AKTIV');
+			JToolBarHelper::makeDefault('impressen.setDefault', 'COM_IMPRESSUM_IMPRESSEN_TOOLBAR_SET_DEFAULT');
 		}
 		if ($canDo->get('core.delete')) 
 		{

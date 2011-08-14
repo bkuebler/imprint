@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -124,7 +124,7 @@ class ImpressumModelImpressum extends JModelAdmin
 	 * @return	boolean	True on success.
 	 * @since	3.0
 	 */
-	function setAktiv($pk)
+	function setDefault($pk)
 	{
 		// Initialise variables.
 		$table		= $this->getTable();
@@ -142,18 +142,18 @@ class ImpressumModelImpressum extends JModelAdmin
 		if ($table->load($pk))
 		{	
 			
-			if ($table->aktiv == 1)
-				JError::raiseNotice(403, JText::_('COM_IMPRESSUM_ERROR_ALREADY_AKTIV'));
+			if ($table->default == 1)
+				JError::raiseNotice(403, JText::_('COM_IMPRESSUM_ERROR_ALREADY_DEFAULT'));
 			else 
 			{
 				$db = JFactory::getDBO();
 				$query = $db->getQuery(true);
 				$query->update('#__impressum');
-				$query->set('aktiv = 0');
+				$query->set('`default` = 0');
 				$db->setQuery($query);
 				$db->query();
 				
-				$table->aktiv = 1;
+				$table->default = 1;
 				
 				if (!$table->store())
 					JError::raiseWarning(403, $table->getError());
@@ -188,7 +188,7 @@ class ImpressumModelImpressum extends JModelAdmin
 		{
 			if ($table->load($pk))
 			{
-				if($table->aktiv)
+				if($table->default)
 				{
 					unset($pks[$i]);
 					JError::raiseNotice('', JText::_('COM_IMPRESSUM_IMPRESSUM_ERROR_CANNOT_DELETE_DEFAULT'));

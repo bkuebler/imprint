@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `#__impressum`;
 CREATE TABLE `#__impressum` (                                                                           
                  `id` int(11) NOT NULL auto_increment,    
                  `name` varchar(255) NOT NULL default '',
-                 `aktiv` tinyint NOT NULL default 0,                                                              
+                 `default` tinyint NOT NULL default 0,                                                              
                  `firma` varchar(255) NOT NULL default '',               
                  `name1` varchar(255) NOT NULL default '',               
                  `name2` varchar(255) NOT NULL default '',               
@@ -94,5 +94,5 @@ CREATE TABLE `#__impressum` (
                  PRIMARY KEY  (`id`)                                                                                    
                )   
 ;
-insert into `#__impressum`(`id`,`name`,`aktiv`,`misc`) values ( '1','Standard','1','Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung f&uuml;r die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren Betreiber verantwortlich.<br /><br />Alle hier verwendeten Namen, Begriffe, Zeichen und Grafiken k&ouml;nnen Marken- oder Warenzeichen im Besitze ihrer rechtlichen Eigent&uuml;mer sein. Die Rechte aller erw&auml;hnten und benutzten Marken- und Warenzeichen liegen ausschlie&szlig;lich bei deren Besitzern.');
+insert into `#__impressum`(`id`,`name`,`default`,`misc`) values ( '1','Standard','1','Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung f&uuml;r die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren Betreiber verantwortlich.<br /><br />Alle hier verwendeten Namen, Begriffe, Zeichen und Grafiken k&ouml;nnen Marken- oder Warenzeichen im Besitze ihrer rechtlichen Eigent&uuml;mer sein. Die Rechte aller erw&auml;hnten und benutzten Marken- und Warenzeichen liegen ausschlie&szlig;lich bei deren Besitzern.');
                  

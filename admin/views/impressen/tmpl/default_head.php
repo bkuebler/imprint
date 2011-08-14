@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -27,7 +27,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                 <input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count($this->items); ?>);" />
         </th>                     
         <th width="5%">
-                <?php echo JHtml::_('grid.sort',  'COM_IMPRESSUM_IMPRESSEN_AKTIV', 'aktiv', $this->listDirn, $this->listOrder); ?>
+                <?php echo JHtml::_('grid.sort',  'COM_IMPRESSUM_IMPRESSEN_DEFAULT', 'default', $this->listDirn, $this->listOrder); ?>
         </th>
         <th>
                 <?php echo JHtml::_('grid.sort',  'COM_IMPRESSUM_IMPRESSEN_NAME', 'name', $this->listDirn, $this->listOrder); ?>

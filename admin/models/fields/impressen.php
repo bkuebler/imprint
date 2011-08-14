@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -53,14 +53,14 @@ class JFormFieldImpressen extends JFormFieldList
 	{
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		$query->select('id,name');
+		$query->select('`id`, `name`');
 		$query->from('#__impressum');
 		$db->setQuery((string)$query);
 		$impressen = $db->loadObjectList();
 		$options = array();
 		if ($impressen)
 		{
-			$options[] = JHtml::_('select.option', 0, JText::_('COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_OPTION_AKTIV'));
+			$options[] = JHtml::_('select.option', 0, JText::_('COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_OPTION_DEFAULT'));
 			foreach($impressen as $impressum) 
 			{
 				$options[] = JHtml::_('select.option', $impressum->id, $impressum->name);

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Mathias Gebhardt
@@ -47,7 +47,7 @@ class ImpressumModelImpressen extends JModelList
 			$config['filter_fields'] = array(
 				'name',
 				'id',
-				'aktiv',
+				'default',
 			);
 		}
 
@@ -107,7 +107,7 @@ class ImpressumModelImpressen extends JModelList
 	{
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		$query->select('id, name, aktiv');
+		$query->select('`id`, `name`, `default`');
 		$query->from('#__impressum');
 		
 		// Filter by search in title
