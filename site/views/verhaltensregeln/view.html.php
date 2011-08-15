@@ -55,19 +55,5 @@ class ImpressumViewVerhaltensregeln extends JView
         }
 		
 		parent::display($tpl);
-		
-		// Set the document
-		$this->setDocument();
-	}
-		
-	/**
-	* Method to set up the document properties
-	*
-	* @since	3.0
-	*/
-	protected function setDocument()
-	{
-		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRESSUM_TITLE'));
 	}
 }

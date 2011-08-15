@@ -59,19 +59,5 @@ class ImpressumViewImpressum extends JView
         $this->default = $id == 0;
 
 		parent::display($tpl);
-		
-		// Set the document
-		$this->setDocument();
-	}
-	
-	/**
-	* Method to set up the document properties
-	*
-	* @since	3.0
-	*/
-	protected function setDocument()
-	{
-		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRESSUM_TITLE'));
 	}
 }
