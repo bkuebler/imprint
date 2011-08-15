@@ -3,7 +3,7 @@
  * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
- * @copyright	(C) 2011 Mathias Gebhardt
+ * @copyright	(C) 2011 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
  * Impressum is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
