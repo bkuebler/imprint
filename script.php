@@ -116,7 +116,7 @@ class com_impressumInstallerScript
 
 			// SQL query does not work. Deleting files work.
 			
-			/* if ($oldVersion == '3.0')
+			if ($oldVersion == '3.0')
 			{
 				jimport('joomla.filesystem.file');
 	
@@ -150,47 +150,65 @@ class com_impressumInstallerScript
 					$ftp->login($options->ftp_user, $options->ftp_pass);
 			
 					// Translate path for the FTP account
-					// @TODO: check whether files exists or not
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/language/de-DE/de-DE.com_impressum.ini');
-					$return = $ftp->delete($file);
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/language/de-DE/de-DE.com_impressum.sys.ini');
-					$return = $return && $ftp->delete($file);
+					$path = JPATH_ADMINISTRATOR . '/language/de-de/';
+					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
+					$files = $ftp->listDetails($path,'files');
+					if(in_array('de-DE.com_impressum.ini', $files))
+						$return = $ftp->delete($path . 'de-DE.com_impressum.ini');
+					if(in_array('de-DE.com_impressum.sys.ini', $files))
+						$return = $return && $ftp->delete($path . 'de-DE.com_impressum.sys.ini');
 					
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/language/en-GB/en-GB.com_impressum.ini');
-					$return = $return && $ftp->delete($file);
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/language/en-GB/en-GB.com_impressum.sys.ini');
-					$return = $return && $ftp->delete($file);
+					$path = JPATH_ADMINISTRATOR . '/language/en-GB/';
+					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
+					$files = $ftp->listDetails($path,'files');
+					if(in_array('en-GB.com_impressum.ini', $files))
+						$return = $return && $ftp->delete($path . 'en-GB.com_impressum.ini');
+					if(in_array('en-GB.com_impressum.sys.ini', $files))
+						$return = $return && $ftp->delete($path . 'en-GB.com_impressum.sys.ini');
 			
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, JPATH_SITE), '/language/de-DE/de-DE.com_impressum.ini');
-					$return = $return && $ftp->delete($file);
+					$path = JPATH_SITE . '/language/de-de/';
+					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
+					$files = $ftp->listDetails($path,'files');
+					if(in_array('de-DE.com_impressum.ini', $files))
+						$return = $return && $ftp->delete($path . 'de-DE.com_impressum.ini');
 					
-					$file = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, JPATH_SITE), '/language/en-GB/en-GB.com_impressum.ini');
-					$return = $return && $ftp->delete($file);
+					$path = JPATH_SITE . '/language/en-GB/';
+					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
+					$files = $ftp->listDetails($path,'files');
+					if(in_array('en-GB.com_impressum.ini', $files))
+						$return = $return && $ftp->delete($path . 'en-GB.com_impressum.ini');
 							
 					$ftp->quit();
 				} 
 				else
 				{
 					ob_start();
-					$return = JFile::delete($path . '/language/de-DE/de-DE.com_impressum.ini');
-					// @TODO: check whether files exists or not
-					$return = $return && JFile::delete($path . '/language/de-DE/de-DE.com_impressum.sys.ini');
+					if(JFile::exists($path . '/language/de-DE/de-DE.com_impressum.ini'))
+						$return = JFile::delete($path . '/language/de-DE/de-DE.com_impressum.ini');
+					if(JFile::exists($path . '/language/de-DE/de-DE.com_impressum.sys.ini'))
+						$return = $return && JFile::delete($path . '/language/de-DE/de-DE.com_impressum.sys.ini');
 					
-					$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_impressum.ini');
-					$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_impressum.sys.ini');
+					if(JFile::exists($path . '/language/en-GB/en-GB.com_impressum.ini'))
+						$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_impressum.ini');
+					if(JFile::exists($path . '/language/en-GB/en-GB.com_impressum.sys.ini'))
+						$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_impressum.sys.ini');
 					
-					$return = $return && JFile::delete(JPATH_SITE . '/language/de-DE/de-DE.com_impressum.ini');
+					if(JFile::exists($path . '/language/de-DE/de-DE.com_impressum.ini'))
+						$return = $return && JFile::delete(JPATH_SITE . '/language/de-DE/de-DE.com_impressum.ini');
 					
-					$return = $return && JFile::delete(JPATH_SITE . '/language/en-GB/en-GB.com_impressum.ini');
+					if(JFile::exists($path . '/language/en-GB/en-GB.com_impressum.ini'))
+						$return = $return && JFile::delete(JPATH_SITE . '/language/en-GB/en-GB.com_impressum.ini');
 					
-				ob_end_clean();
+					ob_end_clean();
 				}
 				
+				// Fix missing 3.0.sql update script
 				$db = JFactory::getDbo();
-				$db->setQuery("ALTER TABLE `#__impressum` ADD `templateemail` varchar(255) NOT NULL default '';"
-					. " ALTER TABLE `#__impressum` CHANGE `aktiv` `default` tinyint NOT NULL default 0;");
+				$db->setQuery("ALTER TABLE `#__impressum` ADD `templateemail` varchar(255) NOT NULL default ''");
 				$db->query();
-			} */
+				$db->setQuery("ALTER TABLE `#__impressum` CHANGE `aktiv` `default` tinyint NOT NULL default 0;");
+				$db->query();
+			}
 		}
 		else
 		{
