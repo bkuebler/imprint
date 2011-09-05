@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0 $Id$
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Impressum Reloaded Team
@@ -44,8 +44,10 @@ class ImpressumViewImpressum extends JView
 	 */
 	function display($tpl = null)
 	{
-		$impressum = $this->get('Impressum');
-		$id = $this->get('Id');
+		$app		= JFactory::getApplication();
+		$params		= $app->getParams();
+		$impressum	= $this->get('Impressum');
+		$id			= $this->get('Id');
 		
 		// Check for errors.
         if (count($errors = $this->get('Errors'))) 
@@ -57,7 +59,64 @@ class ImpressumViewImpressum extends JView
         $this->impressum = $impressum;
         $this->id = $id;
         $this->default = $id == 0;
+        $this->params = $params;
 
+        $this->setDocument();
+        
 		parent::display($tpl);
+	}
+	
+	/**
+	 * Prepares the document
+	 * 
+	 * @author	mgebhardt
+	 * @since	3.0
+	 */
+	protected function setDocument()
+	{
+		$app		= JFactory::getApplication();
+		$menus		= $app->getMenu();
+		$pathway	= $app->getPathway();
+		$title 		= null;
+
+		// Because the application sets a default page title,
+		// we need to get it from the menu item itself
+		$menu = $menus->getActive();
+
+		if ($menu) {
+			$this->params->def('page_heading', $this->params->get('page_title', $menu->title));
+		}
+		else {
+			$this->params->def('page_heading', JText::_('COM_IMPRESSUM_DEFAULT_PAGE_TITLE'));
+		}
+
+		$title = $this->params->get('page_title', '');
+
+		if (empty($title)) {
+			$title = $app->getCfg('sitename');
+		}
+		elseif ($app->getCfg('sitename_pagetitles', 0) == 1) {
+			$title = JText::sprintf('JPAGETITLE', $app->getCfg('sitename'), $title);
+		}
+		elseif ($app->getCfg('sitename_pagetitles', 0) == 2) {
+			$title = JText::sprintf('JPAGETITLE', $title, $app->getCfg('sitename'));
+		}
+
+ 		$this->document->setTitle($title);
+ 		
+ 		if ($this->params->get('menu-meta_description'))
+ 		{
+ 			$this->document->setDescription($this->params->get('menu-meta_description'));
+ 		}
+ 		
+ 		if ($this->params->get('menu-meta_keywords'))
+ 		{
+ 			$this->document->setMetadata('keywords', $this->params->get('menu-meta_keywords'));
+ 		}
+ 		
+ 		if ($this->params->get('robots'))
+ 		{
+ 			$this->document->setMetadata('robots', $this->params->get('robots'));
+ 		}
 	}
 }
