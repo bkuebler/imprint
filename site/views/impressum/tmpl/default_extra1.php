@@ -39,9 +39,9 @@
 		<td align="left">
 			<?php echo $this->impressum->extra1person;
 			if ($this->impressum->extra1email)
-				echo "(".JHTML::_('email.cloak', $this->impressum->extra1email).")<br />";
+				echo " (".JHTML::_('email.cloak', $this->impressum->extra1email).")<br />";
 			if ($this->impressum->extra1website)
-				echo JText::_( 'COM_IMPRESSUM_EXTRAWEBSITE' ) . '<a href="http://' . $this->impressum->extra1website . '" target="blank">' . $this->impressum->extra1website . '</a>';
+				echo JText::_( 'COM_IMPRESSUM_EXTRAWEBSITE' ) . ' <a href="http://' . $this->impressum->extra1website . '" target="blank">' . $this->impressum->extra1website . '</a>';
 			?>
 		</td>
 	</tr>
