@@ -3,7 +3,7 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRESSUM</name>
 	
-	<creationDate>10.10.2011</creationDate>
+	<creationDate>05.10.2011</creationDate>
 	<author>Impressum Reloaded Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011 Impressum Reloaded Team</copyright>
