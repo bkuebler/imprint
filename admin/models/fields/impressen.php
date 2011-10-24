@@ -58,9 +58,10 @@ class JFormFieldImpressen extends JFormFieldList
 		$db->setQuery((string)$query);
 		$impressen = $db->loadObjectList();
 		$options = array();
-		if ($impressen)
+		$options[] = JHtml::_('select.option', 0, JText::_('COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_OPTION_DEFAULT'));
+		if ($impressen && count($impressen) > 1)
 		{
-			$options[] = JHtml::_('select.option', 0, JText::_('COM_IMPRESSUM_IMPRESSUM_FIELD_IMPRESSUM_OPTION_DEFAULT'));
+			$options[] = JHtml::_('select.option', 0, '-----', 'value', 'text', true);
 			foreach($impressen as $impressum) 
 			{
 				$options[] = JHtml::_('select.option', $impressum->id, $impressum->name);
