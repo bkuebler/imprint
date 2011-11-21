@@ -31,7 +31,7 @@ $user =& JFactory::getUser();
 <?php //endif; ?>
 
 <div id="component-impressum">
-	<table border="0" width="100%">
+	<table class="impressum_table">
 		<tr>
 			<td>
 				<?php echo $this->loadTemplate('address'); ?>

@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!-- HTML Beginn //-->
 
-<table>
+<table class="impressum_table">
 	<tr>
 		<td class="componentheading">
 			<span >Erkl&auml;rung zum Datenschutz f&uuml;r <?php echo $this->siteName; ?></span>

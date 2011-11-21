@@ -49,6 +49,10 @@ class ImpressumViewDatenschutzanalyticsfacebook extends JView
 		$this->id		= $this->get('Id');
 		$this->siteName	= $this->get('SiteName');
 		
+		// Load the css
+		$document	= JFactory::getDocument();
+		$document->addStyleSheet(JURI::root() . 'media/com_impressum/css/com_impressum.css');
+		
 		// Check for errors.
         if (count($errors = $this->get('Errors'))) 
         {

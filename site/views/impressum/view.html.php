@@ -49,6 +49,10 @@ class ImpressumViewImpressum extends JView
 		$impressum	= $this->get('Impressum');
 		$id			= $this->get('Id');
 		
+		// Load the css
+		$document	= JFactory::getDocument();
+		$document->addStyleSheet(JURI::root() . 'media/com_impressum/css/com_impressum.css');
+		
 		// Check for errors.
         if (count($errors = $this->get('Errors'))) 
         {
