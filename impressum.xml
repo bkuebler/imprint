@@ -8,7 +8,7 @@
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011 Impressum Reloaded Team</copyright>
 	<license>GNU/GPL, see LICENSE.txt</license>
-	<version>3.0.1</version>
+	<version>3.0.2</version>
 	<description>COM_IMPRESSUM_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
@@ -41,6 +41,7 @@
 	
 	<media destination="com_impressum" folder="media" >
 		<filename>index.html</filename>
+		<folder>css</folder>
 		<folder>images</folder>
 	</media>
 	
