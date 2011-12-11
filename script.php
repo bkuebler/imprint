@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0.1 $Id$
+ * @version		3.0.3 $Id$
  * @package		Joomla
  * @subpackage	Impressum
  * @copyright	(C) 2011 Impressum Reloaded Team
@@ -37,8 +37,9 @@ class com_impressumInstallerScript
 	 * @author	mgebhardt
 	 * @var		string
 	 * @since	3.0.1
+	 * @todo: Compare this version with version of xml installer file every release! 
 	 */
-	private $release = '3.0.1';
+	private $release = '3.0.3';
 	
 	/**
 	 * Method to install the component.

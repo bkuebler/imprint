@@ -3,12 +3,13 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRESSUM</name>
 	
-	<creationDate>08.12.2011</creationDate>
+	<creationDate>11.12.2011</creationDate>
 	<author>Impressum Reloaded Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011 Impressum Reloaded Team</copyright>
 	<license>GNU/GPL, see LICENSE.txt</license>
-	<version>3.0.2</version>
+	<!-- Also update component version in /script.php -->
+	<version>3.0.3</version>
 	<description>COM_IMPRESSUM_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
