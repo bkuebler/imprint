@@ -174,7 +174,7 @@ if (($this->impressum->params->get('show_bankguests')=="0") && (!$user->guest) &
 						</td>
 	<?php endif; ?>
 						<td>
-							<?php echo $this->impressum->misc; ?>
+							<?php echo nl2br($this->impressum->misc); ?>
 						</td>
 	<?php if ( $this->impressum->image && $this->impressum->params->get( 'show_image' ) ): ?>
 						<td valign="top" >
