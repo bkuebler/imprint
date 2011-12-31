@@ -39,7 +39,7 @@ class com_impressumInstallerScript
 	 * @since	3.0.1
 	 * @todo: Compare this version with version of xml installer file every release! 
 	 */
-	private $release = '3.0.3';
+	private $release = '3.0.4B1';
 	
 	/**
 	 * Method to install the component.
