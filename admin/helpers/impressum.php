@@ -61,4 +61,72 @@ abstract class ImpressumHelper
  
 		return $result;
 	}
+	
+	//TODO: Beschreibung noch ergänzen
+	/**
+	 * Method to generate icons like in the Control Panel
+	 * originally by Jan Pavelka (Phoca.cz)
+	 *
+	 * @author chris-schmidt
+	 * @return object The complete icon with link & picture
+	 * @since 3.1
+	 * 
+	 */
+	public static function quickIconButton( $link, $image, $text ) {
+	
+		$lang	= &JFactory::getLanguage();
+		$button = '';
+		if ($lang->isRTL()) {
+			$button .= '<div style="float:right;">';
+		} else {
+			$button .= '<div style="float:left;">';
+		}
+		$button .=	'<div class="icon">'
+		.'<a href="'.$link.'">'
+		.JHTML::_('image.site',  $image, '../media/com_impressum/images/assets/', NULL, NULL, $text )
+		.'<span>'.$text.'</span></a>'
+		.'</div>';
+		$button .= '</div>';
+	
+		return $button;
+	}
+
+	//TODO: Diesen Code verwenden oder deinen Code aus der script.php ab Zeile 259?
+	/**
+	 * Read the Impressum Reloaded Version out of the XML-file
+	 *
+	 * @author chris-schmidt
+	 */
+	public static function version( ) {
+	
+		// Import filesystem libraries
+		jimport('joomla.filesystem.folder');
+	
+		$folder = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_impressum';
+		if (JFolder::exists($folder))
+		{
+			$xmlFilesinDir = JFolder::files($folder, '.xml$');
+		} else {
+			$xmlFilesinDir = null;
+		}
+	
+		if (count($xmlFilesinDir))
+		{
+			foreach ($xmlFilesinDir as $xmlfile)
+			{
+				if ($data = JApplicationHelper::parseXMLInstallFile($folder.DS.$xmlfile))
+				{
+					foreach ($data as $key => $value)
+					{
+						if ($key == 'version')
+						{
+							echo $value;
+						}
+					}
+				}
+			}
+		} else {
+			echo 'Unknown?!?';
+		}
+	}
 }
