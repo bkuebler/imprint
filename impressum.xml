@@ -3,13 +3,13 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRESSUM</name>
 	
-	<creationDate>31.12.2011</creationDate>
+	<creationDate>15.02.2012</creationDate>
 	<author>Impressum Reloaded Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
-	<copyright>Copyright (c) 2011 Impressum Reloaded Team</copyright>
+	<copyright>Copyright (c) 2011-2012 Impressum Reloaded Team</copyright>
 	<license>GNU/GPL, see LICENSE.txt</license>
 	<!-- Also update component version in /script.php -->
-	<version>3.0.4B1</version>
+	<version>3.0.5</version>
 	<description>COM_IMPRESSUM_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
@@ -48,6 +48,12 @@
 	
 	<administration>
 		<menu img="../media/com_impressum/images/recht.png">COM_IMPRESSUM</menu>
+		<submenu>
+		<menu link="option=com_impressum&amp;view=cpanel" view="cpanel"
+				img="../media/com_impressum/images/assets/16px/icon-16-cpanel.png" alt="COM_IMPRESSUM_CPANEL">COM_IMPRESSUM_CPANEL</menu>
+		<menu link="option=com_impressum&amp;view=about" view="about"
+				img="../media/com_impressum/images/assets/16px/icon-16-about.png" alt="COM_IMPRESSUM_ABOUT">COM_IMPRESSUM_ABOUT</menu>
+		</submenu>
 		
 		<files folder="admin">
 			<filename>index.html</filename>
@@ -57,6 +63,7 @@
 			<filename>impressum.php</filename>
 			
 			<folder>controllers</folder>
+			<folder>help</folder>
 			<folder>helpers</folder>
 			<folder>language</folder>
 			<folder>models</folder>
