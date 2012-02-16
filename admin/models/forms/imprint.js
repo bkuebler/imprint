@@ -1,5 +1,5 @@
 /**
- * @version		3.0.1 $Id: imprint.js 20 2011-08-15 21:03:56Z mgebhardt $
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team

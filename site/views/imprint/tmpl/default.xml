@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id: default.xml 20 2011-08-15 21:03:56Z mgebhardt $ -->
+<!-- $Id$ -->
 <metadata>
 	<layout title="COM_IMPRINT_IMPRINT_VIEW_DEFAULT_TITLE">
 		<message>COM_IMPRINT_IMPRINT_VIEW_DEFAULT_DESC</message>

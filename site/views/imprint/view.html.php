@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0.1 $Id: view.html.php 26 2011-11-21 16:01:56Z mgebhardt $
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team

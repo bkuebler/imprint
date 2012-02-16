@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0.1 $Id: default_extra1.php 23 2011-10-04 20:56:12Z chris-schmidt $
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0.1 $Id: default.php 33 2011-12-31 13:10:31Z mgebhardt $
+ * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
