@@ -1,21 +1,21 @@
 <?php
 /**
- * @version		3.0.1 $Id$
+ * @version		3.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -26,13 +26,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport('joomla.application.component.view');
 
 /**
- * Impressum view clss.
+ * About view clss.
  * 
  * @package		Joomla
- * @subpackage	Impressum
- * @since		3.0
+ * @subpackage	Imprint
+ * @since		3.1
  */
-class ImpressumViewAbout extends JView
+class ImprintViewAbout extends JView
 {
 
 	function display($tpl = null) 
@@ -67,12 +67,11 @@ class ImpressumViewAbout extends JView
 	 * Method to create the toolbar.
 	 *  
 	 * @author	mgebhardt
-	 * @since	3.0
+	 * @since	3.1
 	 */
 	protected function addToolBar() 
 	{
-		JToolBarHelper::title(JText::_('COM_IMPRESSUM').' - '.JText::_('COM_IMPRESSUM_ABOUT'), 'about');
-		JToolBarHelper::cancel('impressum.cancel', 'JTOOLBAR_CLOSE');
+		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_ABOUT'), 'about');
 		JToolBarHelper::divider();
 		JToolBarHelper::help('screen.imprint', true);
 	}
@@ -81,11 +80,11 @@ class ImpressumViewAbout extends JView
 	* Method to set up the document properties
 	*
 	* @author	mgebhardt
-	* @since	3.0
+	* @since	3.1
 	*/
 	protected function setDocument()
 	{
 		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRESSUM_ADMINISTRATION'));
+		$document->setTitle(JText::_('COM_IMPRINT_ADMINISTRATION'));
 	}
 }

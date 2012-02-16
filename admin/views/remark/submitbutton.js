@@ -1,20 +1,20 @@
 /**
- * @version		3.0.1 $Id: submitbutton.js 20 2011-08-15 21:03:56Z mgebhardt $
+ * @version		3.1 $Id: submitbutton.js 20 2011-08-15 21:03:56Z mgebhardt $
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -22,7 +22,7 @@
  * Method to validate the input.
  *  
  * @author	mgebhardt
- * @since	3.0
+ * @since	3.1
  */
 Joomla.submitbutton = function(task)
 {
@@ -54,7 +54,7 @@ Joomla.submitbutton = function(task)
 		}
 		else
 		{
-			alert("COM_IMPRESSUM_IMPRESSUM_ERROR_UNACCEPTABLE");
+			alert("COM_IMPRINT_REMARK_ERROR_UNACCEPTABLE");
 			return false;
 		}
 	}

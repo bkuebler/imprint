@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) Guido Kamniarz, 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) Guido Kamniarz, 2011 Imprint Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!-- HTML Beginn //-->
 
-  <table class="impressum_table"><tr><td class="componentheading">
+  <table class="imprint_table"><tr><td class="componentheading">
   <span >Haftungsausschluss (Disclaimer) f&uuml;r <?php echo $this->siteName; ?></span>
   </td></tr><tr><td>
 
@@ -83,11 +83,11 @@ Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dies
 Nutzers auf ausdr&uuml;cklich freiwilliger Basis. Die Inanspruchnahme und Bezahlung aller angebotenen 
 Dienste ist - soweit technisch m&ouml;glich und zumutbar - auch ohne Angabe solcher Daten bzw. unter Angabe 
 anonymisierter Daten oder eines Pseudonyms gestattet.
-Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie 
+Die Nutzung der im Rahmen des Imprints oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie 
 Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur &uuml;bersendung von nicht 
 ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender 
 von sogenannten Spam-Mails bei Verst&ouml;ssen gegen dieses Verbot sind ausdr&uuml;cklich vorbehalten.<br /><br />
-Weitere Informationen entnehmen Sie bitte der <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=datenschutz">
+Weitere Informationen entnehmen Sie bitte der <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=datenschutz">
 Erkl&auml;rung zum Datenschutz (Privacy Policy)</a>
 </p>
 <p><strong>5. Rechtswirksamkeit dieses Haftungsausschlusses </strong><br />

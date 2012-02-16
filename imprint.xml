@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: imprint.xml 40 2012-02-15 17:21:49Z chris-schmidt $ -->
+<extension type="component" version="1.7.0" method="upgrade">
+	<name>COM_IMPRINT</name>
+	
+	<creationDate>16.02.2012</creationDate>
+	<author>Impressum Reloaded Team</author>
+	<authorEmail>gebhardtmathias@aol.com</authorEmail>
+	<copyright>Copyright (c) 2011-2012 Imprint Reloaded Team</copyright>
+	<license>GNU/GPL, see LICENSE.txt</license>
+	<!-- Also update component version in /script.php -->
+	<version>3.1.0dev5</version>
+	<description>COM_IMPRINT_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>imprint.php</filename>
+		<filename>controller.php</filename>
+		
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+	<media destination="com_imprint" folder="media" >
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+	
+	<administration>
+		<menu img="../media/com_imprint/images/recht.png">COM_IMPRINT</menu>
+		<submenu>
+			<menu link="option=com_imprint&amp;view=cpanel" view="cpanel"
+					img="../media/com_imprint/images/assets/16px/icon-16-cpanel.png"
+					alt="COM_IMPRINT_CPANEL">COM_IMPRINT_CPANEL</menu>
+			<menu link="option=com_imprint&amp;view=imprints" view="imprints"
+					img="../media/com_imprint/images/assets/16px/icon-16-imprints.png"
+					alt="COM_IMPRINT_IMPRINTS">COM_IMPRINT_IMPRINTS</menu>
+			<menu lint="option=com_imprint&amp;view=text" view="remarks"
+					img="../media/com_imprint/images/assets/16px/icon-16-remarks.png"
+					alt="COM_IMPRINT_REMARKS">COM_IMPRINT_REMARKS</menu>
+			<menu link="option=com_imprint&amp;view=about" view="about"
+					img="../media/com_imprint/images/assets/16px/icon-16-about.png"
+					alt="COM_IMPRINT_ABOUT">COM_IMPRINT_ABOUT</menu>
+		</submenu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>imprint.php</filename>
+			
+			<folder>controllers</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+</extension>

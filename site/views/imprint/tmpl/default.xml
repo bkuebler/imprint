@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: default.xml 20 2011-08-15 21:03:56Z mgebhardt $ -->
+<metadata>
+	<layout title="COM_IMPRINT_IMPRINT_VIEW_DEFAULT_TITLE">
+		<message>COM_IMPRINT_IMPRINT_VIEW_DEFAULT_DESC</message>
+	</layout>
+	<fields
+		name="request"
+		addfieldpath="/administrator/components/com_imprint/models/fields"
+	>
+		<fieldset name="request">
+			<field
+				name="id"
+				type="imprints"
+				label="COM_IMPRINT_IMPRINT_FIELD_IMPRINT_LABEL"
+				description="COM_IMPRINT_IMPRINT_FIELD_IMPRINT_DESC"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) Guido Kamniarz, 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) Guido Kamniarz, 2011 Imprint Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!-- HTML Beginn //-->
 
-  <table class="impressum_table"><tr><td class="componentheading">
+  <table class="imprint_table"><tr><td class="componentheading">
   <span >Erkl&auml;rung zum Datenschutz f&uuml;r <?php echo $this->siteName; ?></span>
   </td></tr><tr><td>
 
@@ -33,7 +33,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   Daten werden gem&auml;ss den Bestimmungen des Bundesdatensschutzgesetzes BDSG verwendet.
   Die Betreiber dieser Website verpflichten sich zur Verschwiegenheit. Diese Webseiten k&ouml;nnen 
   Links zu Webseiten anderer Anbieter enthalten, auf die sich diese Datenschutzerkl&auml;rung nicht 
-  erstreckt. Weitere wichtige Informationen finden sich auch in den <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=nutzungsbedingungen">Allgemeinen 
+  erstreckt. Weitere wichtige Informationen finden sich auch in den <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=nutzungsbedingungen">Allgemeinen 
   Nutzungsbedingungen</a>.</p>
 <p> <strong>Personenbezogene Daten</strong><br />
   Personenbezogene Daten sind Informationen, die dazu genutzt werden k&ouml;nnen, die 
@@ -122,10 +122,10 @@ Zweck einverstanden.<br />
 <p><strong>Recht auf Widerruf</strong><br />
   Wenn Sie uns personenbezogene Daten &uuml;berlassen haben, k&ouml;nnen Sie diese jederzeit 
   im Benutzerprofil wieder &auml;ndern und l&ouml;schen. F&uuml;r eine vollst&auml;ndige L&ouml;schung des Accounts bitte 
-  an den <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> wenden. 
+  an den <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> wenden. 
   Bis zu diesem Zeitpunkt erfolgte Beitr&auml;ge in Foren, Kommentaren, Terminank&uuml;ndigungen 
   und Artikeln bleiben allerdings unter Umst&auml;nden erhalten - Informationen dazu 
-  auch bei den <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=nutzungsbedingungen">allgemeinen 
+  auch bei den <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=nutzungsbedingungen">allgemeinen 
   Nutzungsbedingungen</a>.</p>
 
 <p><strong>Links zu anderen Websites</strong><br />
@@ -143,12 +143,12 @@ Zweck einverstanden.<br />
 
 <p><strong>Fragen und Kommentare</strong><br />
   Bei Fragen und f&uuml;r Anregungen und Kommentare zum Thema Datenschutz bitte per 
-  Mail an den <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> 
+  Mail an den <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> 
   von <?php echo $this->siteName; ?> wenden.</p>
   
 <p><strong>Auskunftsrecht</strong><br />
 Sie haben jederzeit das Recht auf Auskunft &uuml;ber die bez&uuml;glich Ihrer Person gespeicherten Daten, 
-deren Herkunft und Empf&auml;nger sowie den Zweck der Datenverarbeitung. Auskunft &uuml;ber die gespeicherten Daten gibt der <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a>.
+deren Herkunft und Empf&auml;nger sowie den Zweck der Datenverarbeitung. Auskunft &uuml;ber die gespeicherten Daten gibt der <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a>.
 </p>
   
 <p><strong>Sicherheitshinweis:</strong><br />

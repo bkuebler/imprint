@@ -13,7 +13,7 @@
 			class="inputbox"
 			validate="rules"
 			filter="rules"
-			component="com_impressum"
+			component="com_imprint"
 			section="component"
 		/>
 	</fieldset>

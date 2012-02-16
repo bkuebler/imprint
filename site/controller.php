@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -24,14 +24,16 @@ defined('_JEXEC') or die( 'Restricted access' );
 
 jimport('joomla.application.component.controller');
 
+//TODO: Remove all old static views and add new view for additional texts
+
 /**
- * Impressum controller class.
+ * Imprint controller class.
  * 
  * @package		Joomla
- * @subpackage	Impressum
+ * @subpackage	Imprint
  * @since		3.0
  */
-class ImpressumController extends JController
+class ImprintController extends JController
 {
 
 	/**
@@ -47,7 +49,7 @@ class ImpressumController extends JController
 		/* 
 		 * Old stuff, cannot push the one model in all views.
 		// set default view if not set
-		JRequest::setVar('view', JRequest::getCmd('view', 'Impressum'));
+		JRequest::setVar('view', JRequest::getCmd('view', 'Imprint'));
 		
 		// call parent behavior
 		parent::display($cachable);
@@ -55,13 +57,13 @@ class ImpressumController extends JController
 		
 		$document	= JFactory::getDocument();
 		$viewType	= $document->getType();
-		$viewName	= JRequest::getCmd('view', 'Impressum');
+		$viewName	= JRequest::getCmd('view', 'Imprint');
 		$viewLayout	= JRequest::getCmd('layout', 'default');
 		
 		$view = $this->getView($viewName, $viewType, '', array('base_path' => $this->basePath));
 		
 		// Get/Create the model
-		if ($model = $this->getModel('Impressum')) {
+		if ($model = $this->getModel('Imprint')) {
 			// Push the model into the view (as default)
 			$view->setModel($model, true);
 		}

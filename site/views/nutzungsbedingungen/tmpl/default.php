@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) Guido Kamniarz, 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) Guido Kamniarz, 2011 Imprint Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!-- HTML Beginn //-->
 
-  <tabl class="impressum_table"><tr><td class="componentheading">
+  <tabl class="imprint_table"><tr><td class="componentheading">
   Allgemeine Nutzungsbedingungen f&uuml;r <?php echo $this->siteName; ?>
   </td></tr><tr><td>
 
@@ -89,7 +89,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   Das Mitglied gibt f&uuml;r alle Beitr&auml;ge, die von ihm oder ihr zuk&uuml;nftig auf &raquo;<?php echo $this->siteName; ?>&laquo; 
   eingereicht werden, folgende Erkl&auml;rungen ab:<br />
 </p>
-<ul><li>1. Das Mitglied versichert, das die eingereichten Beitr&auml;ge frei von Rechten Dritter, insbesondere Urheber-, Marken- oder Pers&ouml;nlichkeitsrechten sind. Dies gilt f&uuml;r alle eingereichten Beitr&auml;ge und Bildwerke.</li><li>2. Das Mitglied r&auml;umt den Betreibern von &raquo;<?php echo $this->siteName;?>&laquo; ein uneingeschr&auml;nktes Nutzungsrecht an den eingereichten Beitr&auml;gen ein. Dieses umfasst die Ver&ouml;ffentlichung im Internet auf &raquo;<?php echo $this->siteName;?>&laquo; sowie auf anderen Internetservern, in Newslettern, Printmedien und anderen Publikationen.</li><li>3. Eingereichte Beitr&auml;ge werden auf Verlangen des Mitgliedes per Email an die Adresse des <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmasters</a> wieder gel&ouml;scht bzw. anonymisiert. Die L&ouml;schung bzw. Anonymisierung erfolgt innerhalb von 7 Tagen nach der Mitteilung. F&uuml;r Folgesch&auml;den, die dem Mitglied aus der versp&auml;teten L&ouml;schung des Beitrages entstehen haften die Betreiber nur insoweit, als sie nicht auf einer Pflichtverletzung des Mitgliedes (oben unter 1), 2) und 3) ) und soweit sie dar&uuml;ber hinaus auf grobem Verschulden oder Vorsatz der Betreiber von &raquo;<?php echo $this->siteName;?>&laquo; beruhen. Wir weisen in diesem Zusammenhang ausdr&uuml;cklich darauf hin, dass &raquo;<?php echo $this->siteName;?>&laquo; regelm&auml;&szlig;ig von Suchmaschinen indexiert wird, und dass wir keinen Einfluss darauf haben, ob, wo und wie lange bei uns ver&ouml;ffentlichte Beitr&auml;ge m&ouml;glicherweise auch nach L&ouml;schung bei &raquo;<?php echo $this->siteName;?>&laquo; in Datenbanken von Suchmaschinen und Webkatalogen gespeichert werden und abrufbar sind.</li><li>4. Es besteht keinerlei Anspruch auf Speicherung, Ver&ouml;ffentlichung oder Archivierung der eingereichten Beitr&auml;ge. Die Betreiber behalten sich vor, eingereichte Beitr&auml;ge ohne Angabe von Gr&uuml;nden nicht zu ver&ouml;ffentlichen, vor Ver&ouml;ffentlichung zu editieren oder nach Ver&ouml;ffentlichung nach freiem Ermessen wieder zu l&ouml;schen.</li><li>5. Durch die Ver&ouml;ffentlichung eingereichter Beitr&auml;ge entstehen keinerlei Verg&uuml;tungsanspr&uuml;che (Honorare, Lizenzgeb&uuml;hren, Aufwendungsentsch&auml;digungen oder &auml;hnliches) des Mitgliedes gegen&uuml;ber &raquo;<?php echo $this->siteName;?>&laquo;. Die Mitarbeit ist ehrenamtlich (unentgeltlich).</li></ul>
+<ul><li>1. Das Mitglied versichert, das die eingereichten Beitr&auml;ge frei von Rechten Dritter, insbesondere Urheber-, Marken- oder Pers&ouml;nlichkeitsrechten sind. Dies gilt f&uuml;r alle eingereichten Beitr&auml;ge und Bildwerke.</li><li>2. Das Mitglied r&auml;umt den Betreibern von &raquo;<?php echo $this->siteName;?>&laquo; ein uneingeschr&auml;nktes Nutzungsrecht an den eingereichten Beitr&auml;gen ein. Dieses umfasst die Ver&ouml;ffentlichung im Internet auf &raquo;<?php echo $this->siteName;?>&laquo; sowie auf anderen Internetservern, in Newslettern, Printmedien und anderen Publikationen.</li><li>3. Eingereichte Beitr&auml;ge werden auf Verlangen des Mitgliedes per Email an die Adresse des <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmasters</a> wieder gel&ouml;scht bzw. anonymisiert. Die L&ouml;schung bzw. Anonymisierung erfolgt innerhalb von 7 Tagen nach der Mitteilung. F&uuml;r Folgesch&auml;den, die dem Mitglied aus der versp&auml;teten L&ouml;schung des Beitrages entstehen haften die Betreiber nur insoweit, als sie nicht auf einer Pflichtverletzung des Mitgliedes (oben unter 1), 2) und 3) ) und soweit sie dar&uuml;ber hinaus auf grobem Verschulden oder Vorsatz der Betreiber von &raquo;<?php echo $this->siteName;?>&laquo; beruhen. Wir weisen in diesem Zusammenhang ausdr&uuml;cklich darauf hin, dass &raquo;<?php echo $this->siteName;?>&laquo; regelm&auml;&szlig;ig von Suchmaschinen indexiert wird, und dass wir keinen Einfluss darauf haben, ob, wo und wie lange bei uns ver&ouml;ffentlichte Beitr&auml;ge m&ouml;glicherweise auch nach L&ouml;schung bei &raquo;<?php echo $this->siteName;?>&laquo; in Datenbanken von Suchmaschinen und Webkatalogen gespeichert werden und abrufbar sind.</li><li>4. Es besteht keinerlei Anspruch auf Speicherung, Ver&ouml;ffentlichung oder Archivierung der eingereichten Beitr&auml;ge. Die Betreiber behalten sich vor, eingereichte Beitr&auml;ge ohne Angabe von Gr&uuml;nden nicht zu ver&ouml;ffentlichen, vor Ver&ouml;ffentlichung zu editieren oder nach Ver&ouml;ffentlichung nach freiem Ermessen wieder zu l&ouml;schen.</li><li>5. Durch die Ver&ouml;ffentlichung eingereichter Beitr&auml;ge entstehen keinerlei Verg&uuml;tungsanspr&uuml;che (Honorare, Lizenzgeb&uuml;hren, Aufwendungsentsch&auml;digungen oder &auml;hnliches) des Mitgliedes gegen&uuml;ber &raquo;<?php echo $this->siteName;?>&laquo;. Die Mitarbeit ist ehrenamtlich (unentgeltlich).</li></ul>
 <p><b>5. Erkl&auml;rung zum Datenschutz (Privacy Policy)</b><br/>
   Sofern innerhalb des Internetangebotes die M&ouml;glichkeit zur Eingabe pers&ouml;nlicher 
   oder gesch&auml;ftlicher Daten genutzt wird, so erfolgt die Preisgabe dieser Daten 
@@ -97,7 +97,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   unseres Dienstes ist - soweit technisch m&ouml;glich und zumutbar - auch ohne Angabe 
   solcher Daten bzw. unter Angabe anonymisierter Daten oder eines Pseudonyms gestattet. 
   Weitere wichtige Informationen zum Thema Datenschutz finden sich in unserer 
-  <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=datenschutz">Erkl&auml;rung 
+  <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>&amp;view=datenschutz">Erkl&auml;rung 
   zum Datenschutz (Privacy Policy)</a>.</p>
 <p><b>6. Registrierung und Passwort</b><br/>
   Der Benutzer ist verpflichtet, die Kombination Benutzername/Passwort vertraulich 
@@ -117,7 +117,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   jedoch nicht verpflichtet, die fremden Inhalte st&auml;ndig zu &uuml;berpr&uuml;fen.<br/>
 </p>
 <p><b>Kontakt</b><br/>
-  Fragen rund um <?php echo $this->siteName; ?> bitte an den <a href="index.php?option=com_impressum<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> 
+  Fragen rund um <?php echo $this->siteName; ?> bitte an den <a href="index.php?option=com_imprint<?php echo $this->id == 0 ? '' : ('&amp;id=' . $this->id); ?>">Webmaster</a> 
   richten.<br/>
 </p>
 <p><b>Rechtswirksamkeit</b><br/>

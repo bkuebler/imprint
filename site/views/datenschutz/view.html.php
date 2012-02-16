@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -28,10 +28,10 @@ jimport('joomla.application.component.view');
  * Datenschutz view class.
  * 
  * @package		Joomla
- * @subpackage	Impressum
+ * @subpackage	Imprint
  * @since		3.0
  */
-class ImpressumViewDatenschutz extends JView
+class ImprintViewDatenschutz extends JView
 {
 	
 	/**
@@ -51,7 +51,7 @@ class ImpressumViewDatenschutz extends JView
 		
 		// Load the css
 		$document	= JFactory::getDocument();
-		$document->addStyleSheet(JURI::root() . 'media/com_impressum/css/com_impressum.css');
+		$document->addStyleSheet(JURI::root() . 'media/com_imprint/css/com_imprint.css');
 		
 		// Check for errors.
         if (count($errors = $this->get('Errors'))) 
@@ -86,7 +86,7 @@ class ImpressumViewDatenschutz extends JView
 			$this->params->def('page_heading', $this->params->get('page_title', $menu->title));
 		}
 		else {
-			$this->params->def('page_heading', JText::_('COM_IMPRESSUM_DEFAULT_PAGE_TITLE'));
+			$this->params->def('page_heading', JText::_('COM_IMPRINT_DEFAULT_PAGE_TITLE'));
 		}
 
 		$title = $this->params->get('page_title', '');

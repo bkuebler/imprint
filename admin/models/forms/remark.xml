@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: imprint.xml 7 2011-07-29 10:15:55Z mgebhardt $ -->
+<form>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field name="name" type="text" 
+			label="COM_IMPRINT_REMARK_IMPRINT_NAME" 
+			description="COM_IMPRINT_REMARK_IMPRINT_NAME_DESC"
+			size="60" maxlength="255" required="true"
+		/>
+		<field name="text" type="textarea" 
+			label="COM_IMPRINT_REMARK_TEXT" 
+			description="COM_IMPRINT_REMARK_TEXT_DESC" 
+			rows="10" cols="45"
+		/>	
+	</fieldset>
+	
+	<fields name="params">
+		<fieldset name="params_basic" label="COM_IMPRINT_REMARK_PARAMS_BASIC">
+				
+		</fieldset>
+		<fieldset name="params_advanced" label="COM_IMPRINT_REMARK_PARAMS_ADVANCED">
+			
+		</fieldset>
+	</fields>
+</form>

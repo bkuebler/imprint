@@ -1,3 +1,3 @@
-/* version 3.0 $Id$ */
+/* version 3.1.0 $Id$ */
  
-DROP TABLE `#__impressum`;
+DROP TABLE `#__imprint_imprints`;

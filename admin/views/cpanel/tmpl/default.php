@@ -2,20 +2,20 @@
 /**
  * @version		3.0.1 $Id$
  * @package		Joomla
- * @subpackage	Impressum
- * @copyright	(C) 2011 Impressum Reloaded Team
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
  * @license		GNU/GPL, see LICENSE.txt
- * Impressum is free software; you can redistribute it and/or
+ * Imprint is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License 2
  * as published by the Free Software Foundation.
 
- * Impressum is distributed in the hope that it will be useful,
+ * Imprint is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 
  * You should have received a copy of the GNU General Public License
- * along with Impressum; if not, write to the Free Software
+ * along with Imprint; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
@@ -31,14 +31,19 @@ JHtml::_('behavior.tooltip');
 		<td width="55%" valign="top">
 			<div id="cpanel">
 			<?php
-			$link = 'index.php?option=com_impressum';
-			echo ImpressumHelper::quickIconButton( $link, '48px/icon-48-cpanel.png', JText::_( 'COM_IMPRESSUM_CPANEL' ) );
+//TODO: reale nessessary? Do you need a link to current page?
+//TODO: Joomlacore can do this natively!
+// 			$link = 'index.php?option=com_imprint';
+// 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-cpanel.png', JText::_( 'COM_IMPRINT_CPANEL' ) );
 		
-			$link = 'index.php?option=com_impressum&amp;view=edit_imprints';
-			echo ImpressumHelper::quickIconButton( $link, '48px/icon-48-edit_imprints.png', JText::_( 'COM_IMPRESSUM_EDIT_IMPRINTS' ) );
+			$link = 'index.php?option=com_imprint&amp;view=imprints';
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
+			
+			$link = 'index.php?option=com_imprint&amp;view=remarks';
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-remarks.png', JText::_( 'COM_IMPRINT_REMARKS' ) );
 		
-			$link = 'index.php?option=com_impressum&amp;view=about';
-			echo ImpressumHelper::quickIconButton( $link, '48px/icon-48-about.png', JText::_( 'COM_IMPRESSUM_ABOUT' ) );
+			$link = 'index.php?option=com_imprint&amp;view=about';
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-about.png', JText::_( 'COM_IMPRINT_ABOUT' ) );
 			?>
 <!--
 We can include ads if we want
@@ -57,20 +62,20 @@ We can include ads if we want
 			<div style="300px;border:1px solid #ccc;background:#fff;margin:15px;padding:15px">
 			<div style="float:right;margin:10px;">
 				<?php
-				//TODO: Logo am besten unter /media/com_impressum/assets/images/ speichern, oder? Offizielles Logo?
-					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_impressum/images/', NULL, NULL, 'Impressum Reloaded' )
+				//TODO: Logo am besten unter /media/com_imprint/assets/images/ speichern, oder? Offizielles Logo?
+					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_imprint/images/', NULL, NULL, 'Imprint Reloaded' )
 				?>
 			</div>
 
 			<h3><?php echo JText::_('JVERSION');?></h3>
-			<p><?php echo ImpressumHelper::version( );?></p>
+			<p><?php echo ImprintHelper::getVersion();?></p>
 
-			<h3><?php echo JText::_('COM_IMPRESSUM_COPYRIGHT');?></h3>
-			<p>&copy; 2011 - <?php echo date("Y"); ?> Impressum Reloaded Team. All rights reserved.<br />
+			<h3><?php echo JText::_('COM_IMPRINT_COPYRIGHT');?></h3>
+			<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Reloaded Team. All rights reserved.<br />
 			<br />
-			<a href="http://sourceforge.net/projects/impressumreload/" target="_blank"><?php echo JText::_('COM_IMPRESSUM_HOME');?></a></p>
+			<a href="http://sourceforge.net/projects/imprintreload/" target="_blank"><?php echo JText::_('COM_IMPRINT_HOME');?></a></p>
 
-			<h3><?php echo JText::_('COM_IMPRESSUM_LICENSE');?></h3>
+			<h3><?php echo JText::_('COM_IMPRINT_LICENSE');?></h3>
 			<p><a href="http://www.gnu.org/licenses/gpl-1.0.html" target="_blank">GPL</a></p>
 
 			</div>
