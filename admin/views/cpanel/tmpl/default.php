@@ -75,7 +75,7 @@ We can include ads if we want
 			<a href="http://sourceforge.net/projects/imprintreload/" target="_blank"><?php echo JText::_('COM_IMPRINT_HOME');?></a></p>
 
 			<h3><?php echo JText::_('COM_IMPRINT_LICENSE');?></h3>
-			<p><a href="http://www.gnu.org/licenses/gpl-1.0.html" target="_blank">GPL</a></p>
+			<p><a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></p>
 
 			</div>
 		</td>
