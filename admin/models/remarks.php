@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.0.1 $Id$
+ * @version		3.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
@@ -25,11 +25,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport('joomla.application.component.modellist');
 
 /**
- * Imprints model class.
+ * Remarks model class.
  * 
  * @package		Joomal
  * @subpackage	Imprint
- * @since		3.0
+ * @since		3.1
  */
 class ImprintModelRemarks extends JModelList
 {
@@ -39,7 +39,7 @@ class ImprintModelRemarks extends JModelList
 	 * 
 	 * @author	mgebhardt
 	 * @param	array	An optional associative array of configuration settings.
-	 * @since	3.0
+	 * @since	3.1
 	 */
 	public function __construct($config = array())
 	{
@@ -60,7 +60,7 @@ class ImprintModelRemarks extends JModelList
 	 * 
 	 * @author	mgebhardt
 	 * @return	void
-	 * @since	3.0
+	 * @since	3.1
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{
@@ -86,7 +86,7 @@ class ImprintModelRemarks extends JModelList
 	 * 
 	 * @author	mgebhardt
 	 * @return	string	A store id.
-	 * @since	3.0
+	 * @since	3.1
 	 */
 	protected function getStoreId($id = '')
 	{
@@ -101,6 +101,7 @@ class ImprintModelRemarks extends JModelList
 	 * 
 	 * @author	mgebhardt
 	 * @return	string  An SQL query
+	 * @since	3.1
 	 */
 	protected function getListQuery()
 	{
@@ -116,8 +117,7 @@ class ImprintModelRemarks extends JModelList
 				$query->where('id = '.(int) substr($search, 3));
 			else
 			{
-				//TODO: replace getEscaped with new core function
-				$search = $db->Quote('%'.$db->getEscaped($search, true).'%');
+				$search = $db->Quote('%'.$db->escape($search, true).'%');
 				$query->where('name LIKE '.$search);
 			}
 		}
@@ -125,7 +125,7 @@ class ImprintModelRemarks extends JModelList
 		// Add the list ordering clause.
 		$orderCol	= $this->state->get('list.ordering');
 		$orderDirn	= $this->state->get('list.direction');
-		$query->order($db->getEscaped($orderCol.' '.$orderDirn));
+		$query->order($db->escape($orderCol.' '.$orderDirn));
 		
 		return $query;
 	}
