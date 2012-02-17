@@ -96,33 +96,18 @@ abstract class ImprintHelper
 	}
 
 	/**
-	 * Read the Imprint Reloaded Version out of the XML-file
+	 * Method to get the version of the installed imprint.
 	 * 
-	 * @return	boolean	false on error or if success
-	 * 			string	the version string
-	 * @author 	chris-schmidt
+	 * @author	mgebhardt
 	 * @since	3.1
+	 * @return	string	The version of the installed imprint.
 	 */
 	public static function getVersion()
 	{
-		//TODO: get version form DB
-		
-		// Import filesystem libraries
-		jimport('joomla.filesystem.folder');
-	
-		$folder = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_imprint';
-		if (JFolder::exists($folder))
-			$xmlFilesinDir = JFolder::files($folder, '.xml$');
-		else
-			return false;
-	
-		foreach ($xmlFilesinDir as $xmlfile)
-			if ($data = JApplicationHelper::parseXMLInstallFile($folder.DS.$xmlfile))
-				foreach ($data as $key => $value)
-					if ($key == 'version')
-						return $value;
-		
-		return false;
+		$db = JFactory::getDbo();
+		$db->setQuery('SELECT manifest_cache FROM #__extensions WHERE name = "com_imprint"');
+		$manifest = json_decode( $db->loadResult(), true );
+		return $manifest['version'];
 	}
 	
 	/**
