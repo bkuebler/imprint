@@ -94,6 +94,7 @@ CREATE  TABLE IF NOT EXISTS `#__imprint_imprints` (
   `adresstitel` VARCHAR(255) NOT NULL DEFAULT 'Anbieterinformationen' ,
   `datenschutztitel` VARCHAR(255) NOT NULL DEFAULT '' ,
   PRIMARY KEY (`id`) )
+  COMMENT='Saves the different imprints'
 ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS `#__imprint_remarks` (
