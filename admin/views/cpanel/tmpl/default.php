@@ -30,11 +30,7 @@ JHtml::_('behavior.tooltip');
 	<tr>
 		<td width="55%" valign="top">
 			<div id="cpanel">
-			<?php
-//TODO: realy nessessary? Do you need a link to current page?
-// 			$link = 'index.php?option=com_imprint';
-// 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-cpanel.png', JText::_( 'COM_IMPRINT_CPANEL' ) );
-		
+			<?php		
 			$link = 'index.php?option=com_imprint&amp;view=imprints';
 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
 			
