@@ -82,6 +82,7 @@ class ImprintViewCPanel extends JView
 		{
 			JToolBarHelper::preferences('com_imprint');
 		}
+		JToolBarHelper::divider();
 		JToolBarHelper::help('screen.imprint', true);
 	}
 	
