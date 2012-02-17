@@ -75,8 +75,13 @@ class ImprintViewCPanel extends JView
 	 */
 	protected function addToolBar() 
 	{
+		$canDo = ImprintHelper::getActions();
 		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_CPANEL'), 'cpanel');
 		JToolBarHelper::divider();
+		if ($canDo->get('core.admin'))
+		{
+			JToolBarHelper::preferences('com_imprint');
+		}
 		JToolBarHelper::help('screen.imprint', true);
 	}
 	
