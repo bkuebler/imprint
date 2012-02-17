@@ -21,7 +21,7 @@
 
 ?>
 
-<table width="100%" border="0">
+<table style="width: 100%; border-width: 0px">
 	<tr>
 <?php if ($this->imprint->params->get('show_icons')=="1"): ?>
 		<td style="width: 20px" align="left">
@@ -49,7 +49,7 @@
 			<?php if ($this->imprint->land) echo $this->imprint->land ?>
 		</td>
 		<td align="left" valign="top">
-			<table cellspacing="2" cellpadding="0" border="0">
+			<table style="width: 100%; border-width: 0px; border-spacing: 0px; padding: 0px">
 <?php if ($this->imprint->telefon != ''): ?>
 				<tr>
 					<td align="left">

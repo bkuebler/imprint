@@ -23,7 +23,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!-- HTML Beginn //-->
 
-  <tabl class="imprint_table"><tr><td class="componentheading">
+  <table class="imprint_table"><tr><td class="componentheading">
   Allgemeine Nutzungsbedingungen f&uuml;r <?php echo $this->siteName; ?>
   </td></tr><tr><td>
 

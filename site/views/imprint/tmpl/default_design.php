@@ -21,7 +21,7 @@
 
 ?>
 
-<table width="100%" border="0">
+<table style="width: 100%; border-width: 0px">
 	<tr>
 <?php if ($this->imprint->params->get('show_icons')=="1"): ?>
 		<td style="width: 20px" align="left">
