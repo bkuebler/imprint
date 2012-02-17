@@ -46,9 +46,10 @@ class ImprintViewImprint extends JView
 	function display($tpl = null) 
 	{
 		// get the Data
-		$form = $this->get('Form');
-		$item = $this->get('Item');
+		$form 	= $this->get('Form');
+		$item 	= $this->get('Item');
 		$script = $this->get('Script');
+		$params = JComponentHelper::getParams('com_imprint');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) 
@@ -57,9 +58,10 @@ class ImprintViewImprint extends JView
 			return false;
 		}
 		// Assign the Data
-		$this->form = $form;
-		$this->item = $item;
-		$this->script = $script;
+		$this->form 				= $form;
+		$this->item 				= $item;
+		$this->script 				= $script;
+		$this->presentation_style	= $params->get('presentation_style') == '' ? 'tabs' : $params->get('presentation_style');
 
 		// Set the toolbar
 		$this->addToolBar();

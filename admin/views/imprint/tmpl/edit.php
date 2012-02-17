@@ -27,10 +27,10 @@ $params = $this->form->getFieldsets('params');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_imprint&view=imprint&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate">
 	<div class="width-60 fltlft">
-		<?php echo JHtml::_('sliders.start', 'imprint-tabs'); ?>
+		<?php echo JHtml::_($this->presentation_style . '.start', 'imprint-' . $this->presentation_style); ?>
 <?php foreach ($this->form->getFieldsets() as $name => $fieldset): ?>
 	<?php if (substr($name, 0, 6) == 'params') continue; ?>
-		<?php echo JHtml::_('sliders.panel', JText::_($fieldset->label), $name); ?>
+		<?php echo JHtml::_($this->presentation_style . '.panel', JText::_($fieldset->label), $name); ?>
 		<fieldset class="adminform">
 			<ul class="adminformlist">
 	<?php foreach($this->form->getFieldset($name) as $field): ?>
@@ -39,11 +39,11 @@ $params = $this->form->getFieldsets('params');
 			</ul>
 		</fieldset>
 <?php endforeach; ?>
-		<?php echo JHtml::_('sliders.end'); ?>
+		<?php echo JHtml::_($this->presentation_style . '.end'); ?>
 	</div>
 
 	<div class="width-40 fltrt">
-		<?php echo JHtml::_('sliders.start', 'imprint-slider'); ?>
+		<?php echo JHtml::_('sliders.start', 'imprint-sliders'); ?>
 
 <?php foreach ($params as $name => $fieldset): ?>
 		<?php echo JHtml::_('sliders.panel', JText::_($fieldset->label), $name.'-params');?>
