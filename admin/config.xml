@@ -7,7 +7,7 @@
 		description="JCONFIG_PERMISSIONS_DESC"
 	>
 		<field
-			name="rules"
+			name="rules_component"
 			type="rules"
 			label="JCONFIG_PERMISSIONS_LABEL"
 			class="inputbox"
@@ -15,6 +15,27 @@
 			filter="rules"
 			component="com_imprint"
 			section="component"
+		/>
+		<!-- TODO: Try to text code with new installation of component -->
+		<field
+			name="rules_imprint"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_imprint"
+			section="imprint"
+		/>
+		<field
+			name="rules_remark"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_imprint"
+			section="remark"
 		/>
 	</fieldset>
 </config>
