@@ -30,17 +30,7 @@ defined('_JEXEC') or die('Restricted access');
  * @since		3.0
  */
 class com_imprintInstallerScript
-{
-	/**
-	 * Current version.
-	 * 
-	 * @author	mgebhardt
-	 * @var		string
-	 * @since	3.0.1
-	 * @todo: Compare this version with version of xml installer file every release! 
-	 */
-	private $release = '3.1dev1';
-	
+{	
 	/**
 	 * Method to install the component.
 	 * 

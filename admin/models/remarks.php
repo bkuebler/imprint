@@ -47,7 +47,6 @@ class ImprintModelRemarks extends JModelList
 			$config['filter_fields'] = array(
 				'name',
 				'id',
-				'default',
 			);
 		}
 

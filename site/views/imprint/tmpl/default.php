@@ -22,7 +22,7 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 $user =& JFactory::getUser();
 
-// @TODO: Use MVC standard here. 
+//TODO: Use MVC standard here. 
 //if ( $this->params->get( 'show_page_title', 1 ) && !$this->imprint->params->get( 'popup' ) ) :
 ?>
 <!--  <div class="componentheading<?php //echo $this->params->get( 'pageclass_sfx' ); ?>">-->

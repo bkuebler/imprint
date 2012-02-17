@@ -31,8 +31,7 @@ JHtml::_('behavior.tooltip');
 		<td width="55%" valign="top">
 			<div id="cpanel">
 			<?php
-//TODO: reale nessessary? Do you need a link to current page?
-//TODO: Joomlacore can do this natively!
+//TODO: realy nessessary? Do you need a link to current page?
 // 			$link = 'index.php?option=com_imprint';
 // 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-cpanel.png', JText::_( 'COM_IMPRINT_CPANEL' ) );
 		
@@ -62,7 +61,7 @@ We can include ads if we want
 			<div style="300px;border:1px solid #ccc;background:#fff;margin:15px;padding:15px">
 			<div style="float:right;margin:10px;">
 				<?php
-				//TODO: Logo am besten unter /media/com_imprint/assets/images/ speichern, oder? Offizielles Logo?
+				//TODO: Logo am besten unter /media/com_imprint/assets/images/ speichern, oder? Offizielles Logo? - Ja
 					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_imprint/images/', NULL, NULL, 'Imprint Reloaded' )
 				?>
 			</div>

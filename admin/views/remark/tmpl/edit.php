@@ -24,8 +24,6 @@ defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 $params = $this->form->getFieldsets('params');
-
-//TODO: Create Form and update code
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_imprint&view=remark&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate">
 	<div class="width-60 fltlft">

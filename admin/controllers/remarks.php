@@ -35,6 +35,8 @@ jimport('joomla.application.component.controlleradmin');
 class ImprintControllerRemarks extends JControllerAdmin
 {
 	
+	//FIXME: delete does not work! Check controllers and models
+	
 	/**
 	 * Constructor.
 	 * 

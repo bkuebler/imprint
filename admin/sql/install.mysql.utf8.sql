@@ -97,14 +97,14 @@ CREATE  TABLE IF NOT EXISTS `#__imprint_imprints` (
 ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS `#__imprint_remarks` (
-  `id` INT(11) NOT NULL ,
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(255) NOT NULL ,
   `text` TEXT NOT NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS `#__imprint_relation` (
-  `id` INT(11) NOT NULL ,
+  `id` INT(11) NOT NULL AUTO_INCREMENT ,
   `imprint` INT(11) NOT NULL ,
   `remark` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) ,

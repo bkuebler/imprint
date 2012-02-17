@@ -61,7 +61,7 @@ JHtml::_('behavior.tooltip');
 			<div style="300px;border:1px solid #ccc;background:#fff;margin:15px;padding:15px">
 			<div style="float:right;margin:10px;">
 	 				<?php
-	 				//TODO: Logo am besten unter /media/com_imprint/assets/images/ speichern, oder? Offizielles Logo?
+	 				//TODO: Logo am besten unter /media/com_imprint/assets/images/ speichern, oder? Offizielles Logo? - Ja
 					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_imprint/images/', NULL, NULL, 'Imprint Reloaded' )
 				?>
 			</div>

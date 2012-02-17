@@ -126,13 +126,13 @@ class ImprintModelRemark extends JModelAdmin
 	* @return	boolean  True if successful, false if an error occurs.
 	* @since	3.1
 	*/
-	public function delete(&$pks)
-	{
-		// Initialise variables.
-		$pks		= (array) $pks;
-		$table		= $this->getTable();
+// 	public function delete(&$pks)
+// 	{
+// 		// Initialise variables.
+// 		$pks		= (array) $pks;
+// 		$table		= $this->getTable();
 		
 		
-		return parent::delete($pks);
-	}
+// 		return parent::delete($pks);
+// 	}
 }
