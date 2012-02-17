@@ -1,8 +1,8 @@
 /* version 3.1.0 $Id$ */
  
+DROP TABLE IF EXISTS `#__imprints_relation`;
 DROP TABLE IF EXISTS `#__imprints_imprints`;
 DROP TABLE IF EXISTS `#__imprints_remarks`;
-DROP TABLE IF EXISTS `#__imprints_relation`;
 
 CREATE  TABLE IF NOT EXISTS `#__imprint_imprints` (
   `id` INT(11) NOT NULL AUTO_INCREMENT ,
