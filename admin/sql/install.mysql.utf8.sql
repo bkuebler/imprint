@@ -87,7 +87,7 @@ CREATE  TABLE IF NOT EXISTS `#__imprint_imprints` (
   `contacturl` VARCHAR(255) NOT NULL DEFAULT '' ,
   `agburl` VARCHAR(255) NOT NULL DEFAULT '' ,
   `image` VARCHAR(255) NOT NULL DEFAULT '' ,
-  `misc` TEXT NOT NULL DEFAULT 'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\nAlle hier verwendeten Namen, Begriffe, Zeichen und Grafiken können Marken- oder Warenzeichen im Besitze ihrer rechtlichen Eigentümer sein. Die Rechte aller erwähnten und benutzten Marken- und Warenzeichen liegen ausschließlich bei deren Besitzern.',
+  `misc` TEXT NOT NULL ,
   `params` TEXT NOT NULL ,
   `bildrechte` TEXT NOT NULL ,
   `bildquellen` TEXT NOT NULL ,
@@ -123,4 +123,4 @@ CREATE  TABLE IF NOT EXISTS `#__imprint_relation` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-insert into `#__imprint_imprints`(`id`,`name`,`default`,`misc`) values ( '1','Standard','1');
+insert into `#__imprint_imprints`(`id`,`name`,`default`,`misc`) values ( '1', 'Standard', '1', 'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.\n\nAlle hier verwendeten Namen, Begriffe, Zeichen und Grafiken können Marken- oder Warenzeichen im Besitze ihrer rechtlichen Eigentümer sein. Die Rechte aller erwähnten und benutzten Marken- und Warenzeichen liegen ausschließlich bei deren Besitzern.' );
