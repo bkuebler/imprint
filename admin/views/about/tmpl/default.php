@@ -45,14 +45,14 @@ JHtml::_('behavior.tooltip');
 				<div style="border-top:1px solid #c2c2c2"></div>
 				<h3><?php echo JText::_('COM_IMPRINT_ABOUT_MYSQL_AND_PHP_VERSION');?></h3>
 				<p>
-				<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_PHP_VERSION');?>: <?php $PHPVersion = phpversion(); echo $PHPVersion;?><br />
-				<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_MYSQL_VERSION');?>: <?php printf("%s\n", mysql_get_client_info());?><br />
+					<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_PHP_VERSION');?>: <?php $PHPVersion = phpversion(); echo $PHPVersion;?><br />
+					<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_MYSQL_VERSION');?>: <?php printf("%s\n", mysql_get_client_info());?><br />
 				</p>
 				
 				<div style="border-top:1px solid #c2c2c2"></div>
 				<h3><?php echo JText::_('COM_IMPRINT_ABOUT_IMPRINT_VERSION');?></h3>
 				<p>
-				<?php echo JText::_('JVERSION');?>: <?php echo ImprintHelper::getVersion( );?><br />
+					<?php echo JText::_('JVERSION');?>: <?php echo ImprintHelper::getVersion( );?><br />
 				</p>
 				
 			</div>

@@ -95,7 +95,6 @@ abstract class ImprintHelper
 		return $button;
 	}
 
-	//TODO: Diesen Code verwenden oder deinen Code aus der script.php ab Zeile 259? - Habs eine bisschen abgeändert.
 	/**
 	 * Read the Imprint Reloaded Version out of the XML-file
 	 * 
@@ -106,7 +105,7 @@ abstract class ImprintHelper
 	 */
 	public static function getVersion()
 	{
-		// Würde die Version aber aus der DB ziehen.
+		//TODO: get version form DB
 		
 		// Import filesystem libraries
 		jimport('joomla.filesystem.folder');
@@ -116,18 +115,13 @@ abstract class ImprintHelper
 			$xmlFilesinDir = JFolder::files($folder, '.xml$');
 		else
 			return false;
-		// Warum noch weiter machen, wenn kene daten da sind?
-		// Nehm dir bitte den Platz den Code lesbar zu gestalten und
-		// gebe jeder { bzw. }-Klammer eine eigene Zeile, oder lasse 
-		// sie weg, wenn sie überflüssig sind.
 	
 		foreach ($xmlFilesinDir as $xmlfile)
 			if ($data = JApplicationHelper::parseXMLInstallFile($folder.DS.$xmlfile))
 				foreach ($data as $key => $value)
 					if ($key == 'version')
-						return $value; // Warum echo; return echo kannst du dann immernoch machen.
+						return $value;
 		
-		// Zwar Dateien da, aber keine mit version-Tag
 		return false;
 	}
 	
