@@ -4,19 +4,7 @@
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
- * @license		GNU/GPL, see LICENSE.txt
- * Imprint is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License 2
- * as published by the Free Software Foundation.
-
- * Imprint is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
-
- * You should have received a copy of the GNU General Public License
- * along with Imprint; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // No direct access
@@ -39,14 +27,14 @@ JHtml::_('behavior.tooltip');
 				<p>
 					<a href="http://www.joomla.org" target="_blank"><?php echo JText::_('COM_IMPRINT_ABOUT_JOOMLA_ORG');?></a><br />
 					<a href="http:///www.joomlaos.de" target="_blank"><?php echo JText::_('COM_IMPRINT_ABOUT_JOOMLAOS_DE');?></a><br />
-					<a href="http:///www.jgerman.de" target="_blank"><?php echo JText::_('COM_IMPRINT_ABOUT_JGERMAN_DE');?></a><br />
+					<a href="http:///www.jgerman.de" target="_blank"><?php echo JText::_('COM_IMPRINT_ABOUT_JGERMAN_DE');?></a>
 				</p>
 				
 				<div style="border-top:1px solid #c2c2c2"></div>
 				<h3><?php echo JText::_('COM_IMPRINT_ABOUT_MYSQL_AND_PHP_VERSION');?></h3>
 				<p>
 					<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_PHP_VERSION');?>: <?php $PHPVersion = phpversion(); echo $PHPVersion;?><br />
-					<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_MYSQL_VERSION');?>: <?php printf("%s\n", mysql_get_client_info());?><br />
+					<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_MYSQL_VERSION');?>: <?php printf("%s\n", mysql_get_client_info());?>
 				</p>
 				
 				<div style="border-top:1px solid #c2c2c2"></div>
@@ -73,7 +61,7 @@ JHtml::_('behavior.tooltip');
 			<h2><?php echo JText::_('COM_IMPRINT_ABOUT_CODE_CONTRIBUTERS');?>:</h2>
 			<p>
 				<a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Mathias Gebhardt</a><br />
-				<a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Christopher Schmidt</a><br />
+				<a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Christopher Schmidt</a>
 			</p>
 <!--		No documentation exists at this moment, for the future
 			<h3><?php echo JText::_('COM_IMPRINT_DOCUMENTAION_CONTRIBUTERS');?>:</h3>
@@ -83,11 +71,14 @@ JHtml::_('behavior.tooltip');
 			<h3><?php echo JText::_('COM_IMPRINT_ABOUT_TRANSLATION_CONTRIBUTERS');?>:</h3>
 			<p>
 				English (en-GB) - Imprint Reloaded Translation Team - <a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Christopher Schmidt</a><br />
-				German (de-DE) - Imprint Reloaded Translation Team - <a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Christopher Schmidt</a><br />
+				German (de-DE) - Imprint Reloaded Translation Team - <a href="http://sourceforge.net/projects/imprintreload/" target="_blank">Christopher Schmidt</a>
 			</p>
-<!--		No derivative work exists at this moment, for the future
+
 			<h3><?php echo JText::_('COM_IMPRINT_DERIVATIVE_WORK');?>:</h3>
--->
+			<p>
+				Impressum Reloaded (C) 2009 - 2011 <a href="http://www.medienmodernisierer.de" target="_blank">Guido Kamniarz</a>, <?php echo JText::_('COM_IMPRINT_LICENSE');?>: <a href="http://www.gnu.org/licenses/gpl-1.0.html" target="_blank">GPL</a><br />
+				Impressum (C) 2007 - 2009 <a href="http://www.gcsoft.de" target="_blank">Gerhard Clausen</a>, <?php echo JText::_('COM_IMPRINT_LICENSE');?>: <a href="http://www.gnu.org/licenses/gpl-1.0.html" target="_blank">GPL</a>
+			</p>
 			</div>
 		</td>
 	</tr>

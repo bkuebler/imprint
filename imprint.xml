@@ -3,13 +3,13 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRINT</name>
 	
-	<creationDate>17.02.2012</creationDate>
+	<creationDate>28.02.2012</creationDate>
 	<author>Impressum Reloaded Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011-2012 Imprint Reloaded Team</copyright>
 	<license>GNU/GPLv2, see LICENSE.txt</license>
 	<!-- Also update component version in /script.php -->
-	<version>3.1.0dev12</version>
+	<version>3.1.0dev13</version>
 	<description>COM_IMPRINT_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
