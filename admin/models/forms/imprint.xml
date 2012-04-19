@@ -474,7 +474,8 @@
 		/>
 	</fieldset>
 	
-	<fields name="params">
+	<fields name="params"
+		addfieldpath="/administrator/components/com_imprint/models/fields">
 		<fieldset name="params_basic" label="COM_IMPRINT_IMPRINT_PARAMS_BASIC">
 			<field name="show_image" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO_DESC">
 				<option value="0">JHIDE</option>
@@ -578,7 +579,7 @@
 			</field> -->	
 		</fieldset>
 		<fieldset name="params_remarks" label="COM_IMPRINT_IMPRINT_PARAMS_REMARKS">
-			
+			<field name="remark" type="remark" label="remarkTest" desciption="remarkTestDesc" />
 		</fieldset>
 		<fieldset name="params_advanced" label="COM_IMPRINT_IMPRINT_PARAMS_ADVANCED">
 			<field name="contact_icons" type="list" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_ICONS" description="COM_IMPRINT_IMPRINT_PARAMS_ICONS_DESC">

@@ -28,7 +28,7 @@ class JFormFieldImprints extends JFormFieldList
 	 * @var		string	The field type.
 	 * @since	3.0
 	 */
-	protected $type = 'Imprint';
+	protected $type = 'Imprints';
  
 	/**
 	 * Method to get a list of options for a list input.
