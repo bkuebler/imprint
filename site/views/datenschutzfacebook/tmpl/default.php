@@ -3,7 +3,7 @@
  * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
+ * @copyright	(C) 2011 - 2012 Imprint Team
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 

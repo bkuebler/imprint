@@ -1,0 +1,45 @@
+/*
+ * @version		3.5 $Id: help.css 70 2012-02-28 14:42:14Z chris-schmidt $
+ * @package		Joomla
+ * @subpackage	Imprint
+ * @copyright	(C) 2011 - 2012 Imprint Team
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+ 
+body {
+	font-family: verdana, arial, sans-serif;
+	font-size: 9pt;
+}
+
+div.heading {
+	display: block;
+	background-image:
+		url(/administrator/components/com_jguestbook/assets/images/48px/icon-48-logo-yellow.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding-top: 15px;
+}
+
+h1 {
+	color: #0B55C4;
+	font-size: 1.5em;
+	border-left: 25px solid #0B55C4;
+	border-bottom: 1px solid #0B55C4;
+	padding: 0 0 2px 5px;
+}
+
+p.helpContent {
+	padding-top: 10px;	
+}
+
+p.closeWindow {
+	padding-top: 20px;
+	text-align: right;	
+}
+
+pre {
+	text-align: left;
+	background-color: #fff;
+	border-left: 1px solid #aaa;
+	padding: 5px;
+}

@@ -22,16 +22,16 @@
 			directory="/images" hide_none="1" default=""
 		/>
 		<field name="agburl" type="text" 
-			label="COM_IMPRINT_IMPRINT_DIREKTERLINK" 
-			description="COM_IMPRINT_IMPRINT_DIREKTERLINK_DESC" 
+			label="COM_IMPRINT_IMPRINT_DIRECTLINK" 
+			description="COM_IMPRINT_IMPRINT_DIRECTLINK_DESC" 
 			size="60" maxlength="255"
 		/>
 	</fieldset>
 	
-	<fieldset name="kontakt" label="COM_IMPRINT_IMPRINT_KONTAKT">
+	<fieldset name="kontakt" label="COM_IMPRINT_IMPRINT_CONTACT">
 		<field name="telefon" type="text" 
-			label="COM_IMPRINT_IMPRINT_TELEFON" 
-			description="COM_IMPRINT_IMPRINT_TELEFON_DESC"
+			label="COM_IMPRINT_IMPRINT_TELEPHONE" 
+			description="COM_IMPRINT_IMPRINT_TELEPHONE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="fax" type="text" 
@@ -40,8 +40,8 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="handy" type="text" 
-			label="COM_IMPRINT_IMPRINT_HANDY" 
-			description="COM_IMPRINT_IMPRINT_HANDY_DESC"
+			label="COM_IMPRINT_IMPRINT_MOBILE_PHONE" 
+			description="COM_IMPRINT_IMPRINT_MOBILE_PHONE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="website" type="text" 
@@ -61,8 +61,8 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="firma" type="text" 
-			label="COM_IMPRINT_IMPRINT_FIRMA" 
-			description="COM_IMPRINT_IMPRINT_FIRMA_DESC"
+			label="COM_IMPRINT_IMPRINT_COMPANY" 
+			description="COM_IMPRINT_IMPRINT_COMPANY_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="name1" type="text" 
@@ -86,29 +86,29 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="strasse" type="text" 
-			label="COM_IMPRINT_IMPRINT_STRASSE" 
-			description="COM_IMPRINT_IMPRINT_STRASSE_DESC"
+			label="COM_IMPRINT_IMPRINT_STREET" 
+			description="COM_IMPRINT_IMPRINT_STREET_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="plz" type="text" 
-			label="COM_IMPRINT_IMPRINT_PLZ" 
-			description="COM_IMPRINT_IMPRINT_PLZ_DESC"
+			label="COM_IMPRINT_IMPRINT_ZIPCODE" 
+			description="COM_IMPRINT_IMPRINT_ZIPCODE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="ort" type="text" 
-			label="COM_IMPRINT_IMPRINT_ORT" 
-			description="COM_IMPRINT_IMPRINT_ORT_DESC"
+			label="COM_IMPRINT_IMPRINT_CITY" 
+			description="COM_IMPRINT_IMPRINT_CITY_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="land" type="text" 
-			label="COM_IMPRINT_IMPRINT_LAND" 
-			description="COM_IMPRINT_IMPRINT_LAND_DESC"
+			label="COM_IMPRINT_IMPRINT_COUNTRY" 
+			description="COM_IMPRINT_IMPRINT_COUNTRY_DESC"
 			size="60" maxlength="255" 
 		/>
 		
 		<field name="contacturl" type="text" 
-			label="COM_IMPRINT_IMPRINT_DIREKTERLINK" 
-			description="COM_IMPRINT_IMPRINT_DIREKTERLINK_DESC" 
+			label="COM_IMPRINT_IMPRINT_DIRECTLINK" 
+			description="COM_IMPRINT_IMPRINT_DIRECTLINK_DESC" 
 			size="60" maxlength="255"
 		/>
 	</fieldset>
@@ -143,21 +143,21 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="ustidnr" type="text" 
-			label="COM_IMPRINT_IMPRINT_USTIDNR" 
-			description="COM_IMPRINT_IMPRINT_USTIDNR_DESC"
+			label="COM_IMPRINT_IMPRINT_SALES_TAX_ID" 
+			description="COM_IMPRINT_IMPRINT_SALES_TAX_ID_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="wirtidnr" type="text" 
-			label="COM_IMPRINT_IMPRINT_WIRTIDNR" 
-			description="COM_IMPRINT_IMPRINT_WIRTIDNR_DESC"
+			label="COM_IMPRINT_IMPRINT_ECONOMIC_ID" 
+			description="COM_IMPRINT_IMPRINT_ECONOMIC_ID_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="spacerRechtSteuernummer" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_RECHT_STEUERNUMMER"
 		/>
 		<field name="inhaltperson" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHALTPERSON" 
-			description="COM_IMPRINT_IMPRINT_INHALTPERSON_DESC"
+			label="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT" 
+			description="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="inhaltemail" type="text" 
@@ -199,13 +199,13 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="ustidnr2" type="text" 
-			label="COM_IMPRINT_IMPRINT_USTIDNR" 
-			description="COM_IMPRINT_IMPRINT_USTIDNR_DESC"
+			label="COM_IMPRINT_IMPRINT_SALES_TAX_ID" 
+			description="COM_IMPRINT_IMPRINT_SALES_TAX_ID_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="wirtidnr2" type="text" 
-			label="COM_IMPRINT_IMPRINT_WIRTIDNR" 
-			description="COM_IMPRINT_IMPRINT_WIRTIDNR_DESC"
+			label="COM_IMPRINT_IMPRINT_ECONOMIC_ID" 
+			description="COM_IMPRINT_IMPRINT_ECONOMIC_ID_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="inhaltperson2" type="text" 
@@ -294,23 +294,23 @@
 	
 	<fieldset name="bank" label="COM_IMPRINT_IMPRINT_BANK">
 		<field name="bankinhaber" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHABER" 
-			description="COM_IMPRINT_IMPRINT_INHABER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="kontonr" type="text" 
-			label="COM_IMPRINT_IMPRINT_KONTONUMMER" 
-			description="COM_IMPRINT_IMPRINT_KONTONUMMER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="bankname" type="text" 
-			label="COM_IMPRINT_IMPRINT_BANKNAME" 
-			description="COM_IMPRINT_IMPRINT_BANKNAME_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_NAME" 
+			description="COM_IMPRINT_IMPRINT_BANK_NAME_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="blz" type="text" 
-			label="COM_IMPRINT_IMPRINT_BLZ" 
-			description="COM_IMPRINT_IMPRINT_BLZ_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_CODE" 
+			description="COM_IMPRINT_IMPRINT_BANK_CODE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="iban" type="text" 
@@ -327,23 +327,23 @@
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_2"
 		/>
 		<field name="bankinhaber2" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHABER" 
-			description="COM_IMPRINT_IMPRINT_INHABER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="kontonr2" type="text" 
-			label="COM_IMPRINT_IMPRINT_KONTONUMMER" 
-			description="COM_IMPRINT_IMPRINT_KONTONUMMER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="bankname2" type="text" 
-			label="COM_IMPRINT_IMPRINT_BANKNAME" 
-			description="COM_IMPRINT_IMPRINT_BANKNAME_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_NAME" 
+			description="COM_IMPRINT_IMPRINT_BANK_NAME_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="blz2" type="text" 
-			label="COM_IMPRINT_IMPRINT_BLZ" 
-			description="COM_IMPRINT_IMPRINT_BLZ_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_CODE" 
+			description="COM_IMPRINT_IMPRINT_BANK_CODE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="iban2" type="text" 
@@ -360,23 +360,23 @@
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_3"
 		/>
 		<field name="bankinhaber3" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHABER" 
-			description="COM_IMPRINT_IMPRINT_INHABER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="kontonr3" type="text" 
-			label="COM_IMPRINT_IMPRINT_KONTONUMMER" 
-			description="COM_IMPRINT_IMPRINT_KONTONUMMER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="bankname3" type="text" 
-			label="COM_IMPRINT_IMPRINT_BANKNAME" 
-			description="COM_IMPRINT_IMPRINT_BANKNAME_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_NAME" 
+			description="COM_IMPRINT_IMPRINT_BANK_NAME_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="blz3" type="text" 
-			label="COM_IMPRINT_IMPRINT_BLZ" 
-			description="COM_IMPRINT_IMPRINT_BLZ_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_CODE" 
+			description="COM_IMPRINT_IMPRINT_BANK_CODE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="iban3" type="text" 
@@ -393,23 +393,23 @@
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_4"
 		/>
 		<field name="bankinhaber4" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHABER" 
-			description="COM_IMPRINT_IMPRINT_INHABER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="kontonr4" type="text" 
-			label="COM_IMPRINT_IMPRINT_KONTONUMMER" 
-			description="COM_IMPRINT_IMPRINT_KONTONUMMER_DESC"
+			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
+			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="bankname4" type="text" 
-			label="COM_IMPRINT_IMPRINT_BANKNAME" 
-			description="COM_IMPRINT_IMPRINT_BANKNAME_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_NAME" 
+			description="COM_IMPRINT_IMPRINT_BANK_NAME_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="blz4" type="text" 
-			label="COM_IMPRINT_IMPRINT_BLZ" 
-			description="COM_IMPRINT_IMPRINT_BLZ_DESC"
+			label="COM_IMPRINT_IMPRINT_BANK_CODE" 
+			description="COM_IMPRINT_IMPRINT_BANK_CODE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="iban4" type="text" 
@@ -442,18 +442,18 @@
 		/>
 
 		<field name="templatename" type="text" 
-			label="COM_IMPRINT_IMPRINT_TEMPLATENAME" 
-			description="COM_IMPRINT_IMPRINT_TEMPLATENAME_DESC"
+			label='COM_IMPRINT_IMPRINT_TEMPLATE_NAME' 
+			description="COM_IMPRINT_IMPRINT_TEMPLATE_NAME_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="templatehersteller" type="text" 
-			label="COM_IMPRINT_IMPRINT_HERSTELLER" 
-			description="COM_IMPRINT_IMPRINT_HERSTELLER_DESC"
+			label="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR" 
+			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="templateemail" type="text" 
-			label="COM_IMPRINT_IMPRINT_TEMPLATEEMAIL" 
-			description="COM_IMPRINT_IMPRINT_TEMPLATEEMAIL_DESC"
+			label="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_EMAIL" 
+			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_EMAIL_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="templatewebsite" type="text" 
@@ -463,13 +463,13 @@
 		/>
 
 		<field name="bildquellen" type="textarea" 
-			label="COM_IMPRINT_IMPRINT_BILDQUELLEN" 
-			description="COM_IMPRINT_IMPRINT_BILDQUELLEN_DESC" 
+			label="COM_IMPRINT_IMPRINT_IMAGE_SOURCES" 
+			description="COM_IMPRINT_IMPRINT_IMAGE_SOURCES_DESC" 
 			rows="5" cols="45"
 		/>
 		<field name="bildrechte" type="textarea" 
-			label="COM_IMPRINT_IMPRINT_BILDRECHTE" 
-			description="COM_IMPRINT_IMPRINT_BILDRECHTE_DESC" 
+			label="COM_IMPRINT_IMPRINT_IMAGE_RIGHTS" 
+			description="COM_IMPRINT_IMPRINT_IMAGE_RIGHTS_DESC" 
 			rows="5" cols="45"
 		/>
 	</fieldset>

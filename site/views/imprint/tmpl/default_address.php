@@ -3,7 +3,7 @@
  * @version		3.0.1 $Id$
  * @package		Joomla
  * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Impressum Reloaded Team
+ * @copyright	(C) 2011 - 2012 Imprint Team
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -26,15 +26,26 @@
 		</td>
 <?php endif; ?>
 		<td width="<?php echo $this->imprint->params->get('leftcw'); ?>%" valign="top" align="left">
-			<?php if ($this->imprint->firma) echo "<strong>".$this->imprint->firma."</strong><br />" ?>
-			<?php if ($this->imprint->name1) echo "<strong>".$this->imprint->name1."</strong><br />" ?>
-			<?php if ($this->imprint->name2) echo "<strong>".$this->imprint->name2."</strong><br />" ?>
-			<?php if ($this->imprint->name3) echo "<strong>".$this->imprint->name3."</strong><br />" ?>
-			<?php if ($this->imprint->name4) echo "<strong>".$this->imprint->name4."</strong><br />" ?>
-			<?php if ($this->imprint->strasse) echo $this->imprint->strasse ?><br />
-			<?php if ($this->imprint->plz) echo $this->imprint->plz ?>
-			<?php if ($this->imprint->ort) echo $this->imprint->ort ?><br />
-			<?php if ($this->imprint->land) echo $this->imprint->land ?>
+		<?php
+		if ($this->imprint->firma)
+			echo JText::_( 'COM_IMPRINT_COMPANY' ) .': '.$this->imprint->firma.'<br />';
+		if ($this->imprint->name1)
+			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name1.'<br />';
+		if ($this->imprint->name2)
+			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name2.'<br />';
+		if ($this->imprint->name3)
+			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name3.'<br />';
+		if ($this->imprint->name4)
+			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name4.'<br />';
+		if ($this->imprint->strasse)
+			echo JText::_( 'COM_IMPRINT_STREET' ) .': '.$this->imprint->strasse.'<br />';
+		if ($this->imprint->plz)
+			echo JText::_( 'COM_IMPRINT_ZIP_CODE' ) .': '.$this->imprint->plz.'<br />';
+		if ($this->imprint->ort)
+			echo JText::_( 'COM_IMPRINT_CITY' ) .': '.$this->imprint->ort.'<br />';
+		if ($this->imprint->land)
+			echo JText::_( 'COM_IMPRINT_COUNTRY' ) .': '.$this->imprint->land.'<br />';
+		?>
 		</td>
 		<td align="left" valign="top">
 			<table style="width: 100%; border-width: 0px; border-spacing: 0px; padding: 0px">
@@ -44,7 +55,9 @@
 						<?php echo $this->imprint->params->get( 'marker_telephone' ); ?>&nbsp;
 					</td>
 					<td align="left">
-						<?php echo $this->imprint->telefon; ?>
+					<?php 
+						echo JText::_( 'COM_IMPRINT_TELEPHONE' ) .': '.$this->imprint->telefon.'<br />';
+					?>
 					</td>
 				</tr>
 <?php endif; ?>
@@ -54,7 +67,9 @@
 						<?php echo $this->imprint->params->get( 'marker_fax' ); ?>&nbsp;
 					</td>
 					<td align="left">
-						<?php echo $this->imprint->fax ?>
+					<?php 
+						echo JText::_( 'COM_IMPRINT_FAX' ) .': '.$this->imprint->fax.'<br />';
+					?>
 					</td>
 				</tr>
 <?php endif; ?>
@@ -64,7 +79,9 @@
 						<?php echo $this->imprint->params->get( 'marker_mobile' ); ?>&nbsp;
 					</td>
 					<td align="left">
-						<?php echo $this->imprint->handy ?>
+					<?php
+						echo JText::_( 'COM_IMPRINT_MOBILE_PHONE' ) .': '.$this->imprint->handy.'<br />';
+					?>
 					</td>
 				</tr>
 <?php endif; ?>
