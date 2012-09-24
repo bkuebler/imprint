@@ -49,7 +49,7 @@
 			description="COM_IMPRINT_IMPRINT_WEBSITE_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="email" type="text" 
+		<field name="email" type="email" 
 			label="COM_IMPRINT_IMPRINT_EMAIL" 
 			description="COM_IMPRINT_IMPRINT_EMAIL_DESC"
 			size="60" maxlength="255" 
@@ -127,7 +127,7 @@
 			description="COM_IMPRINT_IMPRINT_VERTRETER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="vertreteremail" type="text" 
+		<field name="vertreteremail" type="email" 
 			label="COM_IMPRINT_IMPRINT_VERTRETEREMAIL" 
 			description="COM_IMPRINT_IMPRINT_VERTRETEREMAIL_DESC"
 			size="60" maxlength="255" 
@@ -160,7 +160,7 @@
 			description="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="inhaltemail" type="text" 
+		<field name="inhaltemail" type="email" 
 			label="COM_IMPRINT_IMPRINT_INHALTEMAIL" 
 			description="COM_IMPRINT_IMPRINT_INHALTEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -183,10 +183,10 @@
 			description="COM_IMPRINT_IMPRINT_VERTRETER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="vertreteremail2" type="text" 
+		<field name="vertreteremail2" type="email" 
 			label="COM_IMPRINT_IMPRINT_VERTRETEREMAIL" 
 			description="COM_IMPRINT_IMPRINT_VERTRETEREMAIL_DESC"
-			size="60" maxlength="255" 
+			size="60"  maxlength="255" 
 		/>
 		<field name="registergericht2" type="text" 
 			label="COM_IMPRINT_IMPRINT_AUFSICHT" 
@@ -213,7 +213,7 @@
 			description="COM_IMPRINT_IMPRINT_INHALTPERSON_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="inhaltemail2" type="text" 
+		<field name="inhaltemail2" type="email" 
 			label="COM_IMPRINT_IMPRINT_INHALTEMAIL" 
 			description="COM_IMPRINT_IMPRINT_INHALTEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -234,7 +234,7 @@
 			description="COM_IMPRINT_IMPRINT_EXTRAPERSON_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="extra1email" type="text" 
+		<field name="extra1email" type="email" 
 			label="COM_IMPRINT_IMPRINT_EXTRAEMAIL" 
 			description="COM_IMPRINT_IMPRINT_EXTRAEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -257,7 +257,7 @@
 			description="COM_IMPRINT_IMPRINT_EXTRAPERSON_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="extra2email" type="text" 
+		<field name="extra2email" type="email" 
 			label="COM_IMPRINT_IMPRINT_EXTRAEMAIL" 
 			description="COM_IMPRINT_IMPRINT_EXTRAEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -280,7 +280,7 @@
 			description="COM_IMPRINT_IMPRINT_EXTRAPERSON_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="extra3email" type="text" 
+		<field name="extra3email" type="email" 
 			label="COM_IMPRINT_IMPRINT_EXTRAEMAIL" 
 			description="COM_IMPRINT_IMPRINT_EXTRAEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -435,7 +435,7 @@
 			description="COM_IMPRINT_IMPRINT_TECHNIKWEBSITE_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="technikemail" type="text" 
+		<field name="technikemail" type="email" 
 			label="COM_IMPRINT_IMPRINT_TECHNIKEMAIL" 
 			description="COM_IMPRINT_IMPRINT_TECHNIKEMAIL_DESC"
 			size="60" maxlength="255" 
@@ -451,7 +451,7 @@
 			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="templateemail" type="text" 
+		<field name="templateemail" type="email" 
 			label="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_EMAIL" 
 			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_EMAIL_DESC"
 			size="60" maxlength="255" 
