@@ -8,7 +8,7 @@
  */
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
-$user =& JFactory::getUser();
+$user = JFactory::getUser();
 
 //TODO: Use MVC standard here. 
 //if ( $this->params->get( 'show_page_title', 1 ) && !$this->imprint->params->get( 'popup' ) ) :

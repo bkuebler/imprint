@@ -32,10 +32,10 @@ class ImprintController extends JController
  	 * @return	JController	This object to support chaining. 
 	 * @since	3.0
 	 */
-	function display($cachable = false)
+	function display($cachable = false, $urlparams = false)
 	{
 		/* 
-		 * Old stuff, cannot push the one model in all views.
+		 * Old stuff, cannot push the same model into all views.
 		// set default view if not set
 		JRequest::setVar('view', JRequest::getCmd('view', 'Imprint'));
 		
