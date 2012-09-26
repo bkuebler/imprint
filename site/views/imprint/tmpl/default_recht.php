@@ -38,14 +38,14 @@ else if ($this->imprint->vertreter)
 	{
 		echo $this->imprint->vertreter;
 		if ($this->imprint->vertreteremail)
-			echo "(".JHTML::_('email.cloak', $this->imprint->vertreteremail).")" . '<br>';
+			echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail).")" . '<br>';
 	}
 if ($this->imprint->ustidnr)
 	echo JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) .': '.$this->imprint->ustidnr.'<br />';
 if ($this->imprint->wirtidnr)
 	echo JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) .': '.$this->imprint->wirtidnr.'<br />';
 if ($this->imprint->registergericht)
-	echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht.'&nbsp;';
+	echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht.'<br />';
 if ($this->imprint->registernummer)
 	echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer.'<br />';
 if ($this->imprint->inhaltperson)
@@ -86,7 +86,7 @@ if ($this->imprint->inhaltperson)
 		{
 				echo $this->imprint->vertretertitel2.': '.$this->imprint->vertreter2;
 				if ($this->imprint->vertreteremail2)
-					echo "(".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
+					echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
 		}
 	else if ($this->imprint->vertreter2)
 	{
@@ -94,28 +94,28 @@ if ($this->imprint->inhaltperson)
 		{
 			echo $this->imprint->vertreter2;
 			if ($this->imprint->vertreteremail2)
-				echo "(".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br>';
+				echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br>';
 		}
 	}
 	if ($this->imprint->vertreter2)
 	{
 		echo JText::_( 'COM_IMPRINT_REPRESENTATIVE' ).': '.$this->imprint->vertreter2;
 		if ($this->imprint->vertreteremail2)
-			echo "(".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
+			echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
 	}
 	if ($this->imprint->ustidnr2)
 		echo JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) .': '.$this->imprint->ustidnr2.'<br />';
 	if ($this->imprint->wirtidnr2)
 		echo JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) .': '.$this->imprint->wirtidnr2.'<br />';
 	if ($this->imprint->registergericht2)
-		echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht2.'&nbsp;';
+		echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht2.'<br />';
 	if ($this->imprint->registernummer2)
 		echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer2.'<br />';
 	if ($this->imprint->inhaltperson2)
 	{
 		echo JText::_( 'COM_IMPRINT_INHALTPERSON' ) . ': ' . $this->imprint->inhaltperson2;
-		if ($this->imprint->inhaltemail2)
-			echo "(".JHTML::_('email.cloak', $this->imprint->inhaltemail2).")";
+	if ($this->imprint->inhaltemail2)
+		echo " (".JHTML::_('email.cloak', $this->imprint->inhaltemail2).")";
 	}
 	?>
 		</td>
