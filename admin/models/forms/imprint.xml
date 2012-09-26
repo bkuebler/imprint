@@ -474,6 +474,14 @@
 		/>
 	</fieldset>
 	
+	<fieldset name="remarks" label="COM_IMPRINT_IMPRINT_REMARKS">
+		<field name="remarks" type="remarks" 
+			label="COM_IMPRINT_IMPRINT_REMARKS" 
+			description="COM_IMPRINT_IMPRINT_REMARKS_DESC"
+			multiple="true"
+		/>
+	</fieldset>
+	
 	<fields name="params"
 		addfieldpath="/administrator/components/com_imprint/models/fields">
 		<fieldset name="params_basic" label="COM_IMPRINT_IMPRINT_PARAMS_BASIC">

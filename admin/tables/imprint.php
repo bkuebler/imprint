@@ -48,13 +48,19 @@ class ImprintTableImprint extends JTable
 		if (isset($array['params']) && is_array($array['params'])) 
 		{
 			// Convert the params field to a string.
-			$parameter = new JRegistry;
+			$parameter = new JRegistry();
 			$parameter->loadArray($array['params']);
 			$array['params'] = (string)$parameter;
 		}
+		
+		if (isset($array['remarks']) && is_array($array['remarks']))
+		{
+			// Convert the remarks field to a string.
+			$array['remarks'] = implode(';', $array['remarks']);
+		}
 		return parent::bind($array, $ignore);
 	}
-
+	
 	/**
 	 * Overloaded load function
 	 * 
@@ -69,9 +75,13 @@ class ImprintTableImprint extends JTable
 		if (parent::load($pk, $reset)) 
 		{
 			// Convert the params field to a registry.
-			$params = new JRegistry;
+			$params = new JRegistry();
 			$params->loadString($this->params);
 			$this->params = $params;
+			
+			//@TODO: Recreate remarks array here; check why it's converted to an object
+			//$this->remarks = explode(';', $this->remarks);
+
 			return true;
 		}
 		else
