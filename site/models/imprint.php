@@ -149,8 +149,21 @@ class ImprintModelImprint extends JModel
 					$imprint->params->set('column_width',     '40');
 					break;
 			}
+			
+			// Load remarks
+			//@TODO Check MySQL code
+			/*
+			$remarks = explode(';', $imprint->remarks);
+			$query = $db->getQuery(true);
+			$query->select(id, name);
+			$query->from('#__com_imprint_remarks');
+			$query->where('id IS IN (' . implode(', ', $remarks) . ')');
+			$db->setQuery($query);
+			$imprint->remarks = $db->loadObjectList();
+			*/
+			$this->imprint = $imprint;
 		}
-		return $imprint;
+		return $this->imprint;
 	}
 	
 	/**

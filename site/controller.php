@@ -32,17 +32,16 @@ class ImprintController extends JController
  	 * @return	JController	This object to support chaining. 
 	 * @since	3.0
 	 */
+	
 	function display($cachable = false, $urlparams = false)
 	{
-		/* 
-		 * Old stuff, cannot push the same model into all views.
 		// set default view if not set
 		JRequest::setVar('view', JRequest::getCmd('view', 'Imprint'));
 		
 		// call parent behavior
-		parent::display($cachable);
-		*/
+		parent::display($cachable, $urlparams);
 		
+		/*
 		$document	= JFactory::getDocument();
 		$viewType	= $document->getType();
 		$viewName	= JRequest::getCmd('view', 'Imprint');
@@ -51,7 +50,7 @@ class ImprintController extends JController
 		$view = $this->getView($viewName, $viewType, '', array('base_path' => $this->basePath));
 		
 		// Get/Create the model
-		if ($model = $this->getModel('Imprint')) {
+		if ($model = $this->getModel($viewName)) {
 			// Push the model into the view (as default)
 			$view->setModel($model, true);
 		}
@@ -92,7 +91,8 @@ class ImprintController extends JController
 		else {
 			$view->display();
 		}
-		
+		*/
 		return $this;
+		
 	}
 }
