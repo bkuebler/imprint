@@ -42,7 +42,7 @@ class ImprintControllerImprints extends JControllerAdmin
 	 * @author	mgebhardt
 	 * @since	3.0
 	 */
-	public function getModel($name = 'Imprint', $prefix = 'ImprintModel') 
+	public function getModel($name = 'Imprint', $prefix = 'ImprintModel', $config = array()) 
 	{
 		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
 		return $model;

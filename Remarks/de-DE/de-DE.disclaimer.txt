@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  <span >Haftungsausschluss (Disclaimer) f&uuml;r <?php echo $this->siteName; ?></span>
-  </td></tr><tr><td>
-
 <p><strong>1. Inhalt des Onlineangebotes</strong><br />
 Der Autor &uuml;bernimmt keinerlei Gew&auml;hr f&uuml;r die Aktualit&auml;t, Korrektheit, Vollst&auml;ndigkeit 
 oder Qualit&auml;t der bereitgestellten Informationen. Haftungsanspr&uuml;che gegen den Autor, 
@@ -84,7 +67,3 @@ verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der gel
 nicht mehr oder nicht vollst&auml;ndig entsprechen sollten, bleiben die &uuml;brigen Teile des Dokumentes in ihrem 
 Inhalt und ihrer G&uuml;ltigkeit davon unber&uuml;hrt.
 </p>
-
-  </td></tr></table>
-
-<!-- HTML Ende //-->

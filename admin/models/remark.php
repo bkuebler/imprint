@@ -114,13 +114,51 @@ class ImprintModelRemark extends JModelAdmin
 	* @return	boolean  True if successful, false if an error occurs.
 	* @since	3.1
 	*/
-// 	public function delete(&$pks)
-// 	{
-// 		// Initialise variables.
-// 		$pks		= (array) $pks;
-// 		$table		= $this->getTable();
-		
-		
-// 		return parent::delete($pks);
-// 	}
+ 	public function delete(&$pks)
+ 	{
+ 		// Initialise variables.
+ 		$pks		= (array) $pks;
+ 		$db			= JFactory::getDbo();
+ 		
+ 		foreach ($pks as $i => $pk)
+ 		{
+ 			$query = $db->getQuery(true);
+ 			$query->select('id, remarks');
+ 			$query->from('#__imprint_imprints');
+ 			$query->where("remarks LIKE '%$pk%'");
+ 			$db->setQuery($query);
+ 			$imprints = $db->loadObjectList();
+ 			foreach ($imprints as $i => $imprint)
+ 			{
+ 				$remarks = explode(';', $imprint->remarks);
+ 				
+ 				// Remarks has to be an array
+ 				if(!is_array($remarks))
+ 				{
+ 					unset($imprints[i]);
+ 					continue;
+ 				}
+ 				
+ 				// It is also possible to get false imprints from query
+ 				if(($key = array_search($pk, $remarks)) === false)
+ 				{
+ 					unset($imprints[i]);
+ 					continue;
+ 				}
+ 				
+ 				// delete remark from remarks array
+ 				unset($remarks[$key]);
+ 				
+ 				// Write new remarks array back to DB
+ 				$query = $db->getQuery(true);
+ 				$query->update('#__imprint_imprints');
+ 				$query->set("remarks = '" . implode(';', $remarks). "'");
+ 				$query->where('id = ' . $imprint->id);
+ 				$db->setQuery($query);
+ 				$db->query();
+ 			}
+ 		}
+
+ 		return parent::delete($pks);
+ 	}
 }

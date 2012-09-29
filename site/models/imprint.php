@@ -151,16 +151,28 @@ class ImprintModelImprint extends JModel
 			}
 			
 			// Load remarks
-			//@TODO Check MySQL code
-			/*
-			$remarks = explode(';', $imprint->remarks);
-			$query = $db->getQuery(true);
-			$query->select(id, name);
-			$query->from('#__com_imprint_remarks');
-			$query->where('id IS IN (' . implode(', ', $remarks) . ')');
-			$db->setQuery($query);
-			$imprint->remarks = $db->loadObjectList();
-			*/
+			if(isset($imprint->remarks))
+			{
+				$remarks = explode(';', $imprint->remarks);
+				$query = $db->getQuery(true);
+				$query->select('id, name');
+				$query->from('#__imprint_remarks');
+				$query->where('id IN (' . implode(', ', $remarks) . ')');
+				$db->setQuery($query);
+				$imprint->remarks = $db->loadObjectList();
+				
+				foreach ($imprint->remarks as $remark)
+				{
+					$url = 'index.php?option=com_imprint&view=remark&imprintId=';
+					$url .= $this->getId();
+					$url .= '&id=' . $remark->id;
+					$remark->url = JRoute::_($url);
+				}
+			}
+			else
+			{
+				$imprint->remarks = false;
+			}
 			$this->imprint = $imprint;
 		}
 		return $this->imprint;

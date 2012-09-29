@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  <span >Erkl&auml;rung zum Datenschutz f&uuml;r <?php echo $this->siteName; ?></span>
-  </td></tr><tr><td>
-
 <p><strong>Vorwort</strong><br />
   Wir nehmen den Schutz Ihrer privaten Daten ernst. Die besondere Beachtung der Privatsph&auml;re 
   bei der Verarbeitung pers&ouml;nlicher Daten ist uns ein wichtiges Anliegen. Pers&ouml;nliche 
@@ -83,6 +66,25 @@ erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem
 Zweck einverstanden.<br />
 </p>
 
+<p><strong>Einsatz von Facebook Social Plugins</strong><br />
+  Diese Internetseite verwendet Social Plugins (&bdquo;Plugins&rdquo;) des sozialen Netzwerkes facebook.com, 
+  welches von der Facebook Inc., 1601 S. California Ave, Palo Alto, CA 94304, USA betrieben wird
+  (&bdquo;Facebook&rdquo;). Diese Plugins sind mit einem Facebook Logo oder dem Zusatz &bdquo;Facebook Social Plugin&rdquo;
+  gekennzeichnet. Wenn Sie eine Webseite unseres Internetauftritts aufrufen, die ein solches Plugin
+  enth&auml;lt, baut Ihr Browser eine direkte Verbindung mit den Servern von Facebook auf. Der Inhalt des 
+  Plugins wird von Facebook direkt an Ihren Browser &uuml;bermittelt und von diesem in die Webseite 
+  eingebunden. Durch die Einbindung der Plugins erh&auml;lt Facebook die Information, dass Sie die 
+  entsprechende Seite unseres Internetauftritts aufgerufen haben. Sind Sie bei Facebook eingeloggt 
+  kann Facebook den Besuch Ihrem Facebook-Konto zuordnen. Wenn Sie mit den Plugins interagieren, 
+  zum Beispiel den &bdquo;Gef&auml;llt mir&rdquo;-Button bet&auml;tigen oder einen Kommentar abgeben, wird die entsprechende 
+  Information von Ihrem Browser direkt an Facebook &uuml;bermittelt und dort gespeichert. Zweck und Umfang 
+  der Datenerhebung und die weitere Verarbeitung und Nutzung der Daten durch Facebook sowie Ihre 
+  diesbez&uuml;glichen Rechte und Einstellungsm&ouml;glichkeiten zum Schutz Ihrer Privatssph&auml;re entnehmen Sie 
+  bitte den Datenschutzhinweisen von Facebook. Wenn Sie nicht m&ouml;chten, dass Facebook &uuml;ber unseren 
+  Internetauftritt Daten &uuml;ber Sie sammelt, m&uuml;ssen Sie sich vor Ihrem Besuch unseres Internetauftritts 
+  bei Facebook ausloggen.<br />
+</p>
+
 <p><strong>Kinder</strong><br />
   Personen unter 18 Jahren sollten ohne Zustimmung der Eltern oder Erziehungsberechtigten 
   keine personenbezogenen Daten an uns &uuml;bermitteln. Wir fordern keine personenbezogenen 
@@ -125,6 +127,3 @@ Wir sind bem&uuml;ht Ihre personenbezogenen Daten durch Ergreifung aller technis
 M&ouml;glichkeiten so zu speichern, dass sie f&uuml;r Dritte nicht zug&auml;nglich sind. Bei der Kommunikation 
 per E Mail kann die vollst&auml;ndige Datensicherheit von uns nicht gew&auml;hrleistet werden, 
 so dass wir Ihnen bei vertraulichen Informationen den Postweg empfehlen.
-</td></tr></table>
-
-<!-- HTML Ende //-->

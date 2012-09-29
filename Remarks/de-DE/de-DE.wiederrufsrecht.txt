@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  <span >Widerrufsrecht f&uuml;r <?php echo $this->siteName; ?></span>
-  </td></tr><tr><td>
-
 <p><strong>Widerrufsrecht</strong><br />
  Als Verbraucher (jede nat&uuml;rliche Person, die ein Rechtsgesch&auml;ft zu einem Zwecke 
  abschlie&szlig;t, der weder ihrer gewerblichen noch selbst&auml;ndigen beruflichen T&auml;tigkeit 
@@ -62,6 +45,3 @@ Ihrer Widerrufserkl&auml;rung oder der Sache, f&uuml;r den Verk&auml;ufer mit de
   gleichwohl erf&uuml;llen m&uuml;ssen.
 <br /></p>
 <p><strong>Ende der Widerrufsbelehrung</strong>
-  </td></tr></table>
-
-<!-- HTML Ende //-->

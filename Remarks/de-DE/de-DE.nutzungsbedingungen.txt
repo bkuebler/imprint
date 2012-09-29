@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  Allgemeine Nutzungsbedingungen f&uuml;r <?php echo $this->siteName; ?>
-  </td></tr><tr><td>
-
 <p><b>1. Informationen zum Urheberrecht</b><br/>
   Alle Informationen dieser Web-Seite werden wie angegeben ohne Anspruch auf Richtigkeit, 
   Vollst&auml;ndigkeit oder Aktualit&auml;t zur Verf&uuml;gung gestellt.<br />
@@ -114,7 +97,3 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   nicht, nicht mehr oder nicht vollst&auml;ndig entsprechen sollten, bleiben die &uuml;brigen 
   Teile des Dokumentes in ihrem Inhalt und ihrer G&uuml;ltigkeit davon unber&uuml;hrt.<br/>
 </p>
-  </td></tr></table>
-
-<!-- HTML Ende //-->
-

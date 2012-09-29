@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  <span >Erkl&auml;rung zum Datenschutz f&uuml;r <?php echo $this->siteName; ?></span>
-  </td></tr><tr><td>
-
 <p><strong>Vorwort</strong><br />
   Wir nehmen den Schutz Ihrer privaten Daten ernst. Die besondere Beachtung der Privatsph&auml;re 
   bei der Verarbeitung pers&ouml;nlicher Daten ist uns ein wichtiges Anliegen. Pers&ouml;nliche 
@@ -63,26 +46,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
   einige benutzerdefinierte Eigenschaften und Einstellungen sind dann allerdings 
   nicht verf&uuml;gbar.<br />
 </p>
-<p><strong>Einsatz von Google Analytics</strong><br />
-Diese Website benutzt Google Analytics, einen Webanalysedienst der Googe Inc. (Google). 
-Google Analytics verwendet sog. Cookies, Textdateien, die auf Ihrem Computer gespeichert werden 
-und die eine Analyse der Benutzung der Website durch Sie erm&ouml;glicht. Die durch den Cookie 
-erzeugten Informationen &uuml;ber Ihre Benutzung diese Website (einschlie&szlig;lich Ihrer 
-IP-Adresse) wird an einen Server der Google in den USA &uuml;bertragen und dort gespeichert. 
-Google wird diese Informationen benutzen, um die Nutzung der Website auszuwerten, um Reports 
-&uuml;ber die Websiteaktivit&auml;ten f&uuml;r die Websitebetreiber zusammenzustellen und um 
-weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. 
-Auch wird Google diese Informationen gegebenenfalls an Dritte &uuml;bertragen, sofern dies 
-gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. 
-Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. 
-Sie k&ouml;nnen die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser 
-Software verhindern. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls 
-nicht s&auml;mtliche Funktionen dieser Website voll umf&auml;nglich nutzen k&ouml;nnen. 
-Durch die Nutzung dieser Website erkl&auml;ren Sie sich mit der Bearbeitung der &uuml;ber Sie 
-erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten 
-Zweck einverstanden.<br />
-</p>
-
 <p><strong>Einsatz von Facebook Social Plugins</strong><br />
   Diese Internetseite verwendet Social Plugins (&bdquo;Plugins&rdquo;) des sozialen Netzwerkes facebook.com, 
   welches von der Facebook Inc., 1601 S. California Ave, Palo Alto, CA 94304, USA betrieben wird
@@ -144,6 +107,3 @@ Wir sind bem&uuml;ht Ihre personenbezogenen Daten durch Ergreifung aller technis
 M&ouml;glichkeiten so zu speichern, dass sie f&uuml;r Dritte nicht zug&auml;nglich sind. Bei der Kommunikation 
 per E Mail kann die vollst&auml;ndige Datensicherheit von uns nicht gew&auml;hrleistet werden, 
 so dass wir Ihnen bei vertraulichen Informationen den Postweg empfehlen.
-</td></tr></table>
-
-<!-- HTML Ende //-->

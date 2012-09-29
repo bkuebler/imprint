@@ -143,6 +143,18 @@ if (($this->imprint->params->get('show_bankguests')=="0") && (!$user->guest) &&
 		</tr>
 <?php endif; ?>
 
+<?php if ($this->imprint->remarks !== false): ?>
+		<tr>
+			<td>
+				<?php echo $this->loadTemplate('remarks'); ?>
+			</td>
+	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
+			<td valign="top" >
+			</td>
+	<?php endif; ?>
+		</tr>
+<?php endif; ?>
+
 <?php if ($this->imprint->params->get('show_info')=="1"): ?>
 		<tr>
 			<td>

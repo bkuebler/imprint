@@ -1,26 +1,4 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-<table class="imprint_table">
-	<tr>
-		<td class="componentheading">
-			<span >Erkl&auml;rung zum Datenschutz f&uuml;r <?php echo $this->siteName; ?></span>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<p>
-				<strong>Vorwort</strong><br />
+<strong>Vorwort</strong><br />
 				Wir nehmen den Schutz Ihrer privaten Daten ernst. Die besondere Beachtung der Privatsph&auml;re 
 				bei der Verarbeitung pers&ouml;nlicher Daten ist uns ein wichtiges Anliegen. Pers&ouml;nliche 
 				Daten werden gem&auml;ss den Bestimmungen des Bundesdatensschutzgesetzes BDSG verwendet.
@@ -126,7 +104,3 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				per E Mail kann die vollst&auml;ndige Datensicherheit von uns nicht gew&auml;hrleistet werden, 
 				so dass wir Ihnen bei vertraulichen Informationen den Postweg empfehlen.
 			</p>
-		</td>
-	</tr>
-</table>
-<!-- HTML Ende //-->

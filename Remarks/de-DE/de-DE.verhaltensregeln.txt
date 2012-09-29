@@ -1,20 +1,3 @@
-<?php
-/**
- * @version		3.0.1 $Id$
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2012 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined( '_JEXEC' ) or die( 'Restricted access' );
-?>
-<!-- HTML Beginn //-->
-
-  <table class="imprint_table"><tr><td class="componentheading">
-  <span >Verhaltensregeln f&uuml;r <?php echo $this->siteName; ?></span>
-  </td></tr><tr><td>
-
 <?php echo $this->siteName; ?> betreibt ein interaktives Online-Angebot, das als soziales Netzwerk im Internet abrufbar ist. Alle auf <?php echo $this->siteName; ?>.de registrierten Nutzer bilden zusammen ein einheitliches soziales Netzwerk (nachfolgend Netzwerk). Jeder Nutzer kann entscheiden, ob und in wieweit er Nutzern Einsicht in sein Profil gew&auml;hrt.<br><br>F&uuml;r das Verhalten aller Nutzer des Netzwerks, f&uuml;r Inhalte in Profilen und Gruppen, f&uuml;r Bilder und Links, sowie f&uuml;r den Umgang mit Daten, die &uuml;ber das Netzwerk zug&auml;nglich sind, gelten folgende verbindliche Regeln:<br><br>
 <ol>
 <li>Eine respektvolle Ausdrucksweise und ein h&ouml;flicher Umgang miteinander geh&ouml;ren zu den Grundlagen in unserem Netzwerk. Dementsprechend ist es nicht gestattet, andere Menschen negativ hervorzuheben, zu mobben oder l&auml;cherlich zu machen.</li>
@@ -46,5 +29,3 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <li>Bei L&ouml;schung eines Gruppengr&uuml;nders setzt das Team von <?php echo $this->siteName; ?> einen der Gruppenmoderatoren als neuen Gruppengr&uuml;nder ein. Ist kein Moderator vorhanden, wird das Profil mit der l&auml;ngsten Mitgliedschaft in der jeweiligen Gruppe als Gr&uuml;nder eingesetzt.</li>
 </ol>
 </td></tr></table>
-
-<!-- HTML Ende //-->

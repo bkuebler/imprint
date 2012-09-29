@@ -36,56 +36,6 @@ class ImprintTableRemark extends JTable
 	}
 	
 	/**
-	 * Overloaded bind function
-	 * 
-	 * @author	mgebhardt
-	 * @param   array     		named array
-	 * @return  null|string     null is operation was satisfactory, otherwise returns an error
-	 * @since 	3.0
-	 */
-	public function bind($array, $ignore = '') 
-	{
-// 		if (isset($array['params']) && is_array($array['params'])) 
-// 		{
-// 			// Convert the params field to a string.
-// 			$parameter = new JRegistry;
-// 			$parameter->loadArray($array['params']);
-// 			$array['params'] = (string)$parameter;
-// 		}
-
-		//TODO: Add junction to relationship table
-		return parent::bind($array, $ignore);
-	}
-
-	/**
-	 * Overloaded load function
-	 * 
-	 * @author	mgebhardt
-	 * @param	int		$pk primary key
-	 * @param	boolean	$reset reset data
-	 * @return	boolean
-	 * @since	3.1
-	 */
-	public function load($pk = null, $reset = true) 
-	{
-		//TODO: Add junction to relationship table
-		parent::load($pk, $reset);
-		
-// 		if (parent::load($pk, $reset)) 
-// 		{
-// 			// Convert the params field to a registry.
-// 			$params = new JRegistry;
-// 			$params->loadString($this->params);
-// 			$this->params = $params;
-// 			return true;
-// 		}
-// 		else
-// 		{
-// 			return false;
-// 		}
-	}
-	
-	/**
 	 * Method to compute the default name of the asset.
 	 * The default name is in the form `table_name.id`
 	 * where id is the value of the primary key of the table.
