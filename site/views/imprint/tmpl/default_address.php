@@ -37,26 +37,26 @@
 			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name3.'<br />';
 		if ($this->imprint->name4)
 			echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name4.'<br />';
-		if ($this->imprint->strasse)
-			echo JText::_( 'COM_IMPRINT_STREET' ) .': '.$this->imprint->strasse.'<br />';
-		if ($this->imprint->plz)
-			echo JText::_( 'COM_IMPRINT_ZIP_CODE' ) .': '.$this->imprint->plz.'<br />';
-		if ($this->imprint->ort)
-			echo JText::_( 'COM_IMPRINT_CITY' ) .': '.$this->imprint->ort.'<br />';
-		if ($this->imprint->land)
-			echo JText::_( 'COM_IMPRINT_COUNTRY' ) .': '.$this->imprint->land.'<br />';
+		if ($this->imprint->street)
+			echo JText::_( 'COM_IMPRINT_STREET' ) .': '.$this->imprint->street.'<br />';
+		if ($this->imprint->zipcode)
+			echo JText::_( 'COM_IMPRINT_ZIP_CODE' ) .': '.$this->imprint->zipcode.'<br />';
+		if ($this->imprint->city)
+			echo JText::_( 'COM_IMPRINT_CITY' ) .': '.$this->imprint->city.'<br />';
+		if ($this->imprint->country)
+			echo JText::_( 'COM_IMPRINT_COUNTRY' ) .': '.$this->imprint->country.'<br />';
 		?>
 		</td>
 		<td align="left" valign="top">
 			<table style="width: 100%; border-width: 0px; border-spacing: 0px; padding: 0px">
-<?php if ($this->imprint->telefon != ''): ?>
+<?php if ($this->imprint->telephone != ''): ?>
 				<tr>
 					<td align="left">
 						<?php echo $this->imprint->params->get( 'marker_telephone' ); ?>&nbsp;
 					</td>
 					<td align="left">
 					<?php 
-						echo JText::_( 'COM_IMPRINT_TELEPHONE' ) .': '.$this->imprint->telefon.'<br />';
+						echo JText::_( 'COM_IMPRINT_TELEPHONE' ) .': '.$this->imprint->telephone.'<br />';
 					?>
 					</td>
 				</tr>
@@ -73,14 +73,14 @@
 					</td>
 				</tr>
 <?php endif; ?>
-<?php if ($this->imprint->handy != ''): ?>
+<?php if ($this->imprint->mobilephone != ''): ?>
 				<tr>
 					<td align="left">
 						<?php echo $this->imprint->params->get( 'marker_mobile' ); ?>&nbsp;
 					</td>
 					<td align="left">
 					<?php
-						echo JText::_( 'COM_IMPRINT_MOBILE_PHONE' ) .': '.$this->imprint->handy.'<br />';
+						echo JText::_( 'COM_IMPRINT_MOBILE_PHONE' ) .': '.$this->imprint->mobilephone.'<br />';
 					?>
 					</td>
 				</tr>

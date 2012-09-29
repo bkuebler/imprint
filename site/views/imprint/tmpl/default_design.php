@@ -26,15 +26,15 @@
 		</td>
 	<?php endif; ?>
 		<td align="left">
-		<?php echo JText::_( 'COM_IMPRINT_TEMPLATENAME' ) . ': ' . $this->imprint->templatename . '<br />' ?>
-		<?php echo JText::_( 'COM_IMPRINT_TEMPLATEHERSTELLER' ) . ': ' . $this->imprint->templatehersteller;
-			if ($this->imprint->templateemail)
-				echo " (".JHTML::_('email.cloak', $this->imprint->templateemail).")"; ?>
+		<?php echo JText::_( 'COM_IMPRINT_TEMPLATENAME' ) . ': ' . $this->imprint->template_name . '<br />' ?>
+		<?php echo JText::_( 'COM_IMPRINT_TEMPLATEHERSTELLER' ) . ': ' . $this->imprint->template_creator;
+			if ($this->imprint->template_creator_email)
+				echo " (".JHTML::_('email.cloak', $this->imprint->template_creator_email).")"; ?>
 			<br />
-		<?php if ($this->imprint->templatewebsite)
+		<?php if ($this->imprint->template_creator_website)
 			echo JText::_( 'COM_IMPRINT_TEMPLATEWEBSITE' ) .
-				': <a href="http://' . $this->imprint->templatewebsite . '" target="_blank">' .
-				$this->imprint->templatewebsite.'</a>'; ?>
+				': <a href="http://' . $this->imprint->template_creator_website . '" target="_blank">' .
+				$this->imprint->template_creator_website.'</a>'; ?>
 		</td>
 	</tr>
 </table>

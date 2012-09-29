@@ -151,7 +151,7 @@ class ImprintModelImprint extends JModel
 			}
 			
 			// Load remarks
-			if(isset($imprint->remarks))
+			if(isset($imprint->remarks) && !empty($imprint->remarks))
 			{
 				$remarks = explode(';', $imprint->remarks);
 				$query = $db->getQuery(true);

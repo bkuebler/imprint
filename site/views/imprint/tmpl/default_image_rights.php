@@ -20,25 +20,25 @@
 			<strong><?php echo JText::_( 'COM_IMPRINT_BILDQUELLEN' ); ?></strong>
 		</td>
 	</tr>
-<?php if ($this->imprint->bildquellen): ?>
+<?php if ($this->imprint->image_sources): ?>
 	<tr>
 	<?php if ($this->imprint->params->get('show_icons')=="1"): ?>
 		<td style="width: 20px" align="left">
 		</td>
 	<?php endif; ?>
 		<td align="left" >
-			<?php echo $this->imprint->bildquellen; ?>
+			<?php echo $this->imprint->image_sources; ?>
 		</td>
 	</tr>
 <?php endif; ?>
-<?php if ($this->imprint->bildrechte): ?>
+<?php if ($this->imprint->image_rights): ?>
 	<tr>
 	<?php if ($this->imprint->params->get('show_icons')=="1"): ?>
 		<td style="width: 20px" align="left">
 		</td>
 	<?php endif; ?>
 		<td align="left" >
-			<?php echo $this->imprint->bildrechte; ?>
+			<?php echo $this->imprint->image_rights; ?>
 		</td>
 	</tr>
 <?php endif; ?>
