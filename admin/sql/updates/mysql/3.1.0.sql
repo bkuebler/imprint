@@ -28,13 +28,13 @@ ALTER TABLE `#__imprint_imprints` CHANGE `templateemail` `template_creator_email
 ALTER TABLE `#__imprint_imprints` CHANGE `templatewebsite` `template_creator_website` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ;
 ALTER TABLE `#__imprint_imprints` CHANGE `bildquellen` `image_sources` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ;
 ALTER TABLE `#__imprint_imprints` CHANGE `bildrechte` `image_rights` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ;
-ALTER TABLE `#__imprint_imprints` CHANGE `ustidnr` `sales_tax_id` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
-ALTER TABLE `#__imprint_imprints` CHANGE `wirtidnr` `economic_id` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
-ALTER TABLE `#__imprint_imprints` CHANGE `inhaltperson` `responsible_for_content` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
+ALTER TABLE `#__imprint_imprints` CHANGE `ustidnr` `sales_tax_id` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
+ALTER TABLE `#__imprint_imprints` CHANGE `wirtidnr` `economic_id` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
+ALTER TABLE `#__imprint_imprints` CHANGE `inhaltperson` `responsible_for_content` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE `#__imprint_imprints` CHANGE `inhaltemail` `responsible_for_content_mail` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
-ALTER TABLE `#__imprint_imprints` CHANGE `ustidnr2` `sales_tax_id2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
-ALTER TABLE `#__imprint_imprints` CHANGE `wirtidnr2` `economic_id2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
-ALTER TABLE `#__imprint_imprints` CHANGE `inhaltperson2` `responsible_for_content2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '':
+ALTER TABLE `#__imprint_imprints` CHANGE `ustidnr2` `sales_tax_id2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
+ALTER TABLE `#__imprint_imprints` CHANGE `wirtidnr2` `economic_id2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
+ALTER TABLE `#__imprint_imprints` CHANGE `inhaltperson2` `responsible_for_content2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE `#__imprint_imprints` CHANGE `inhaltemail2` `responsible_for_content_mail2` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE `#__imprint_imprints` ADD `remarks` TEXT NOT NULL AFTER `params`;
 DROP TABLE IF EXISTS `#__imprints_relation`;
