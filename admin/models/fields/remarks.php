@@ -62,7 +62,7 @@ class JFormFieldRemarks extends JFormFieldList
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select("r.id AS value, r.name AS text");
-		$query->from("`jos_imprint_remarks` AS r");
+		$query->from("`#__imprint_remarks` AS r");
 		$query->order("name");
 		$db->setQuery($query);
 		$options = $db->loadObjectList();
