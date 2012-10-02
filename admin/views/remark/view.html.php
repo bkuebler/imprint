@@ -74,7 +74,7 @@ class ImprintViewRemark extends JView
 		$isNew = $this->item->id == 0;
 		$canDo = ImprintHelper::getActions($this->item->id);
 		
-		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT_REMARK_NEW') : JText::_('COM_IMPRINT_REMARK_EDIT'), 'remark');
+		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_EDIT'), 'remark');
 		
 		// Built the actions for new and existing records.
 		if ($isNew) 
@@ -122,7 +122,7 @@ class ImprintViewRemark extends JView
 	{
 		$isNew = $this->item->id == 0;
 		$document = JFactory::getDocument();
-		$document->setTitle($isNew ? JText::_('COM_IMPRINT_REMARK_CREATING') : JText::_('COM_IMPRINT_REMARK_EDITING'));
+		$document->setTitle($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_CREATING') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_EDITING'));
 		$document->addScript(JURI::root() . $this->script);
 		$document->addScript(JURI::root() . "/administrator/components/com_remark/views/remark/submitbutton.js");
 		JText::script('COM_IMPRINT_REMARK_ERROR_UNACCEPTABLE');

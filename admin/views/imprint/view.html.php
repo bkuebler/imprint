@@ -76,7 +76,7 @@ class ImprintViewImprint extends JView
 		$isNew = $this->item->id == 0;
 		$canDo = ImprintHelper::getActions($this->item->id);
 		
-		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT_IMPRINT_NEW') : JText::_('COM_IMPRINT_IMPRINT_EDIT'), 'imprint');
+		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_EDIT'), 'imprint');
 		
 		// Built the actions for new and existing records.
 		if ($isNew) 
@@ -124,7 +124,7 @@ class ImprintViewImprint extends JView
 	{
 		$isNew = $this->item->id == 0;
 		$document = JFactory::getDocument();
-		$document->setTitle($isNew ? JText::_('COM_IMPRINT_IMPRINT_CREATING') : JText::_('COM_IMPRINT_IMPRINT_EDITING'));
+		$document->setTitle($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_CREATING') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_EDITING'));
 		$document->addScript(JURI::root() . $this->script);
 		$document->addScript(JURI::root() . "/administrator/components/com_imprint/views/imprint/submitbutton.js");
 		JText::script('COM_IMPRINT_IMPRINT_ERROR_UNACCEPTABLE');
