@@ -26,13 +26,13 @@
 		</td>
 	<?php endif; ?>
 		<td align="left">
-		<?php echo JText::_( 'COM_IMPRINT_TEMPLATENAME' ) . ': ' . $this->imprint->template_name . '<br />' ?>
-		<?php echo JText::_( 'COM_IMPRINT_TEMPLATEHERSTELLER' ) . ': ' . $this->imprint->template_creator;
+		<?php echo JText::_( 'COM_IMPRINT_IMPRINT_TEMPLATE_NAME' ) . ': ' . $this->imprint->template_name . '<br />' ?>
+		<?php echo JText::_( 'COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR' ) . ': ' . $this->imprint->template_creator;
 			if ($this->imprint->template_creator_email)
 				echo " (".JHTML::_('email.cloak', $this->imprint->template_creator_email).")"; ?>
 			<br />
 		<?php if ($this->imprint->template_creator_website)
-			echo JText::_( 'COM_IMPRINT_TEMPLATEWEBSITE' ) .
+			echo JText::_( 'COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_WEBSITE' ) .
 				': <a href="http://' . $this->imprint->template_creator_website . '" target="_blank">' .
 				$this->imprint->template_creator_website.'</a>'; ?>
 		</td>

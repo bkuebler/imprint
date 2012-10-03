@@ -161,8 +161,8 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="responsible_for_content_mail" type="email" 
-			label="COM_IMPRINT_IMPRINT_INHALTEMAIL" 
-			description="COM_IMPRINT_IMPRINT_INHALTEMAIL_DESC"
+			label="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_MAIL" 
+			description="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_MAIL_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="spacerRecht2Person" type="spacer"
@@ -209,13 +209,13 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="responsible_for_content2" type="text" 
-			label="COM_IMPRINT_IMPRINT_INHALTPERSON" 
-			description="COM_IMPRINT_IMPRINT_INHALTPERSON_DESC"
+			label="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT" 
+			description="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="responsible_for_content_mail2" type="email" 
-			label="COM_IMPRINT_IMPRINT_INHALTEMAIL" 
-			description="COM_IMPRINT_IMPRINT_INHALTEMAIL_DESC"
+			label="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_MAIL" 
+			description="COM_IMPRINT_IMPRINT_RESPONSIBLE_FOR_CONTENT_MAIL_DESC"
 			size="60" maxlength="255" 
 		/>
 	</fieldset>
@@ -424,20 +424,20 @@
 		/>
 	</fieldset>
 
-	<fieldset name="technik" label="COM_IMPRINT_IMPRINT_TECHNIK">
+	<fieldset name="technik" label="COM_IMPRINT_IMPRINT_TECHNICAL_DETAILS">
 		<field name="technikperson" type="text" 
-			label="COM_IMPRINT_IMPRINT_TECHNIKPERSON" 
-			description="COM_IMPRINT_IMPRINT_TECHNIKPERSON_DESC"
+			label="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_IN_CHARGE" 
+			description="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_IN_CHARGE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="technikwebsite" type="text" 
-			label="COM_IMPRINT_IMPRINT_TECHNIKWEBSITE" 
-			description="COM_IMPRINT_IMPRINT_TECHNIKWEBSITE_DESC"
+			label="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_WEBSITE" 
+			description="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_WEBSITE_DESC"
 			size="60" maxlength="255" 
 		/>
 		<field name="technikemail" type="email" 
-			label="COM_IMPRINT_IMPRINT_TECHNIKEMAIL" 
-			description="COM_IMPRINT_IMPRINT_TECHNIKEMAIL_DESC"
+			label="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_EMAIL" 
+			description="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_EMAIL_DESC"
 			size="60" maxlength="255" 
 		/>
 
@@ -457,8 +457,8 @@
 			size="60" maxlength="255" 
 		/>
 		<field name="template_creator_website" type="text" 
-			label="COM_IMPRINT_IMPRINT_WEBSITE" 
-			description="COM_IMPRINT_IMPRINT_WEBSITE_DESC"
+			label="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_WEBSITE" 
+			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_WEBSITE_DESC"
 			size="60" maxlength="255" 
 		/>
 
@@ -493,7 +493,7 @@
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
-			<field name="show_contacturl" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_KONTAKTLINK" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_KONTAKTLINK_DESC">
+			<field name="show_contacturl" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>		
@@ -501,11 +501,11 @@
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
-			<field name="show_bank" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKVERBINDUNGEN" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKVERBINDUNGEN_DESC">
+			<field name="show_bank" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
-			<field name="show_bankguests" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK_GAST" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK_GAST_DESC">
+			<field name="show_bankguests" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
@@ -521,15 +521,15 @@
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>			
-			<field name="show_recht" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RECHT" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RECHT_DESC">
+			<field name="show_recht" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
-			<field name="show_recht2" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RECHT2" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RECHT2_DESC">
+			<field name="show_recht2" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>		
-			<field name="show_technik" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNIK" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNIK_DESC">
+			<field name="show_technik" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>
@@ -549,7 +549,7 @@
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>		    		
-			<field name="show_image_rights" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BILDQUELLEN_RECHTE" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BILDQUELLEN_RECHTE_DESC">
+			<field name="show_image_rights" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS_DESC">
 				<option value="0">JHIDE</option>
 				<option value="1">JSHOW</option>
 			</field>

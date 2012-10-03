@@ -17,7 +17,7 @@
 		</td>
 <?php endif; ?>
 		<td>
-			<strong><?php echo JText::_( 'COM_IMPRINT_TECHNIK' ); ?></strong>
+			<strong><?php echo JText::_( 'COM_IMPRINT_TECHNICAL_DETAILS' ); ?></strong>
 		</td>
 	</tr>
 	<tr>
@@ -28,12 +28,12 @@
 		<td align="left">
 <?php if ($this->imprint->technikperson)
 {
-	echo JText::_( 'COM_IMPRINT_TECHNIKPERSON' ) . ': ' . $this->imprint->technikperson;
+	echo JText::_( 'COM_IMPRINT_TECHNICAL_PERSON_IN_CHARGE' ) . ': ' . $this->imprint->technikperson;
 	if ($this->imprint->technikemail)
 		echo " (".JHTML::_('email.cloak', $this->imprint->technikemail).")" . '<br />';
 }
 if ($this->imprint->technikwebsite)
-	echo JText::_( 'COM_IMPRINT_TECHNIKWEBSITE' ) . ' <a href="http://' . $this->imprint->technikwebsite . '" target="blank">' . $this->imprint->technikwebsite . '</a>';
+	echo JText::_( 'COM_IMPRINT_TECHNICAL_PERSON_WEBSITE' ) . ' <a href="http://' . $this->imprint->technikwebsite . '" target="blank">' . $this->imprint->technikwebsite . '</a>';
 ?>
 		</td>
 	</tr>

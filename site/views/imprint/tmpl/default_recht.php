@@ -50,7 +50,7 @@ if ($this->imprint->registernummer)
 	echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer.'<br />';
 if ($this->imprint->responsible_for_content)
 {
-	echo JText::_( 'COM_IMPRINT_INHALTPERSON' ) . ': ' . $this->imprint->responsible_for_content;
+	echo JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ': ' . $this->imprint->responsible_for_content;
 	if ($this->imprint->responsible_for_content_mail)
 		echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail).")";
 }
@@ -113,7 +113,7 @@ if ($this->imprint->responsible_for_content)
 		echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer2.'<br />';
 	if ($this->imprint->responsible_for_content2)
 	{
-		echo JText::_( 'COM_IMPRINT_INHALTPERSON' ) . ': ' . $this->imprint->responsible_for_content2;
+		echo JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ': ' . $this->imprint->responsible_for_content2;
 	if ($this->imprint->responsible_for_content_mail2)
 		echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail2).")";
 	}

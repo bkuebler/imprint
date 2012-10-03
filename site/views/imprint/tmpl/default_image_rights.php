@@ -17,7 +17,7 @@
 		</td>
 <?php endif; ?>
 		<td>
-			<strong><?php echo JText::_( 'COM_IMPRINT_BILDQUELLEN' ); ?></strong>
+			<strong><?php echo JText::_( 'COM_IMPRINT_IMAGE_SOURCES_AND_RIGHTS' ); ?></strong>
 		</td>
 	</tr>
 <?php if ($this->imprint->image_sources): ?>
