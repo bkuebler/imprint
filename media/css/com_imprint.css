@@ -6,11 +6,49 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
  
- .imprint_table {
-	width: 100%;
-	border: 0 none #FFF;
+.imprint_no_border
+{
+	border:			0 none #FFF !important;
+}
+ 
+.imprint_table,
+.imprint_table table
+{
+	width:			100%;
+	border:			0 none #FFF;
 }
 
- .imprint_table tr, .imprint_table td{
-	border: 0 none #FFF;
+.imprint_table tr,
+.imprint_table td
+{
+	border:			0 none #FFF;
+}
+
+.imprint_td_align_left
+{
+	text-align:		left;
+}
+
+.imprint_td_align_top_left
+{
+	text-align:		left;
+	vertical-align:	top;
+}
+
+.imprint_td_icon
+{
+	width:			20px;
+	text-align:		left;
+}
+
+.imprint_td_header
+{
+	font-weight:	bold;
+}
+
+.imprint_td_address
+{
+	width:			50%;
+	text-align:		left;
+	vertical-align:	top;
 }
