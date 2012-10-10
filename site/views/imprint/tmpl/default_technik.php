@@ -17,7 +17,7 @@
 				<img src="<?php echo JURI::root(); ?>media/com_imprint/images/technik.png" border="" alt="" />
 			</td>
 <?php endif; ?>
-			<td class="imrint_td_header">
+			<td class="imprint_td_header">
 				<?php echo JText::_( 'COM_IMPRINT_TECHNICAL_DETAILS' ); ?>
 			</td>
 		</tr>

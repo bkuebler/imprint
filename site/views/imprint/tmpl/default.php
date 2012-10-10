@@ -9,6 +9,29 @@
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
 $user = JFactory::getUser();
+// count all rows to display
+$rows = 1;
+if($show_recht = ($this->imprint->params->get('show_recht') == "1"))
+	$rows++;
+if($show_bank = ((($this->imprint->params->get('show_bankguests')=="1") || (!$user->guest)) &&
+					($this->imprint->params->get('show_bank')=="1")))
+	$rows++;
+if($show_extra1 = ($this->imprint->params->get('show_extra1')=="1"))
+	$rows++;
+if($show_extra2 = ($this->imprint->params->get('show_extra2')=="1"))
+	$rows++;
+if($show_extra3 = ($this->imprint->params->get('show_extra3')=="1"))
+	$rows++;
+if($show_technik = ($this->imprint->params->get('show_technik')=="1"))
+	$rows++;
+if($show_design = ($this->imprint->params->get('show_design')=="1"))
+	$rows++;
+if($show_image_rights =($this->imprint->params->get('show_image_rights')=="1"))
+	$rows++;
+if($show_info = ($this->imprint->params->get('show_info')=="1"))
+	$rows++;
+if(($show_remarks = ($this->imprint->remarks !== false)) && $show_info)
+	$rows++;
 ?>
 <div id="component-imprint">
 	<table class="imprint_table">
@@ -17,124 +40,85 @@ $user = JFactory::getUser();
 				<?php echo $this->loadTemplate('address'); ?>
 			</td>
 <?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-				<div style="float: left;">
+			<td class="imprint_td_align_top_left" rowspan="<?php echo $rows; ?>">
 					<?php echo JHTML::_('image', '/images/'.$this->imprint->image, JText::_( 'COM_IMPRINT' ), array('align' => 'middle')); ?>
-				</div>
 			</td>
 <?php endif; ?>
 		</tr>
 
-<?php if ($this->imprint->params->get('show_recht')=="1"): ?>
+<?php if ($show_recht): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('recht'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-          	<td class="imprint_td_align_top">
-          	</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
 
     
 <?php
-if ((($this->imprint->params->get('show_bankguests')=="1") || (!$user->guest)) &&
-	($this->imprint->params->get('show_bank')=="1")): ?>
+if ($show_bank): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('bank'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
     
-<?php if ($this->imprint->params->get('show_extra1')=="1"): ?>
+<?php if ($show_extra1): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('extra1'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
 
-<?php if ($this->imprint->params->get('show_extra2')=="1"): ?>
+<?php if ($show_extra2): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('extra2'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
 
-<?php if ($this->imprint->params->get('show_extra3')=="1"): ?>
+<?php if ($show_extra3): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('extra3'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
     
-<?php if ($this->imprint->params->get('show_technik')=="1"): ?>
+<?php if ($show_technik): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('technik'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
     
             
-<?php if ($this->imprint->params->get('show_design')=="1"): ?>
+<?php if ($show_design): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('design'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
     
-<?php if ($this->imprint->params->get('show_image_rights')=="1"): ?>
+<?php if ($show_image_rights): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('image_rights'); ?>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
 
-<?php if ($this->imprint->params->get('show_info')=="1"): ?>
-	<?php if($this->imprint->remarks !== false): ?>
+<?php if ($show_info): ?>
+	<?php if($show_remarks): ?>
 		<tr>
 			<td class="imprint_td_template">
 				<?php echo $this->loadTemplate('remarks'); ?>
 			</td>
-		<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-		<?php endif; ?>
 		</tr>
 	<?php endif; ?>
 		<tr>
@@ -151,10 +135,6 @@ if ((($this->imprint->params->get('show_bankguests')=="1") || (!$user->guest)) &
 					</tr>
 				</table>
 			</td>
-	<?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top">
-			</td>
-	<?php endif; ?>
 		</tr>
 <?php endif; ?>
 	</table>
