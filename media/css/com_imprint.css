@@ -24,6 +24,19 @@
 	border:			0 none #FFF;
 }
 
+.imprint_td_back
+{
+	text-align:		right;
+}
+
+.imprint_td_logo
+{
+	text-align:		center;
+	vertical-align: top;
+	width:			110px;
+	padding:		5px;
+}
+
 .imprint_td_template
 {
 	border:			1px solid #DDDDDD !important;
@@ -41,6 +54,11 @@
 	vertical-align:	top;
 }
 
+.imprint_td_width_50
+{
+	width:			50%;
+}
+
 .imprint_td_icon
 {
 	width:			20px;
@@ -50,11 +68,4 @@
 .imprint_td_header
 {
 	font-weight:	bold;
-}
-
-.imprint_td_address
-{
-	width:			50%;
-	text-align:		left;
-	vertical-align:	top;
 }

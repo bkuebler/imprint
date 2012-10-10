@@ -18,7 +18,7 @@
 			</td>
 <?php endif; ?>
 			<td class="imprint_td_header" colspan="2">
-				<?php echo $this->imprint->adresstitel ?>
+				<?php echo $this->imprint->adresstitel; ?>
 			</td>
 		</tr>
 	</thead>
@@ -28,27 +28,29 @@
 			<td class="imprint_td_icon">
 			</td>
 <?php endif; ?>
-			<td class="imprint_td_address">
-			<?php
-			if ($this->imprint->firma)
-				echo JText::_( 'COM_IMPRINT_COMPANY' ) .': '.$this->imprint->firma.'<br />';
-			if ($this->imprint->name1)
-				echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name1.'<br />';
-			if ($this->imprint->name2)
-				echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name2.'<br />';
-			if ($this->imprint->name3)
-				echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name3.'<br />';
-			if ($this->imprint->name4)
-				echo JText::_( 'COM_IMPRINT_NAME' ) .': '.$this->imprint->name4.'<br />';
-			if ($this->imprint->street)
-				echo JText::_( 'COM_IMPRINT_STREET' ) .': '.$this->imprint->street.'<br />';
-			if ($this->imprint->zipcode)
-				echo JText::_( 'COM_IMPRINT_ZIP_CODE' ) .': '.$this->imprint->zipcode.'<br />';
-			if ($this->imprint->city)
-				echo JText::_( 'COM_IMPRINT_CITY' ) .': '.$this->imprint->city.'<br />';
-			if ($this->imprint->country)
-				echo JText::_( 'COM_IMPRINT_COUNTRY' ) .': '.$this->imprint->country.'<br />';
-			?>
+			<td class="imprint_td_width_50">
+				<table class="imprint_no_border">
+					<?php
+					if ($this->imprint->firma)
+						echo '<tr><td>' . $this->imprint->firma .'</td></tr>';
+					if ($this->imprint->name1)
+						echo '<tr><td>' . $this->imprint->name1 .'</td></tr>';
+					if ($this->imprint->name2)
+						echo '<tr><td>' . $this->imprint->name2 .'</td></tr>';
+					if ($this->imprint->name3)
+						echo '<tr><td>' . $this->imprint->name3 .'</td></tr>';
+					if ($this->imprint->name4)
+						echo '<tr><td>' . $this->imprint->name4 .'</td></tr>';
+					if ($this->imprint->street)
+						echo '<tr><td>' . $this->imprint->street .'</td></tr>';
+					if ($this->imprint->zipcode)
+						echo '<tr><td>' . $this->imprint->zipcode .'</td></tr>';
+					if ($this->imprint->city)
+						echo '<tr><td>' . $this->imprint->city .'</td></tr>';
+					if ($this->imprint->country)
+						echo '<tr><td>' . $this->imprint->country .'</td></tr>';
+					?>
+				</table>
 			</td>
 			<td class="imprint_td_align_top_left">
 				<table class="imprint_no_border">
@@ -59,7 +61,7 @@
 						</td>
 						<td class="imprint_td_align_left">
 						<?php 
-							echo JText::_( 'COM_IMPRINT_TELEPHONE' ) .': '.$this->imprint->telephone.'<br />';
+							echo $this->imprint->telephone;
 						?>
 						</td>
 					</tr>
@@ -71,7 +73,7 @@
 						</td>
 						<td class="imprint_td_align_left">
 						<?php 
-							echo JText::_( 'COM_IMPRINT_FAX' ) .': '.$this->imprint->fax.'<br />';
+							echo $this->imprint->fax;
 						?>
 						</td>
 					</tr>
@@ -83,7 +85,7 @@
 						</td>
 						<td class="imprint_td_align_left">
 						<?php
-							echo JText::_( 'COM_IMPRINT_MOBILE_PHONE' ) .': '.$this->imprint->mobilephone.'<br />';
+							echo $this->imprint->mobilephone;
 						?>
 						</td>
 					</tr>
@@ -106,7 +108,7 @@
 							<?php echo $this->imprint->params->get( 'marker_email' ); ?>&nbsp;
 						</td>
 						<td class="imprint_td_align_left">
-							<?php if ($this->imprint->email) echo JHTML::_('email.cloak', $this->imprint->email); ?>
+							<?php echo JHTML::_('email.cloak', $this->imprint->email); ?>
 						</td>
 					</tr>
 <?php endif; ?>

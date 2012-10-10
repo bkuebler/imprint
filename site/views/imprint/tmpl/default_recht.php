@@ -28,36 +28,45 @@
 			</td>
 <?php endif; ?>
 			<td class="imprint_align_left">
-				<?php
-				if ($this->imprint->vertreter)
-					if ($this->imprint->vertretertitel)
-					{
-						echo $this->imprint->vertretertitel.': '.$this->imprint->vertreter;
-				  		if ($this->imprint->vertreteremail)
-				  			echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail).")" . '<br />';
-					}
-				else if ($this->imprint->vertreter)
-					if ($this->imprint->vertretertitel=="")
-					{
-						echo $this->imprint->vertreter;
-						if ($this->imprint->vertreteremail)
-							echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail).")" . '<br>';
-					}
-				if ($this->imprint->sales_tax_id)
-					echo JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) .': '.$this->imprint->sales_tax_id.'<br />';
-				if ($this->imprint->economic_id)
-					echo JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) .': '.$this->imprint->economic_id.'<br />';
-				if ($this->imprint->registergericht)
-					echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht.'<br />';
-				if ($this->imprint->registernummer)
-					echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer.'<br />';
-				if ($this->imprint->responsible_for_content)
-				{
-					echo JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ': ' . $this->imprint->responsible_for_content;
-					if ($this->imprint->responsible_for_content_mail)
-						echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail).")";
-				}
-				?>
+				<table class="imprint_no_border">
+					<thead>
+						<?php
+						if ($this->imprint->vertreter && $this->imprint->vertretertitel)
+						{
+							echo '<tr><td class="imprint_td_width_50">' . $this->imprint->vertretertitel . ':</td><td>' . $this->imprint->vertreter;
+					  		if ($this->imprint->vertreteremail)
+					  			echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail).")";
+					  		echo '</td></tr>';
+						}
+						else if ($this->imprint->vertreter && ($this->imprint->vertretertitel==""))
+						{
+							echo '<tr><td colspan="2">' . $this->imprint->vertreter;
+							if ($this->imprint->vertreteremail)
+								echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail).")";
+							echo '</td></tr>';
+						}
+						?>
+					</thead>
+					<tbody>
+						<?php
+						if ($this->imprint->sales_tax_id)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) . ':</td><td>' . $this->imprint->sales_tax_id . '</td></tr>';
+						if ($this->imprint->economic_id)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) . ':</td><td>' . $this->imprint->economic_id . '</td></tr>';
+						if ($this->imprint->registergericht)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_REGISTER_COURT' ) . ':</td><td>' . $this->imprint->registergericht . '</td></tr>';
+						if ($this->imprint->registernummer)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) . ':</td><td>' . $this->imprint->registernummer . '</td></tr>';
+						if ($this->imprint->responsible_for_content)
+						{
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ':</td><td>' . $this->imprint->responsible_for_content;
+							if ($this->imprint->responsible_for_content_mail)
+								echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail).")";
+							echo '</td></tr>';
+						}
+						?>
+					</tbody>
+				</table>
 			</td>
 		</tr>
 <?php if ($this->imprint->params->get('show_recht2')=="1"): ?>
@@ -84,44 +93,45 @@
 	        </td>
 	<?php endif; ?>
 	        <td class="imprint_align_left">
-				<?php
-				if ($this->imprint->vertreter2)
-					if ($this->imprint->vertretertitel2)
-					{
-							echo $this->imprint->vertretertitel2.': '.$this->imprint->vertreter2;
+				<table class="imprint_no_border">
+					<thead>
+						<?php
+						if ($this->imprint->vertreter2 && $this->imprint->vertretertitel2)
+						{
+							echo '<tr><td class="imprint_td_width_50">' . $this->imprint->vertretertitel2 . ':</td><td>' . $this->imprint->vertreter2;
+					  		if ($this->imprint->vertreteremail2)
+					  			echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")";
+					 		echo '</td></tr>';
+						}
+						else if ($this->imprint->vertreter2 && ($this->imprint->vertretertitel2==""))
+						{
+							echo '<tr><td colspan="2">' . $this->imprint->vertreter2;
 							if ($this->imprint->vertreteremail2)
-								echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
-					}
-				else if ($this->imprint->vertreter2)
-				{
-					if ($this->imprint->vertretertitel2=="")
-					{
-						echo $this->imprint->vertreter2;
-						if ($this->imprint->vertreteremail2)
-							echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br>';
-					}
-				}
-				if ($this->imprint->vertreter2)
-				{
-					echo JText::_( 'COM_IMPRINT_REPRESENTATIVE' ).': '.$this->imprint->vertreter2;
-					if ($this->imprint->vertreteremail2)
-						echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")" . '<br />';
-				}
-				if ($this->imprint->sales_tax_id2)
-					echo JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) .': '.$this->imprint->sales_tax_id2.'<br />';
-				if ($this->imprint->economic_id2)
-					echo JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) .': '.$this->imprint->economic_id2.'<br />';
-				if ($this->imprint->registergericht2)
-					echo JText::_( 'COM_IMPRINT_REGISTER_COURT' ).': '.$this->imprint->registergericht2.'<br />';
-				if ($this->imprint->registernummer2)
-					echo JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) .': '.$this->imprint->registernummer2.'<br />';
-				if ($this->imprint->responsible_for_content2)
-				{
-					echo JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ': ' . $this->imprint->responsible_for_content2;
-				if ($this->imprint->responsible_for_content_mail2)
-					echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail2).")";
-				}
-				?>
+								echo " (".JHTML::_('email.cloak', $this->imprint->vertreteremail2).")";
+							echo '</td></tr>';
+						}
+						?>
+					</thead>
+					<tbody>
+						<?php
+						if ($this->imprint->sales_tax_id2)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_SALES_TAX_ID' ) . ':</td><td>' . $this->imprint->sales_tax_id2 . '</td></tr>';
+						if ($this->imprint->economic_id2)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_ECONOMIC_ID' ) . ':</td><td>' . $this->imprint->economic_id2 . '</td></tr>';
+						if ($this->imprint->registergericht2)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_REGISTER_COURT' ) . ':</td><td>' . $this->imprint->registergericht2 . '</td></tr>';
+						if ($this->imprint->registernummer2)
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_REGISTER_NUMBER' ) . ':</td><td>' . $this->imprint->registernummer2 . '</td></tr>';
+						if ($this->imprint->responsible_for_content2)
+						{
+							echo '<tr><td class="imprint_td_width_50">' . JText::_( 'COM_IMPRINT_RESPONSIBLE_FOR_CONTENT' ) . ':</td><td>' . $this->imprint->responsible_for_content2;
+							if ($this->imprint->responsible_for_content_mail2)
+								echo " (".JHTML::_('email.cloak', $this->imprint->responsible_for_content_mail2).")";
+							echo '</td></tr>';
+						}
+						?>
+					</tbody>
+				</table>
 			</td>
 		</tr>
 <?php endif; ?>

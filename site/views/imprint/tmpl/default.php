@@ -40,7 +40,7 @@ if(($show_remarks = ($this->imprint->remarks !== false)) && $show_info)
 				<?php echo $this->loadTemplate('address'); ?>
 			</td>
 <?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
-			<td class="imprint_td_align_top_left" rowspan="<?php echo $rows; ?>">
+			<td class="imprint_td_logo" rowspan="<?php echo $rows; ?>">
 					<?php echo JHTML::_('image', '/images/'.$this->imprint->image, JText::_( 'COM_IMPRINT' ), array('align' => 'middle')); ?>
 			</td>
 <?php endif; ?>

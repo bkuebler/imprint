@@ -12,8 +12,6 @@ defined('_JEXEC') or die( 'Restricted access' );
 
 jimport('joomla.application.component.view');
 
-//TODO: Change to new system; add additional text dynamicly
-
 /**
  * Imprint view class.
  * 

@@ -12,8 +12,6 @@ defined('_JEXEC') or die( 'Restricted access' );
 
 jimport('joomla.application.component.controller');
 
-//TODO: Remove all old static views and add new view for additional texts
-
 /**
  * Imprint controller class.
  * 
