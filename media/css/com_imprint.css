@@ -24,6 +24,12 @@
 	border:			0 none #FFF;
 }
 
+.imprint_td_template
+{
+	border:			1px solid #DDDDDD !important;
+	padding:		10px 0 20px;
+}
+
 .imprint_td_align_left
 {
 	text-align:		left;

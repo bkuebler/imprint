@@ -8,30 +8,33 @@
  */
 
 ?>
-<table style="width: 100%; border-width: 0px">
-	<tr>
+<table class="imprint_no_border">
+	<thead>
+		<tr>
 <?php if ($this->imprint->params->get('show_icons')=="1"): ?>
-		<td style="width: 20px" align="left">
-			<img src="<?php echo JURI::root(); ?>/media/com_imprint/images/technik.png" border="" alt="" />
-		</td>
+			<td class="imprint_td_icon">
+				<img src="<?php echo JURI::root(); ?>/media/com_imprint/images/technik.png" border="" alt="" />
+			</td>
 <?php endif; ?>
-		<td>
-			<strong><?php echo $this->imprint->extra3titel ?></strong>
-		</td>
-	</tr>
-	<tr>
+			<td class="imprint_td_header">
+				<?php echo $this->imprint->extra3titel ?>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
 <?php if ($this->imprint->params->get('show_icons')=="1"): ?>
-		<td style="width: 20px" align="left">
-		</td>
+			<td class="imprint_td_icon">
+			</td>
 <?php endif; ?>
-		<td align="left">
-			<?php echo $this->imprint->extra3person;
-			if ($this->imprint->extra3email)
-				echo " (".JHTML::_('email.cloak', $this->imprint->extra3email).")<br />";
-			if ($this->imprint->extra3website)
-				echo JText::_( 'COM_IMPRINT_EXTRAWEBSITE' ) . ' <a href="http://' . $this->imprint->extra3website . '" target="blank">' . $this->imprint->extra3website . '</a>';
-			?>
-		</td>
-	</tr>
+			<td class="imprint_td_align_left">
+				<?php echo $this->imprint->extra3person;
+				if ($this->imprint->extra3email)
+					echo " (".JHTML::_('email.cloak', $this->imprint->extra3email).")<br />";
+				if ($this->imprint->extra3website)
+					echo JText::_( 'COM_IMPRINT_EXTRAWEBSITE' ) . ' <a href="http://' . $this->imprint->extra3website . '" target="blank">' . $this->imprint->extra3website . '</a>';
+				?>
+			</td>
+		</tr>
+	</tbody>
 </table>
-<br />

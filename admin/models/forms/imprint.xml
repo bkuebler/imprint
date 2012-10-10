@@ -293,12 +293,13 @@
 	</fieldset>
 	
 	<fieldset name="bank" label="COM_IMPRINT_IMPRINT_BANK">
+	<!-- first bank account -->
 		<field name="account_holder" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="bank_number" type="text" 
+		<field name="account_number" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
@@ -323,6 +324,7 @@
 			description="COM_IMPRINT_IMPRINT_SWIFT_DESC"
 			size="60" maxlength="255" 
 		/>
+	<!-- second bank account -->
 		<field name="spacerBank2" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_2"
 		/>
@@ -331,7 +333,7 @@
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="bank_number2" type="text" 
+		<field name="account_number2" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
@@ -356,6 +358,7 @@
 			description="COM_IMPRINT_IMPRINT_SWIFT_DESC"
 			size="60" maxlength="255" 
 		/>
+	<!-- third bank account -->
 		<field name="spacerBank3" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_3"
 		/>
@@ -364,7 +367,7 @@
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="bank_number3" type="text" 
+		<field name="account_number3" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
@@ -389,6 +392,7 @@
 			description="COM_IMPRINT_IMPRINT_SWIFT_DESC"
 			size="60" maxlength="255" 
 		/>
+	<!-- forth bank account -->
 		<field name="spacerBank4" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_4"
 		/>
@@ -397,7 +401,7 @@
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER_DESC"
 			size="60" maxlength="255" 
 		/>
-		<field name="bank_number4" type="text" 
+		<field name="account_number4" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER" 
 			description="COM_IMPRINT_IMPRINT_ACCOUNT_NUMBER_DESC"
 			size="60" maxlength="255" 
