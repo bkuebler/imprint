@@ -18,10 +18,10 @@
 			description="COM_IMPRINT_REMARK_IMPRINT_NAME_DESC"
 			size="60" maxlength="255" required="true"
 		/>
-		<field name="text" type="textarea" 
+		<field name="text" type="editor" 
 			label="COM_IMPRINT_REMARK_TEXT" 
 			description="COM_IMPRINT_REMARK_TEXT_DESC" 
-			rows="10" cols="45"
+			filter="safehtml" class="inputbox"
 		/>	
 	</fieldset>
 </form>

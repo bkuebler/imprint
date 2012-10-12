@@ -14,17 +14,19 @@ JHtml::_('behavior.formvalidation');
 $params = $this->form->getFieldsets('params');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_imprint&view=remark&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate">
-	<div class="width-60 fltlft">
+	<div class="width-100 fltlft">
 		<fieldset class="adminform">
 			<legend><?php echo JText::_('JDETAILS'); ?></legend>
 			<ul class="adminformlist">
-<?php foreach($this->form->getFieldset('details') as $field): ?>
-				<li><?php echo $field->label;echo $field->input;?></li>
-<?php endforeach; ?>
+				<li><?php echo $this->form->getLabel('name');echo $this->form->getInput('name');?></li>
 			</ul>
+			<div class="clr"></div>
+			<?php echo $this->form->getLabel('text'); ?>
+			<div class="clr"></div>
+			<?php echo $this->form->getInput('text'); ?>
 		</fieldset>
 	</div>
-
+<!--
 	<div class="width-40 fltrt">
 		<?php echo JHtml::_('sliders.start', 'imprint-slider'); ?>
 
@@ -44,6 +46,7 @@ $params = $this->form->getFieldsets('params');
 
 		<?php echo JHtml::_('sliders.end'); ?>
 	</div>
+-->
 	<div>
 		<input type="hidden" name="task" value="" />
 		<?php echo JHtml::_('form.token'); ?>
