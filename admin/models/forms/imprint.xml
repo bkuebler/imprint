@@ -591,10 +591,10 @@
 			</field> -->	
 		</fieldset>
 		<fieldset name="params_advanced" label="COM_IMPRINT_IMPRINT_PARAMS_ADVANCED">
-			<field name="contact_icons" type="list" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_ICONS" description="COM_IMPRINT_IMPRINT_PARAMS_ICONS_DESC">
-				<option value="0">Icons</option>
-				<option value="1">Text</option>
-				<option value="2">Keine</option>
+			<field name="contact_icons" type="list" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT" description="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT_DESC">
+				<option value="0">COM_IMPRINT_IMPRINT_PARAMS_ICONS</option>
+				<option value="1">COM_IMPRINT_IMPRINT_PARAMS_TEXT</option>
+				<option value="2">COM_IMPRINT_IMPRINT_PARAMS_NO_ICONS_OR_TEXT</option>
 			</field>
 <!-- 			Not used jet -->
 <!-- 			<field name="icon_address" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB_DESC" /> -->
