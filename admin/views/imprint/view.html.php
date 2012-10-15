@@ -126,7 +126,5 @@ class ImprintViewImprint extends JView
 		$document = JFactory::getDocument();
 		$document->setTitle($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_CREATING') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_EDITING'));
 		$document->addScript(JURI::root() . $this->script);
-		$document->addScript(JURI::root() . "/administrator/components/com_imprint/views/imprint/submitbutton.js");
-		JText::script('COM_IMPRINT_IMPRINT_ERROR_UNACCEPTABLE');
 	}
 }

@@ -13,6 +13,20 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 $params = $this->form->getFieldsets('params');
 ?>
+<script type="text/javascript">
+	Joomla.submitbutton = function(task)
+	{
+		if (task == 'contact.cancel' || document.formvalidator.isValid(document.id('imprint-form')))
+		{
+			Joomla.submitform(task, document.getElementById('imprint-form'));
+		}
+		else
+		{
+			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
+		}
+	}
+</script>
+
 <form action="<?php echo JRoute::_('index.php?option=com_imprint&view=imprint&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate">
 	<div class="width-60 fltlft">
 		<?php echo JHtml::_($this->presentation_style . '.start', 'imprint-' . $this->presentation_style); ?>
