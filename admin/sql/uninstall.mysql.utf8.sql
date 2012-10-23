@@ -1,4 +1,4 @@
 /* version 3.1.0 $Id$ */
 
-DROP TABLE IF EXISTS `#__imprints_imprints`;
-DROP TABLE IF EXISTS `#__imprints_remarks`;
+DROP TABLE IF EXISTS `#__imprint_imprints`;
+DROP TABLE IF EXISTS `#__imprint_remarks`;
