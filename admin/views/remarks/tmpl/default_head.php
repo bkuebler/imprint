@@ -12,11 +12,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 <tr>
-        <th width="1%">
-                <input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count($this->items); ?>);" />
-        </th>                     
-        <th>
-                <?php echo JHtml::_('grid.sort',  'COM_IMPRINT_REMARKS_NAME', 'name', $this->listDirn, $this->listOrder); ?>
-        </th>
+	<th width="1%">
+		<input type="checkbox" name="toggle" value="" onclick="checkAll(<?php echo count($this->items); ?>);" />
+	</th>                     
+	<th>
+		<?php echo JHtml::_('grid.sort',  'COM_IMPRINT_REMARKS_NAME', 'name', $this->listDirn, $this->listOrder); ?>
+	</th>
+	<th width="1%" class="nowrap">
+		<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'id', $this->listDirn, $this->listOrder); ?>
+	</th>
 </tr>
 
