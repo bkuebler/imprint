@@ -16,10 +16,9 @@
 			description="COM_IMPRINT_IMPRINT_INFO_DESC" 
 			rows="10" cols="45"
 		/>	
-		<field name="image" type="imagelist" 
+		<field name="image" type="media" 
 			label="COM_IMPRINT_IMPRINT_IMAGE" 
 			description="COM_IMPRINT_IMPRINT_IMAGE_DESC" 
-			directory="/images" hide_none="1" default=""
 		/>
 		<field name="agburl" type="text" 
 			label="COM_IMPRINT_IMPRINT_DIRECTLINK" 
