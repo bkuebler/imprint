@@ -32,11 +32,18 @@ $params = $this->form->getFieldsets('params');
 		<?php echo JHtml::_($this->presentation_style . '.start', 'imprint-' . $this->presentation_style); ?>
 <?php foreach ($this->form->getFieldsets() as $name => $fieldset): ?>
 	<?php if (substr($name, 0, 6) == 'params') continue; ?>
-		<?php echo JHtml::_($this->presentation_style . '.panel', JText::_($fieldset->label), $name); ?>
+	<?php echo JHtml::_($this->presentation_style . '.panel', JText::_($fieldset->label), $name); ?>
 		<fieldset class="adminform">
 			<ul class="adminformlist">
 	<?php foreach($this->form->getFieldset($name) as $field): ?>
+		<?php if($field->type == 'Editor'):?>
+				<div class="clr"></div>
+				<?php echo $field->label; ?>
+				<div class="clr"></div>
+				<?php echo $field->input; ?>
+		<?php else:?>
 				<li><?php echo $field->label;echo $field->input;?></li>
+		<?php endif; ?>
 	<?php endforeach; ?>
 			</ul>
 		</fieldset>
