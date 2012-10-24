@@ -11,11 +11,6 @@
 			description="COM_IMPRINT_IMPRINT_IMPRINT_NAME_DESC"
 			size="60" maxlength="255" required="true"
 		/>
-		<field name="misc" type="textarea" 
-			label="COM_IMPRINT_IMPRINT_INFO" 
-			description="COM_IMPRINT_IMPRINT_INFO_DESC" 
-			rows="10" cols="45"
-		/>	
 		<field name="image" type="media" 
 			label="COM_IMPRINT_IMPRINT_IMAGE" 
 			description="COM_IMPRINT_IMPRINT_IMAGE_DESC" 
@@ -475,11 +470,16 @@
 		/>
 	</fieldset>
 	
-	<fieldset name="remarks" label="COM_IMPRINT_IMPRINT_REMARKS">
+	<fieldset name="remarks" label="COM_IMPRINT_IMPRINT_REMARKS">	
 		<field name="remarks" type="remarks" 
 			label="COM_IMPRINT_IMPRINT_REMARKS" 
 			description="COM_IMPRINT_IMPRINT_REMARKS_DESC"
 			multiple="true"
+		/>
+		<field name="misc" type="editor" 
+			label="COM_IMPRINT_IMPRINT_INFO" 
+			description="COM_IMPRINT_IMPRINT_INFO_DESC" 
+			buttons="article,pagebreak,readmore" filter="safehtml"
 		/>
 	</fieldset>
 	
