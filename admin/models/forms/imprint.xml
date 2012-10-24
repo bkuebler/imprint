@@ -28,32 +28,6 @@
 	</fieldset>
 	
 	<fieldset name="kontakt" label="COM_IMPRINT_IMPRINT_CONTACT">
-		<field name="telephone" type="text" 
-			label="COM_IMPRINT_IMPRINT_TELEPHONE" 
-			description="COM_IMPRINT_IMPRINT_TELEPHONE_DESC"
-			size="60" maxlength="255" 
-		/>
-		<field name="fax" type="text" 
-			label="COM_IMPRINT_IMPRINT_FAX" 
-			description="COM_IMPRINT_IMPRINT_FAX_DESC"
-			size="60" maxlength="255" 
-		/>
-		<field name="mobilephone" type="text" 
-			label="COM_IMPRINT_IMPRINT_MOBILE_PHONE" 
-			description="COM_IMPRINT_IMPRINT_MOBILE_PHONE_DESC"
-			size="60" maxlength="255" 
-		/>
-		<field name="website" type="text" 
-			label="COM_IMPRINT_IMPRINT_WEBSITE" 
-			description="COM_IMPRINT_IMPRINT_WEBSITE_DESC"
-			size="60" maxlength="255" 
-		/>
-		<field name="email" type="email" 
-			label="COM_IMPRINT_IMPRINT_EMAIL" 
-			description="COM_IMPRINT_IMPRINT_EMAIL_DESC"
-			size="60" maxlength="255" 
-		/>
-		
 		<field name="adresstitel" type="text" 
 			label="COM_IMPRINT_IMPRINT_TITEL" 
 			description="COM_IMPRINT_IMPRINT_TITEL_DESC"
@@ -67,7 +41,7 @@
 		<field name="name1" type="text" 
 			label="COM_IMPRINT_IMPRINT_NAME" 
 			description="COM_IMPRINT_IMPRINT_NAME_DESC"
-			size="60" maxlength="255" 
+			size="60" maxlength="255" required="true"
 		/>
 		<field name="name2" type="text" 
 			label="COM_IMPRINT_IMPRINT_NAME" 
@@ -87,24 +61,48 @@
 		<field name="street" type="text" 
 			label="COM_IMPRINT_IMPRINT_STREET" 
 			description="COM_IMPRINT_IMPRINT_STREET_DESC"
-			size="60" maxlength="255" 
+			size="60" maxlength="255" required="true"
 		/>
 		<field name="zipcode" type="text" 
 			label="COM_IMPRINT_IMPRINT_ZIPCODE" 
 			description="COM_IMPRINT_IMPRINT_ZIPCODE_DESC"
-			size="60" maxlength="255" 
+			size="60" maxlength="255" required="true"
 		/>
 		<field name="city" type="text" 
 			label="COM_IMPRINT_IMPRINT_CITY" 
 			description="COM_IMPRINT_IMPRINT_CITY_DESC"
-			size="60" maxlength="255" 
+			size="60" maxlength="255" required="true"
 		/>
 		<field name="country" type="text" 
 			label="COM_IMPRINT_IMPRINT_COUNTRY" 
 			description="COM_IMPRINT_IMPRINT_COUNTRY_DESC"
 			size="60" maxlength="255" 
 		/>
-		
+		<field name="telephone" type="text" 
+			label="COM_IMPRINT_IMPRINT_TELEPHONE" 
+			description="COM_IMPRINT_IMPRINT_TELEPHONE_DESC"
+			size="60" maxlength="255" required="true"
+		/>
+		<field name="fax" type="text" 
+			label="COM_IMPRINT_IMPRINT_FAX" 
+			description="COM_IMPRINT_IMPRINT_FAX_DESC"
+			size="60" maxlength="255" 
+		/>
+		<field name="mobilephone" type="text" 
+			label="COM_IMPRINT_IMPRINT_MOBILE_PHONE" 
+			description="COM_IMPRINT_IMPRINT_MOBILE_PHONE_DESC"
+			size="60" maxlength="255" required="true"
+		/>
+		<field name="website" type="text" 
+			label="COM_IMPRINT_IMPRINT_WEBSITE" 
+			description="COM_IMPRINT_IMPRINT_WEBSITE_DESC"
+			size="60" maxlength="255" 
+		/>
+		<field name="email" type="email" 
+			label="COM_IMPRINT_IMPRINT_EMAIL" 
+			description="COM_IMPRINT_IMPRINT_EMAIL_DESC"
+			size="60" maxlength="255" 
+		/>
 		<field name="contacturl" type="text" 
 			label="COM_IMPRINT_IMPRINT_DIRECTLINK" 
 			description="COM_IMPRINT_IMPRINT_DIRECTLINK_DESC" 
