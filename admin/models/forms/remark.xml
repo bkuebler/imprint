@@ -22,6 +22,7 @@
 			label="COM_IMPRINT_REMARK_TEXT" 
 			description="COM_IMPRINT_REMARK_TEXT_DESC" 
 			filter="safehtml" class="inputbox"
+			buttons="article,pagebreak,readmore"
 		/>	
 	</fieldset>
 </form>
