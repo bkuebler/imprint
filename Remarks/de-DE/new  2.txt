@@ -1,2 +1,0 @@
-Links entfernen: 	<a.*?>([^<>]*)</a>
-SiteName:			<\?php.*?echo.*?siteName.*?\?>
