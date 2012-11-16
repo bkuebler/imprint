@@ -80,4 +80,8 @@
 			<folder>views</folder>
 		</files>
 	</administration>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Imprint Update Site">https://github.com/downloads/joomla-imprint/imprint/imprint-update.xml</server>
+	</updateservers>
 </extension>
