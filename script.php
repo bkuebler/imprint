@@ -78,12 +78,17 @@ class com_imprintInstallerScript
 		
 		// Try to get the new imprint version
 		if($newVersion === false)
-			JError::raiseError('400', 'COM_IMPRINT_PREFLIGHT_ERROR_NEW_VERSION');
+		{
+			$app->enqueueMessage(JText::_
+					('COM_IMPRINT_PREFLIGHT_ERROR_NEW_VERSION'), 'error');
+			return false;
+		}
 			
 		$jversion = new JVersion();
 		if( version_compare( $jversion->getShortVersion(), '1.6', 'lt' ) )
 		{
-			Jerror::raiseWarning(null, 'COM_IMPRINT_PREFLIGHT_ERROR_JOOMLA_VERSION');
+			$app->enqueueMessage(JText::_
+					('COM_IMPRINT_PREFLIGHT_ERROR_JOOMLA_VERSION'), 'error');
 			//Cannot install com_imprint in a Joomla release prior to 1.6
 			return false;
 		}
@@ -95,106 +100,11 @@ class com_imprintInstallerScript
 			$rel = $oldVersion . ' to ' . $newVersion;
 			if ( version_compare( $newVersion, $oldVersion, 'le' ) )
 			{
-				Jerror::raiseWarning(null, 'COM_IMPRINT_PREFLIGHT_ERROR_IMPRINT_VERSION' . $rel);
+				$app->enqueueMessage(JText::_
+						('COM_IMPRINT_PREFLIGHT_ERROR_IMPRINT_VERSION') . $rel,
+						'error');
 				//Incorrect version sequence. Cannot upgrade 
 				return false;
-			}
-			// Fixes the installation bugs of version 3.0 (wrong langeguage directory and missing 3.0.sql).
-
-			// SQL query does not work. Deleting files work.
-			
-			if ($oldVersion == '3.0')
-			{
-				jimport('joomla.filesystem.file');
-	
-				// Get the posted config options.
-				$vars = JRequest::getVar('jform', array());
-			
-				$path = JPATH_ADMINISTRATOR;
-			
-				// check whether we need to use FTP
-				$useFTP = false;
-				if ((file_exists($path) && !is_writable($path))) {
-					$useFTP = true;
-				}
-			
-				// Check for safe mode
-				if (ini_get('safe_mode')) {
-					$useFTP = true;
-				}
-			
-				// Enable/Disable override
-				if (!isset($options->ftpEnable) || ($options->ftpEnable != 1)) {
-					$useFTP = false;
-				}
-			
-				if ($useFTP == true) {
-					// Connect the FTP client
-					jimport('joomla.client.ftp');
-					jimport('joomla.filesystem.path');
-			
-					$ftp = JFTP::getInstance($options->ftp_host, $options->ftp_port);
-					$ftp->login($options->ftp_user, $options->ftp_pass);
-			
-					// Translate path for the FTP account
-					$path = JPATH_ADMINISTRATOR . '/language/de-de/';
-					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
-					$files = $ftp->listDetails($path,'files');
-					if(in_array('de-DE.com_imprint.ini', $files))
-						$return = $ftp->delete($path . 'de-DE.com_imprint.ini');
-					if(in_array('de-DE.com_imprint.sys.ini', $files))
-						$return = $return && $ftp->delete($path . 'de-DE.com_imprint.sys.ini');
-					
-					$path = JPATH_ADMINISTRATOR . '/language/en-GB/';
-					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
-					$files = $ftp->listDetails($path,'files');
-					if(in_array('en-GB.com_imprint.ini', $files))
-						$return = $return && $ftp->delete($path . 'en-GB.com_imprint.ini');
-					if(in_array('en-GB.com_imprint.sys.ini', $files))
-						$return = $return && $ftp->delete($path . 'en-GB.com_imprint.sys.ini');
-			
-					$path = JPATH_SITE . '/language/de-de/';
-					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
-					$files = $ftp->listDetails($path,'files');
-					if(in_array('de-DE.com_imprint.ini', $files))
-						$return = $return && $ftp->delete($path . 'de-DE.com_imprint.ini');
-					
-					$path = JPATH_SITE . '/language/en-GB/';
-					$path = JPath::clean(str_replace(JPATH_CONFIGURATION, $options->ftp_root, $path), '/');
-					$files = $ftp->listDetails($path,'files');
-					if(in_array('en-GB.com_imprint.ini', $files))
-						$return = $return && $ftp->delete($path . 'en-GB.com_imprint.ini');
-							
-					$ftp->quit();
-				} 
-				else
-				{
-					ob_start();
-					if(JFile::exists($path . '/language/de-DE/de-DE.com_imprint.ini'))
-						$return = JFile::delete($path . '/language/de-DE/de-DE.com_imprint.ini');
-					if(JFile::exists($path . '/language/de-DE/de-DE.com_imprint.sys.ini'))
-						$return = $return && JFile::delete($path . '/language/de-DE/de-DE.com_imprint.sys.ini');
-					
-					if(JFile::exists($path . '/language/en-GB/en-GB.com_imprint.ini'))
-						$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_imprint.ini');
-					if(JFile::exists($path . '/language/en-GB/en-GB.com_imprint.sys.ini'))
-						$return = $return && JFile::delete($path . '/language/en-GB/en-GB.com_imprint.sys.ini');
-					
-					if(JFile::exists($path . '/language/de-DE/de-DE.com_imprint.ini'))
-						$return = $return && JFile::delete(JPATH_SITE . '/language/de-DE/de-DE.com_imprint.ini');
-					
-					if(JFile::exists($path . '/language/en-GB/en-GB.com_imprint.ini'))
-						$return = $return && JFile::delete(JPATH_SITE . '/language/en-GB/en-GB.com_imprint.ini');
-					
-					ob_end_clean();
-				}
-				
-				// Fix missing 3.0.sql update script
-				$db = JFactory::getDbo();
-				$db->setQuery("ALTER TABLE `#__imprint_imprints` ADD `templateemail` varchar(255) NOT NULL default ''");
-				$db->query();
-				$db->setQuery("ALTER TABLE `#__imprint_imprints` CHANGE `aktiv` `default` tinyint NOT NULL default 0;");
-				$db->query();
 			}
 		}
 		else
@@ -213,11 +123,27 @@ class com_imprintInstallerScript
 	 * @param	object	$parent	Is the class calling this method.
 	 * @since	3.0
 	 */
-	// Not used.
-// 	function postflight($type, $parent) 
-// 	{
-// 		echo '<p>' . JText::_('COM_IMPRINT_POSTFLIGHT_' . $type . '_TEXT') . '</p>';
-// 	}
+ 	function postflight($type, $parent) 
+ 	{
+ 		$app = JFactory::getApplication();
+ 		
+ 		// Check whether an old installation of com_impressum exits
+ 		$db = JFactory::getDBO();
+ 		$query = $db->getQuery(true);
+ 		$query->select('extension_id');
+ 		$query->from('#__extensions');
+ 		$query->where("name LIKE 'com_impressum'");
+ 		$db->setQuery($query);
+ 		$db->execute();
+ 		
+ 		if($db->getNumRows() > 0)
+ 		{
+ 			// You should uninstall the old imprint versions pre 3.1.0
+ 			$app->enqueueMessage(JText::_
+ 					('COM_IMPRINT_POSTLIGHT_ERROR_UNINSTALL_IMPRESSUM'),
+ 					'warning');
+ 		}
+ 	}
 
 	/**
 	 * Method to get the params of the installed version.
