@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		3.1.9 $Id$
+ * @version		3.1.0
  * @package		Joomla
  * @subpackage	Imprint
  * @copyright	(C) 2011 - 2012 Imprint Team

@@ -1,4 +1,4 @@
-/* version 3.1.0 $Id$ */
+/* version 3.1.0 */
 
 ALTER TABLE `#__imprint_imprints` CHANGE `strasse` `street` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ;
 ALTER TABLE `#__imprint_imprints` CHANGE `plz` `zipcode` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ;
