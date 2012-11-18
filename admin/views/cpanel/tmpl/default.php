@@ -55,7 +55,7 @@ We can include ads if we want
 			<h3><?php echo JText::_('COM_IMPRINT_COPYRIGHT');?></h3>
 			<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Team. All rights reserved.<br />
 			<br />
-			<a href="http://sourceforge.net/projects/imprint/" target="_blank"><?php echo JText::_('COM_IMPRINT_HOME');?></a></p>
+			<a href="https://github.com/joomla-imprint" target="_blank"><?php echo JText::_('COM_IMPRINT_HOME');?></a></p>
 
 			<h3><?php echo JText::_('COM_IMPRINT_LICENSE');?></h3>
 			<p><a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></p>
