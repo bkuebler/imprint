@@ -5,8 +5,14 @@ Imprint for Joomla! CMS.
 
 Ein Impressum für das Joomla! CMS.
 
-Release notes
-=============
+System requirements
+===================
+
+Joomla! 1.7.x or 2.5.x
+
+A version for Joomla! 3.0.x and newer is comming soon.
+
+Eine Version für Joomla! 3.0.x und neuer wird bald erscheinen.
 
 Update from <3.1.0 to 3.1.0 and newer
 =====================================
@@ -22,3 +28,14 @@ Version installiert werden. Ab 3.1.0 können dann die Versionen wieder wie
 gewohnt aktualisiert werden. Diese sollten dann auch automatisch nach
 Aktualisierungen suchen und diese anzeigen. 
 
+Release notes
+=============
+
+3.1.0
+=====
+
+Add remarks function
+Update backend layout
+
+Alle zusätzlichen Texte editierbar gemacht
+Das Backend Layout komplett überarbeitet
