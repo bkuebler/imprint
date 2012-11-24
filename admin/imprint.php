@@ -33,6 +33,8 @@ $document->addStyleDeclaration('.icon-16-imprint {background-image: url(../media
 $document->addStyleDeclaration('.icon-16-remark {background-image: url(../media/com_imprint/images/assets/48px/icon-16-remark.png);}');
 $document->addStyleDeclaration('.icon-16-remarks {background-image: url(../media/com_imprint/images/assets/48px/icon-16-remarks.png);}');
 
+$document->addStyleDeclaration('fieldset.adminform label, fieldset.adminform span.faux-label {width: 150px;}');
+
 // require helper file
 JLoader::register('ImprintHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'imprint.php');
 
