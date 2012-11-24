@@ -70,10 +70,8 @@ class com_imprintInstallerScript
 	 */
 	function preflight($type, $parent) 
 	{
-		// this component does not work with Joomla releases prior to 1.6
-		// abort if the current Joomla release is older
-		
-		$newVersion = $this->getCurrentVersion();
+		$newVersion = $parent->get("manifest")->version;
+		$minJoomla	= $parent->get("manifest")->attributes()->version;
 		$app		= JFactory::getApplication();
 		
 		// Try to get the new imprint version
@@ -85,15 +83,15 @@ class com_imprintInstallerScript
 		}
 			
 		$jversion = new JVersion();
-		if( version_compare( $jversion->getShortVersion(), '1.6', 'lt' ) )
+		if( version_compare( $jversion->getShortVersion(), $minJoomla, 'lt' ) )
 		{
+			// Joomla is to old
 			$app->enqueueMessage(JText::_
 					('COM_IMPRINT_PREFLIGHT_ERROR_JOOMLA_VERSION'), 'error');
-			//Cannot install com_imprint in a Joomla release prior to 1.6
 			return false;
 		}
 		
-		// abort if the release being installed is not newer than the currently installed version
+		// abort if the release being installed is not newer than the current installed version
 		if ( $type == 'update' )
 		{
 			$oldVersion = $this->getOldVersion();
@@ -438,6 +436,7 @@ class com_imprintInstallerScript
 	 * @since	3.1
 	 * @return	string 	The version string or 
 	 * 			boolean	false if manifestfile or version tag not found.
+	 * @deprecated Use $parent->get("manifest")->version; instead
 	 */
 	public static function getCurrentVersion()
 	{
