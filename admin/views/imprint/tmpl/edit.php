@@ -16,7 +16,7 @@ $params = $this->form->getFieldsets('params');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'contact.cancel' || document.formvalidator.isValid(document.id('imprint-form')))
+		if (task == 'imprint.cancel' || document.formvalidator.isValid(document.id('imprint-form')))
 		{
 			Joomla.submitform(task, document.getElementById('imprint-form'));
 		}
