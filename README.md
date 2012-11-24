@@ -17,16 +17,16 @@ Eine Version für Joomla! 3.0.x und neuer wird bald erscheinen.
 Update from <3.1.0 to 3.1.0 and newer
 =====================================
 
-You have to reinstall this component. Please uninstall the old component first
-and then clean install this component. You have to do this only one time.
-Above 3.1.0  the normal Joomla! update function works again. And this component
-will automatically search for updates.
+You have to reinstall this component. Normaly we do this for you with a
+migration script. If this migration fails you must uninstall the old version
+(com_impressum) manually.
 
 Um von Versionen vor 3.1.0 auf die Version 3.1.0 oder neuer zu aktualisieren,
-muss zuerst die alte Version deinstallier werden. Erst dann kann die neue
-Version installiert werden. Ab 3.1.0 können dann die Versionen wieder wie
-gewohnt aktualisiert werden. Diese sollten dann auch automatisch nach
-Aktualisierungen suchen und diese anzeigen. 
+muss die alte Version deinstalliert werden. Diese geschieht normalerweise mit 
+einem Updateskript, das automatisch ausgeführt wird. Dies Skript migriert zu 
+erst alle Daten und entfernt dann die alte Komponente. Sollte bei diesem Skript 
+ein Fehler auftretten, dann muss die alte Komponente (com_impressum) von Ihnen
+manuell deinstalliert werden. 
 
 Release notes
 =============
@@ -35,7 +35,9 @@ Release notes
 =====
 
 Add remarks function
+
 Update backend layout
 
 Alle zusätzlichen Texte editierbar gemacht
+
 Das Backend Layout komplett überarbeitet
