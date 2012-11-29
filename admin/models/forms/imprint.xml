@@ -85,7 +85,7 @@
 		<field name="mobilephone" type="text" 
 			label="COM_IMPRINT_IMPRINT_MOBILE_PHONE" 
 			description="COM_IMPRINT_IMPRINT_MOBILE_PHONE_DESC"
-			size="60" maxlength="255" required="true"
+			size="60" maxlength="255"
 		/>
 		<field name="website" type="text" 
 			label="COM_IMPRINT_IMPRINT_WEBSITE" 
