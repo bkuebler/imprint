@@ -41,7 +41,7 @@ if(($show_remarks = ($this->imprint->remarks !== false)) && $show_info)
 			</td>
 <?php if ( $this->imprint->image && $this->imprint->params->get( 'show_image' ) ): ?>
 			<td class="imprint_td_logo" rowspan="<?php echo $rows; ?>">
-					<?php echo JHTML::_('image', JURI::root() . 'images/' . $this->imprint->image, JText::_( 'COM_IMPRINT' ), array('align' => 'middle')); ?>
+					<?php echo JHTML::_('image', JURI::root() . $this->imprint->image, JText::_( 'COM_IMPRINT' ), array('align' => 'middle')); ?>
 			</td>
 <?php endif; ?>
 		</tr>
