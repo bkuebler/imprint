@@ -60,7 +60,7 @@ JHtml::_('behavior.tooltip');
 			<h2><?php echo JText::_('COM_IMPRINT_ABOUT_CODE_CONTRIBUTERS');?>:</h2>
 			<p>
 				<a href="https://github.com/mgebhardt" target="_blank">Mathias Gebhardt</a><br />
-				<a href="https://github.com/schmidt-chris" target="_blank">Christopher Schmidt</a>
+				<a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a>
 			</p>
 <!--		No documentation exists at this moment, for the future
 			<h3><?php echo JText::_('COM_IMPRINT_DOCUMENTAION_CONTRIBUTERS');?>:</h3>
@@ -69,9 +69,9 @@ JHtml::_('behavior.tooltip');
 
 			<h3><?php echo JText::_('COM_IMPRINT_ABOUT_TRANSLATION_CONTRIBUTERS');?>:</h3>
 			<p>
-				English (en-GB) - Imprint Translation Team - <a href="https://github.com/schmidt-chris" target="_blank">Christopher Schmidt</a><br />
-				German (de-DE) - Imprint Translation Team - <a href="https://github.com/schmidt-chris" target="_blank">Christopher Schmidt</a><br />
-				French (fr-FR) - Imprint Translation Team - <a href="https://github.com/schmidt-chris" target="_blank">Christopher Schmidt</a>
+				English (en-GB) - Imprint Translation Team - <a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a><br />
+				German (de-DE) - Imprint Translation Team - <a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a><br />
+				French (fr-FR) - Imprint Translation Team - <a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a>
 			</p>
 
 			<h3><?php echo JText::_('COM_IMPRINT_DERIVATIVE_WORK');?>:</h3>
