@@ -28,17 +28,7 @@ JHtml::_('behavior.tooltip');
 			$link = 'index.php?option=com_imprint&amp;view=about';
 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-about.png', JText::_( 'COM_IMPRINT_ABOUT' ) );
 			?>
-<!--
-We can include ads if we want
-
-				<div style="clear:both">&nbsp;</div>
-				<p>&nbsp;</p>
-				<div style="text-align:center;padding:0;margin:0;border:0">
-					<iframe style="padding:0;margin:0;border:0" src="http://sourceforge.net/projects/imprint/" noresize="noresize" frameborder="0" border="0" cellspacing="0" scrolling="no" width="500" marginwidth="0" marginheight="0" height="125">
-					<a href="http://sourceforge.net/projects/imprint/" target="_blank">Imprint</a>
-					</iframe>
-				</div>
--->			</div>
+			</div>
 		</td>
 
 		<td width="45%" valign="top">
@@ -48,7 +38,9 @@ We can include ads if we want
 					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_imprint/images/', NULL, NULL, 'Imprint' )
 				?>
 			</div>
-
+			
+			<?php echo JText::_('COM_IMPRINT_WE_NEED_HELP'); ?>
+			
 			<h3><?php echo JText::_('JVERSION');?></h3>
 			<p><?php echo ImprintHelper::getVersion();?></p>
 
