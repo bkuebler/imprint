@@ -80,6 +80,6 @@
 	</administration>
 	
 	<updateservers>
-		<server type="extension" priority="1" name="Imprint Update Site">https://github.com/downloads/joomla-imprint/imprint/imprint-update.xml</server>
+		<server type="extension" priority="1" name="Imprint Update Site">https://github.com/joomla-imprint/imprint/blob/releases/imprint-update.xml</server>
 	</updateservers>
 </extension>
