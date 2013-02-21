@@ -2,7 +2,7 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRINT</name>
 	
-	<creationDate>20.02.2013</creationDate>
+	<creationDate>21.02.2013</creationDate>
 	<author>Imprint Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011-2013 Imprint Team</copyright>
