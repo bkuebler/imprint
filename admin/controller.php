@@ -1,45 +1,45 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Check to ensure this file is included in Joomla!
-defined('_JEXEC') or die( 'Restricted access' );
-
-jimport( 'joomla.application.component.controller' );
+defined('_JEXEC') or die;
 
 /**
- * Imprint controller class.
+ * Imprint Controller
  *
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
-class ImprintController extends JController
+class ImprintController extends JControllerLegacy
 {
-	
 	/**
-	 * Typical view method for MVC based architecture
+	 * @var   string  The default view.
+	 * @since   4.0
+	 */
+	protected $default_view = 'cpanel';
+
+	/**
+	 * Method to display a view.
 	 *  
-	 * @author	mgebhardt
-	 * @param	boolean		If true, the view output will be cached 
- 	 * @return	JController	This object to support chaining. 
-	 * @since	3.0
+	 * @param   boolean     If true, the view output will be cached
+	 * @param   array       An array of safe url parameters and their variable types, for valid values see {@link JFilterInput::clean()}.
+	 *
+	 * @return  JController    This object to support chaining. 
+	 * @since   4.0
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-		// set default view if not set
-		JRequest::setVar('view', ($view = JRequest::getCmd('view', 'cpanel')));
+		$view	= $this->input->get('view', 'cpanel');
+		$layout	= $this->input->get('layout', 'cpanel');
 		
-		// call parent behavior
-		parent::display($cachable, $urlparams);
-		
-		// set the submenu
-		if($view != 'cpanel')
-			ImprintHelper::addSubmenu($view);
+		parent::display();
+
+		return $this;		
 	}
 }

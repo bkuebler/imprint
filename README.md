@@ -1,43 +1,39 @@
-imprint
+Imprint 4
 =======
 
-Imprint for Joomla! CMS.
+Imprint component for Joomla! Content Management System.
 
-Ein Impressum für das Joomla! CMS.
+Eine Komponente für das Joomla! Content Management System,
+welches ein Impressum bereitstellt.
 
 System requirements
 ===================
 
-Joomla! 1.7.x or 2.5.x
+- Joomla! 3.0.x or later
 
-A version for Joomla! 3.0.x and newer is comming soon.
+For Joomla! 2.5.x and older use Imprint 3.
 
-Eine Version für Joomla! 3.0.x und neuer wird bald erscheinen.
+- Joomla! 3.0.x oder neuer
 
-Update from <3.1.0 to 3.1.0 and newer
-=====================================
+Für Joomla! 2.5.x und älter ist Imprint 3 zu benutzen.
 
-You have to reinstall this component. Normaly we do this for you with a
-migration script. If this migration fails you must uninstall the old version
-(com_impressum) manually.
+General Information for Imprint 4
+=================================
 
-Um von Versionen vor 3.1.0 auf die Version 3.1.0 oder neuer zu aktualisieren,
-muss die alte Version deinstalliert werden. Diese geschieht normalerweise mit 
-einem Updateskript, das automatisch ausgeführt wird. Dies Skript migriert zu 
-erst alle Daten und entfernt dann die alte Komponente. Sollte bei diesem Skript 
-ein Fehler auftretten, dann muss die alte Komponente (com_impressum) von Ihnen
-manuell deinstalliert werden. 
+Imprint 4 is very unstable at the moment. It is in deployment. Generally
+it is the new Version for Joomla! 3 and newer. For the old Joomla! Versions
+please use Imprint 3. This Version of Imprint isn't compatible to older
+Versions.
+
+Imprint 4 ist zur Zeit nicht stabil, da es in der Entwicklung ist. Generell
+wird Imprint 4 für die neueren Versionen von Joomla! CMS entwickelt und deshalb
+mit den älteren Joomla! CMS Versionen nicht kompatibel. Für die älteren Versionen
+verwenden Sie bitte weiterhin Imprint 3 diese Version bleibt weiterhin für die
+anderen Versionen als aktuell gültig. 
 
 Release notes
 =============
 
-3.1.0
-=====
+There is currently no Release available!!
 
-Add remarks function
-
-Update backend layout
-
-Alle zusätzlichen Texte editierbar gemacht
-
-Das Backend Layout komplett überarbeitet
+Zur Zeit ist noch kein Release von Imprint 4 veröffentlicht!!

@@ -1,96 +1,42 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Site
+ * @subpackage  com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Check to ensure this file is included in Joomla!
-defined('_JEXEC') or die( 'Restricted access' );
-
-jimport('joomla.application.component.controller');
+defined('_JEXEC') or die;
 
 /**
- * Imprint controller class.
+ * Imprint Component Controller
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Site
+ * @subpackage  Imprint
+ * @since       4.0
  */
-class ImprintController extends JController
+class ImprintController extends JControllerLegacy
 {
-
 	/**
-	 * Typical view method for MVC based architecture
-	 *  
-	 * @author	mgebhardt
-	 * @param	boolean		If true, the view output will be cached 
- 	 * @return	JController	This object to support chaining. 
-	 * @since	3.0
+	 * Method to display a view
+	 *
+	 * @param   boolean    If true, the view output will be cached
+	 * @param   array      An array of safe url parameters and their variable types, for valid values see {@link JFilterInput::clean()}.
+	 *
+ 	 * @return  JController   This object to support chaining. 
+	 * @since   4.0
 	 */
-	
-	function display($cachable = false, $urlparams = false)
+	public function display($cachable = false, $urlparams = false)
 	{
-		// set default view if not set
-		JRequest::setVar('view', JRequest::getCmd('view', 'Imprint'));
+		$cachable = true;
+
+		// Set the default view name and format from the Request.
+		$vName = $this->input->getCmd('view', 'Imprint');
+		$this->input->set('view', $vName);
 		
-		// call parent behavior
-		parent::display($cachable, $urlparams);
-		
-		/*
-		$document	= JFactory::getDocument();
-		$viewType	= $document->getType();
-		$viewName	= JRequest::getCmd('view', 'Imprint');
-		$viewLayout	= JRequest::getCmd('layout', 'default');
-		
-		$view = $this->getView($viewName, $viewType, '', array('base_path' => $this->basePath));
-		
-		// Get/Create the model
-		if ($model = $this->getModel($viewName)) {
-			// Push the model into the view (as default)
-			$view->setModel($model, true);
-		}
-		
-		// Set the layout
-		$view->setLayout($viewLayout);
-		
-		$view->assignRef('document', $document);
-		
-		$conf = JFactory::getConfig();
-		
-		// Display the view
-		if ($cachable && $viewType != 'feed' && $conf->get('caching') >= 1) {
-			$option	= JRequest::getCmd('option');
-			$cache	= JFactory::getCache($option, 'view');
-		
-			if (is_array($urlparams)) {
-				$app = JFactory::getApplication();
-		
-				$registeredurlparams = $app->get('registeredurlparams');
-		
-				if (empty($registeredurlparams)) {
-					$registeredurlparams = new stdClass();
-				}
-		
-				foreach ($urlparams AS $key => $value)
-				{
-					// Add your safe url parameters with variable type as value {@see JFilterInput::clean()}.
-					$registeredurlparams->$key = $value;
-				}
-		
-				$app->set('registeredurlparams', $registeredurlparams);
-			}
-		
-			$cache->get($view, 'display');
-		
-		}
-		else {
-			$view->display();
-		}
-		*/
+		parent::display($cachable, $safeurlparams);
+
 		return $this;
-		
 	}
 }

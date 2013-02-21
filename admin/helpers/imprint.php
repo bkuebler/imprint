@@ -1,44 +1,43 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage	com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined( '_JEXEC' ) or die;
 
 /**
- * Imprint helper class.
+ * Imprint Component helper.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
-abstract class ImprintHelper
+class ImprintHelper
 {
+	public static $extension = 'com_imprint';
 	
 	/**
-	 * Method to get user actions.
+	 * Gets a list of the actions that can be performed.
 	 *  
-	 * @author	mgebhardt
-	 * @param	int		$id	The imprint id.
-	 * @return	object	The action the user can do.
-	 * @since	3.0
+	 * @param   integer   The imprint ID.
+	 * 
+	 * @return  JObject
+	 * @since   4.0
 	 */
-	public static function getActions($id = 0)
+	public static function getActions($imprintId = 0)
 	{	
-		jimport('joomla.access.access');
 		$user	= JFactory::getUser();
 		$result	= new JObject;
  
-		if (empty($messageId)) {
+		if (empty($imprintId)) {
 			$assetName = 'com_imprint';
 		}
 		else {
-			$assetName = 'com_imprint.imprint.'.(int) $messageId;
+			$assetName = 'com_imprint.imprint.'.(int) $imprintId;
 		}
  
 		$actions = JAccess::getActions('com_imprint', 'component');
@@ -62,7 +61,7 @@ abstract class ImprintHelper
 	 * @since 	3.1
 	 * 
 	 */
-	public static function quickIconButton($link, $image, $text)
+/**	public static function quickIconButton($link, $image, $text)
 	{
 	
 		$lang	= JFactory::getLanguage();
@@ -82,6 +81,7 @@ abstract class ImprintHelper
 	
 		return $button;
 	}
+**/
 
 	/**
 	 * Method to get the version of the installed imprint.
@@ -97,18 +97,36 @@ abstract class ImprintHelper
 		$manifest = json_decode( $db->loadResult(), true );
 		return $manifest['version'];
 	}
-	
+
 	/**
-	 * Adds the submenu to backend
-	 * @param 	strin 	$view The current view name
-	 * @author	mgebhardt
-	 * @since	3.1
+	 * Configure the Linkbar
+	 *
+	 * @param   string     $vName    The current view name
+	 *
+	 * @return  void
+	 * @since   4.0
 	 */
-	public static function addSubmenu($view)
+	public static function addSubmenu($vName)
 	{
-		JSubMenuHelper::addEntry(JText::_('COM_IMPRINT_SUBMENU_CPANEL'), 'index.php?option=com_imprint&view=cpanel', $view == 'cpanel');
-		JSubMenuHelper::addEntry(JText::_('COM_IMPRINT_SUBMENU_IMPRINTS'), 'index.php?option=com_imprint&view=imprints', $view == 'imprints');
-		JSubMenuHelper::addEntry(JText::_('COM_IMPRINT_SUBMENU_REMARKS'), 'index.php?option=com_imprint&view=remarks', $view == 'remarks');
-		JSubMenuHelper::addEntry(JText::_('COM_IMPRINT_SUBMENU_ABOUT'), 'index.php?option=com_imprint&view=about', $view == 'about');
+		JHtmlSidebar::addEntry(
+			JText::_('COM_IMPRINT_SUBMENU_CPANEL'),
+			'index.php?option=com_imprint&view=cpanel',
+			$vName == 'cpanel'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_IMPRINT_SUBMENU_IMPRINTS'),
+			'index.php?option=com_imprint&view=imprints',
+			$vName == 'imprints'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_IMPRINT_SUBMENU_REMARKS'),
+			'index.php?option=com_imprint&view=remarks',
+			$vName == 'remarks'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_IMPRINT_SUBMENU_ABOUT'),
+			'index.php?option=com_imprint&view=about',
+			$vName == 'about'
+		);
 	}
 }

@@ -1,23 +1,17 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Site
+ * @subpackage  com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// no direct access
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
 
-// import joomla controller library
-jimport('joomla.application.component.controller');
+// require_once JPATH_COMPONENT.'/helpers/route.php';
+// require_once JPATH_COMPONENT.'/helpers/query.php';
 
-// Get an instance of the controller prefixed by Imprint
-$controller = JController::getInstance('Imprint');
-
-// Perform the Request task
-$controller->execute(JRequest::getCmd('task'));
-
-// Redirect if set by the controller
+$controller = JControllerLegacy::getInstance('Imprint');
+$controller->execute(JFactory::getApplication()->input->get('task'));
 $controller->redirect();

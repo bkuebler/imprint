@@ -1,27 +1,27 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Site
+ * @subpackage	com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// Check to ensure this file is included in Joomla!
-defined('_JEXEC') or die( 'Restricted access' );
-
-jimport('joomla.application.component.view');
+defined('_JEXEC') or die;
 
 /**
- * Imprint view class.
+ * Imprint View class für the Imprint component.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Site
+ * @subpackage  com_imprint
+ * @since       3.0
  */
-class ImprintViewImprint extends JView
+class ImprintViewImprint extends JViewLegacy
 {
-	
+	protected $state = null;
+
+	protected $items = null;
+	protected $params;
 	/**
 	 * Execute and display a template script.
 	 *  
@@ -32,7 +32,7 @@ class ImprintViewImprint extends JView
 	 */
 	function display($tpl = null)
 	{
-		$app		= JFactory::getApplication();
+		$state		= $this->get('State');
 		$params		= $app->getParams();
 		$imprint	= $this->get('Imprint');
 		$id			= $this->get('Id');
@@ -42,58 +42,60 @@ class ImprintViewImprint extends JView
 		$document->addStyleSheet(JURI::root() . 'media/com_imprint/css/com_imprint.css');
 		
 		// Check for errors.
-        if (count($errors = $this->get('Errors'))) 
-        {
-	        JError::raiseError(500, implode('<br />', $errors));
-	        return false;
-        }
-		
-        $this->imprint = $imprint;
-        $this->id = $id;
-        $this->default = $id == 0;
-        $this->params = $params;
+		if (count($errors = $this->get('Errors')))
+		{
+			JError::raiseError(500, implode("\n", $errors));
 
-        $this->setDocument();
-        
+			return false;
+		}
+		
+//        $this->imprint = $imprint;
+//        $this->id = $id;
+//        $this->default = $id == 0;
+
+		$this->params = &$params;
+
+		$this->_prepareDocument();
+
 		parent::display($tpl);
 	}
 	
 	/**
 	 * Prepares the document
-	 * 
-	 * @author	mgebhardt
-	 * @since	3.0
 	 */
-	protected function setDocument()
+	protected function _prepareDocument()
 	{
 		$app		= JFactory::getApplication();
 		$menus		= $app->getMenu();
 		$pathway	= $app->getPathway();
-		$title 		= null;
+		$title		= null;
 
 		// Because the application sets a default page title,
 		// we need to get it from the menu item itself
 		$menu = $menus->getActive();
-
-		if ($menu) {
+		if ($menu)
+		{
 			$this->params->def('page_heading', $this->params->get('page_title', $menu->title));
 		}
-		else {
+		else 
+		{
 			$this->params->def('page_heading', JText::_('COM_IMPRINT_DEFAULT_PAGE_TITLE'));
 		}
 
+		// Check for empty title and add site name if param is set
 		$title = $this->params->get('page_title', '');
-
-		if (empty($title)) {
+		if (empty($title))
+		{
 			$title = $app->getCfg('sitename');
 		}
-		elseif ($app->getCfg('sitename_pagetitles', 0) == 1) {
+		elseif ($app->getCfg('sitename_pagetitles', 0) == 1)
+		{
 			$title = JText::sprintf('JPAGETITLE', $app->getCfg('sitename'), $title);
 		}
-		elseif ($app->getCfg('sitename_pagetitles', 0) == 2) {
+		elseif ($app->getCfg('sitename_pagetitles', 0) == 2)
+		{
 			$title = JText::sprintf('JPAGETITLE', $title, $app->getCfg('sitename'));
 		}
-
  		$this->document->setTitle($title);
  		
  		if ($this->params->get('menu-meta_description'))

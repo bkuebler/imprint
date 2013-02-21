@@ -1,34 +1,31 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// import Joomla controlleradmin library
-jimport('joomla.application.component.controlleradmin');
+defined( '_JEXEC' ) or die;
 
 /**
- * Imprints controller class.
+ * Controller for Imprints list.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
 class ImprintControllerImprints extends JControllerAdmin
 {
-	
 	/**
 	 * Constructor.
 	 * 
-	 * @author	mgebhardt
-	 * @param	array	An optional associative array of configuration settings.
-	 * @since	3.0
+	 * @param   array     An optional associative array of configuration settings.
+	 *
+	 * @return  ImprintControllerImprints
+	 * @see     JController
+	 * @since   3.0
 	 */
 	public function __construct($config = array())
 	{
@@ -38,13 +35,17 @@ class ImprintControllerImprints extends JControllerAdmin
 	
 	/**
 	 * Proxy for getModel.
-	 *  
-	 * @author	mgebhardt
-	 * @since	3.0
+	 *
+	 * @param   string     $name    The name of the model.
+	 * @param   string     $prefix  The prefix for the PHP class name.
+	 *
+	 * @return  JModel
+	 * @since   4.0
 	 */
-	public function getModel($name = 'Imprint', $prefix = 'ImprintModel', $config = array()) 
+	public function getModel($name = 'Imprint', $prefix = 'ImprintModel', $config = array('ignore_request' => true)) 
 	{
-		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
+		$model = parent::getModel($name, $prefix, $config);
+
 		return $model;
 	}
 	
@@ -54,7 +55,7 @@ class ImprintControllerImprints extends JControllerAdmin
 	 * @author	mgebhardt
 	 * @since	3.0
 	 */
-	function setDefault()
+	/**function setDefault()
 	{
 		// Check for request forgeries
 		JRequest::checkToken('default') or die(JText::_('JINVALID_TOKEN'));
@@ -81,5 +82,5 @@ class ImprintControllerImprints extends JControllerAdmin
 			$this->setMessage(JText::_('COM_IMPRINT_IMPRINTS_DEFAULT_SET'));
 		}
 		$this->setRedirect(JRoute::_('index.php?option='.$this->option.'&view='.$this->view_list, false));
-	}
+	}**/
 }
