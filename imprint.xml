@@ -2,7 +2,7 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRINT</name>
 	
-	<creationDate>21.02.2013</creationDate>
+	<creationDate>22.02.2013</creationDate>
 	<author>Imprint Team</author>
 	<authorEmail>gebhardtmathias@aol.com</authorEmail>
 	<copyright>Copyright (c) 2011-2013 Imprint Team</copyright>
@@ -80,6 +80,6 @@
 	</administration>
 	
 	<updateservers>
-		<server type="extension" priority="1" name="Imprint Update Site">https://github.com/joomla-imprint/imprint/raw/releases/imprint-update.xml</server>
+		<server type="extension" priority="1" name="Imprint Update Site">https://raw.github.com/joomla-imprint/imprint/master/imprint-update.xml</server>
 	</updateservers>
 </extension>
