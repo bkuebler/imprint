@@ -14,7 +14,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport('joomla.application.component.view');
 
 /**
- * Imprint view clss.
+ * Imprint view class.
  * 
  * @package		Joomla
  * @subpackage	Imprint
@@ -26,9 +26,7 @@ class ImprintViewCPanel extends JView
 	function display($tpl = null) 
 	{
 		// get the Data
-		$form = $this->get('Form');
-		$item = $this->get('Item');
-		$script = $this->get('Script');
+		$defaultImprintID = $this->get('DefaultImprintID');
 		
 		// Load the css
 		$document	= JFactory::getDocument();
@@ -41,9 +39,7 @@ class ImprintViewCPanel extends JView
 			return false;
 		}
 		// Assign the Data
-		$this->form = $form;
-		$this->item = $item;
-		$this->script = $script;
+		$this->defaultImprintID = $defaultImprintID;
 
 		// Set the toolbar
 		$this->addToolBar();

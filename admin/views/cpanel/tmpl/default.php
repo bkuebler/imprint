@@ -22,6 +22,9 @@ JHtml::_('behavior.tooltip');
 			$link = 'index.php?option=com_imprint&amp;view=imprints';
 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
 			
+			$link = 'index.php?option=com_imprint&amp;task=imprint.edit&amp;id=' . $this->defaultImprintID;
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint.png', JText::_( 'COM_IMPRINT_EDIT_DEFAULT_IMPRINT' ) );
+			
 			$link = 'index.php?option=com_imprint&amp;view=remarks';
 			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-remarks.png', JText::_( 'COM_IMPRINT_REMARKS' ) );
 				
