@@ -1,17 +1,13 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ *
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// import Joomla view library
-jimport('joomla.application.component.view');
+defined( '_JEXEC' ) or die;
 
 /**
  * About view clss.
