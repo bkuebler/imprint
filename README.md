@@ -17,11 +17,20 @@ Eine Version für Joomla! 3.0.x und neuer wird bald erscheinen.
 Joomla! and corresponding imprint versions
 ==========================================
 
-|Joomla! version  |                 |          |
-| from   | to     | imprint version | branch   |
-| ------ | ------ | --------------- | -------- |
-| 1.7    | 2.5    | 3.x             | imprint3 |
-| 3.0    |        | 4.x             | imprint4 |
+<table>
+	<tr>
+		<th colspan="2"> Joomla! version</th><th colspan="2">imprint</th>
+	</tr>
+	<tr>
+		<th>from</th><th>to</th><th>version</th><th>branch</th>
+	</tr>
+	<tr>
+		<td>1.7</td><td>2.5</td><td>3.x</td><td>imprint3</td>
+	</tr>
+	<tr>
+		<td>3.0</td><td></td><td>4.x</td><td>imprint4</td>
+	</tr>
+</table>
 
 See branch's readme to detailed infromation for each version.
 
