@@ -1,34 +1,32 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * 
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
+
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
-$params = $this->form->getFieldsets('params');
-?>
-<script type="text/javascript">
-	Joomla.submitbutton = function(task)
-	{
-		if (task == 'imprint.cancel' || document.formvalidator.isValid(document.id('imprint-form')))
-		{
-			Joomla.submitform(task, document.getElementById('imprint-form'));
-		}
-		else
-		{
-			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
-		}
-	}
-</script>
+JHtml::_('formbehavior.choosen', 'select');
 
-<form action="<?php echo JRoute::_('index.php?option=com_imprint&view=imprint&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate">
-	<div class="width-60 fltlft">
+// $params = $this->form->getFieldsets('params');
+
+echo $this->loadTemplate('jscript');
+?>
+id (int) $this->item->id
+
+<form action="<?php echo JRoute::_('index.php?option=com_imprint&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="imprint-form" class="form-validate form-horizontal">
+	<div class="span10 form-horizontal">
+		<fieldset>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#details" data-toggle="tab"><?php echo JText::_(''); ?></a></li>
+				</ul>
+		</fieldset>
 		<?php echo JHtml::_($this->presentation_style . '.start', 'imprint-' . $this->presentation_style); ?>
 <?php foreach ($this->form->getFieldsets() as $name => $fieldset): ?>
 	<?php if (substr($name, 0, 6) == 'params') continue; ?>
@@ -71,7 +69,14 @@ $params = $this->form->getFieldsets('params');
 		<?php echo JHtml::_('sliders.end'); ?>
 	</div>
 	<div>
+		<input type="hidden" name="option" value="com_imprint" />
+		<input type="hidden" name="view" value="imprint" />
+		<input type="hidden" name="layout" value="edit" />
+		<input type="hidden" name="id" value="<?php echo (int) $this->item->id;?>" />
 		<input type="hidden" name="task" value="" />
 		<?php echo JHtml::_('form.token'); ?>
+	</div>
+	<div class="span2">
+		<?php echo $this->loadTemplate('sidebar'); ?>
 	</div>
 </form>

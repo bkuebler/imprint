@@ -74,3 +74,12 @@
 {
 	font-weight:	bold;
 }
+
+.imprint-cpanel-left {
+	float: left;
+	width: 50%;
+}
+.imprint-cpanel-right {
+	float: right;
+	width: 50%;
+}

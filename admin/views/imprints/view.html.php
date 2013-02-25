@@ -1,108 +1,96 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * 
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// import Joomla view library
-jimport('joomla.application.component.view');
+defined('_JEXEC') or die;
 
 /**
- * Imprints view class.
+ * Imprint view class for Imprints.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
-class ImprintViewImprints extends JView
+class ImprintViewImprints extends JViewLegacy
 {
 	/**
-	 * Imprints view display method.
+	 * Display the Imprints View
 	 *  
-	 * @author	mgebhardt
-	 * @param	string	$tpl	The name of the template file to parse; automatically 
-	 * 							searches through the template paths. 
-	 * @since	3.0
+	 * @param   string  $tpl  The special template name (default null)
+	 * 
+	 * @return  void
 	 */
-	function display($tpl = null) 
+	public function display($tpl = null)
 	{
+		JHtml::_('behavior.tooltip');
+
 		// Get data from the model
 		$items		= $this->get('Items');
 		$pagination = $this->get('Pagination');
 		$state		= $this->get('State');
-		 
+
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))) 
+		if (count($errors = $this->get('Errors')))
 		{
-			JError::raiseError(500, implode('<br />', $errors));
+			JError::raiseError(500, implode('\n', $errors));
+
 			return false;
 		}
+
 		// Assign data to the view
 		$this->items		= $items;
 		$this->pagination	= $pagination;
 		$this->state		= $state;
 		$this->listOrder	= $this->state->get('list.ordering');
 		$this->listDirn		= $this->state->get('list.direction');
-		
-		// Set the toolbar
-        $this->addToolBar();
-		
-		// Display the template
+
+		$this->addToolBar();
+
 		parent::display($tpl);
-		
-		// Set the document
-		$this->setDocument();
 	}
-	
+
 	/**
-	 * Method to create the toolbar.
+	 * Add the pagetitle and toolbar
 	 *  
-	 * @author	mgebhardt
-	 * @since	3.0
+	 * @return  void
+	 * 
+	 * @since	4.0
 	 */
-	protected function addToolBar() 
+	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINTS'), 'imprints');
-		if ($canDo->get('core.create')) 
+		JToolBarHelper::title(JText::_('COM_IMPRINT_IMPRINTS_TITLE'), 'imprints');
+
+		if ($canDo->get('core.create'))
 		{
 			JToolBarHelper::addNew('imprint.add', 'JTOOLBAR_NEW');
 		}
-		if ($canDo->get('core.edit')) 
+		if ($canDo->get('core.edit'))
 		{
 			JToolBarHelper::editList('imprint.edit', 'JTOOLBAR_EDIT');
 		}
-		if ($canDo->get('core.edit.state')) 
+		if ($canDo->get('core.edit.state'))
 		{
 			JToolBarHelper::makeDefault('imprints.setDefault', 'COM_IMPRINT_IMPRINTS_TOOLBAR_SET_DEFAULT');
 		}
-		if ($canDo->get('core.delete')) 
+		if ($canDo->get('core.delete'))
 		{
 			JToolBarHelper::deleteList('', 'imprints.delete', 'JTOOLBAR_DELETE');
 		}
+
 		JToolBarHelper::divider();
-		if ($canDo->get('core.admin')) 
+
+		if ($canDo->get('core.admin'))
 		{
 			JToolBarHelper::preferences('com_imprint');
+			JToolBarHelper::divider();
 		}
+
 		JToolBarHelper::help('screen.imprint', true);
-	}
-	
-	/**
-	 * Method to set up the document properties
-	 * 
-	 * @author	mgebhardt
-	 * @since	3.0
-	 */
-	protected function setDocument() 
-	{
-		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRINT_ADMINISTRATION'));
 	}
 }

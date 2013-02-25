@@ -1,88 +1,66 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * 
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// import Joomla view library
-jimport('joomla.application.component.view');
+defined('_JEXEC') or die;
 
 /**
- * Imprint view clss.
+ * Imprint view class for CPanel.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
-class ImprintViewCPanel extends JView
+class ImprintViewCPanel extends JViewLegacy
 {
-
-	function display($tpl = null) 
+	/**
+	 * Display the CPanel View
+	 * 
+	 * @param   string  $tpl  The special template name (default null)
+	 * 
+	 * @return void
+	 */
+	public function display($tpl = null)
 	{
-		// get the Data
-		$form = $this->get('Form');
-		$item = $this->get('Item');
-		$script = $this->get('Script');
-		
-		// Load the css
-		$document	= JFactory::getDocument();
-		$document->addStyleSheet(JURI::root() . 'media/com_imprint/css/com_imprint.css');
+		JHTML::_('behavior.tooltip');
+		JHTML::stylesheet(JUri::root() . 'media/com_imprint/css/com_imprint.css');
 
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))) 
+		if (count($errors = $this->get('Errors')))
 		{
-			JError::raiseError(500, implode('<br />', $errors));
+			JError::raiseError(500, implode('\n', $errors));
+
 			return false;
 		}
-		// Assign the Data
-		$this->form = $form;
-		$this->item = $item;
-		$this->script = $script;
 
-		// Set the toolbar
 		$this->addToolBar();
 
-		// Display the template
 		parent::display($tpl);
-
-		// Set the document
-		$this->setDocument();
 	}
-	
+
 	/**
-	 * Method to create the toolbar.
+	 * Add the pagetitle and toolbar.
 	 *  
-	 * @author	mgebhardt
-	 * @since	3.0
+	 * @return void
+	 * 
+	 * @since	4.0
 	 */
-	protected function addToolBar() 
+	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_CPANEL'), 'cpanel');
-		JToolBarHelper::divider();
+		JToolBarHelper::title(JText::_('COM_IMPRINT_CPANEL_TITLE'), 'cpanel');
+
 		if ($canDo->get('core.admin'))
 		{
 			JToolBarHelper::preferences('com_imprint');
+			JToolBarHelper::divider();
 		}
-		JToolBarHelper::divider();
+
 		JToolBarHelper::help('screen.imprint', true);
-	}
-	
-	/**
-	* Method to set up the document properties
-	*
-	* @author	mgebhardt
-	* @since	3.0
-	*/
-	protected function setDocument()
-	{
-		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRINT_ADMINISTRATION'));
 	}
 }

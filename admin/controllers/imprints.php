@@ -7,7 +7,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined( '_JEXEC' ) or die;
+defined('_JEXEC') or die;
 
 /**
  * Controller for Imprints list.
@@ -21,9 +21,8 @@ class ImprintControllerImprints extends JControllerAdmin
 	/**
 	 * Constructor.
 	 * 
-	 * @param   array     An optional associative array of configuration settings.
+	 * @param   array  $config  An optional associative array of configuration settings.
 	 *
-	 * @return  ImprintControllerImprints
 	 * @see     JController
 	 * @since   3.0
 	 */
@@ -32,23 +31,25 @@ class ImprintControllerImprints extends JControllerAdmin
 		parent::__construct($config);
 		$this->registerTask('setDefault', 'setDefault');
 	}
-	
+
 	/**
 	 * Proxy for getModel.
 	 *
-	 * @param   string     $name    The name of the model.
-	 * @param   string     $prefix  The prefix for the PHP class name.
+	 * @param   string  $name    The name of the model.
+	 * @param   string  $prefix  The prefix for the PHP class name.
+	 * @param   array   $config  The model configuration array.
 	 *
 	 * @return  JModel
+	 * 
 	 * @since   4.0
 	 */
-	public function getModel($name = 'Imprint', $prefix = 'ImprintModel', $config = array('ignore_request' => true)) 
+	public function getModel($name = 'Imprint', $prefix = 'ImprintModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 
 		return $model;
 	}
-	
+
 	/**
 	 * Method to set the home property for a list of items.
 	 * 

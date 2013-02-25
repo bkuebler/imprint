@@ -1,4 +1,4 @@
-/* version 3.1.0*/
+/* Version 4.0.0 */
  
 DROP TABLE IF EXISTS `#__imprints_imprints`;
 DROP TABLE IF EXISTS `#__imprints_remarks`;

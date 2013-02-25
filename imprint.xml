@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
-	<name>COM_IMPRINT</name>
-	<creationDate>08.02.2013</creationDate>
+	<name>com_imprint</name>
 	<author>Imprint Team</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>(C) 2011 - 2013 Imprint Team. All rights reserved.</copyright>
+	<license>GNU General Puplic License version 2 or later; see
+		LICENSE.txt</license>
 	<authorEmail>dev-team-imprint@joomla.bksus.de</authorEmail>
-	<copyright>Copyright (c) 2011-2013 Imprint Team</copyright>
-	<license>GNU/GPLv2, see LICENSE.txt</license>
+	<authorUrl>joomla-imprint.github.com/imprint/</authorUrl>
 	<version>4.0.0alpha</version>
-	<description>COM_IMPRINT_DESCRIPTION</description>
-
-	<scriptfile>script.php</scriptfile>
+	<description>com_imprint_xml_description</description>
 	
 	<install>
 		<sql>
@@ -44,29 +44,23 @@
 	</media>
 	
 	<administration>
-		<menu img="../media/com_imprint/images/recht.png">COM_IMPRINT</menu>
+		<menu img="class:imprint">com_imprint</menu>
 		<submenu>
-			<menu link="option=com_imprint&amp;view=cpanel" view="cpanel"
-					img="../media/com_imprint/images/assets/16px/icon-16-cpanel.png"
-					alt="COM_IMPRINT_CPANEL">COM_IMPRINT_CPANEL</menu>
+			<menu link="option=com_imprint" view="cpanel" img="class:imprint-cpanel"
+					alt="Imprint/Cpanel">com_imprint_cpanel</menu>
 			<menu link="option=com_imprint&amp;view=imprints" view="imprints"
-					img="../media/com_imprint/images/assets/16px/icon-16-imprints.png"
-					alt="COM_IMPRINT_IMPRINTS">COM_IMPRINT_IMPRINTS</menu>
-			<menu lint="option=com_imprint&amp;view=text" view="remarks"
-					img="../media/com_imprint/images/assets/16px/icon-16-remarks.png"
-					alt="COM_IMPRINT_REMARKS">COM_IMPRINT_REMARKS</menu>
+					img="class:imprint-imprints" alt="Imprint/Imprints">com_imprint_imprints</menu>
+			<menu lint="option=com_imprint&amp;view=remarks" view="remarks"
+					img="class:imprint-remarks"	alt="Imprint/Remarks">com_imprint_remarks</menu>
 			<menu link="option=com_imprint&amp;view=about" view="about"
-					img="../media/com_imprint/images/assets/16px/icon-16-about.png"
-					alt="COM_IMPRINT_ABOUT">COM_IMPRINT_ABOUT</menu>
+					img="class:imprint-about" alt="Imprint/About">com_imprint_about</menu>
 		</submenu>
-		
 		<files folder="admin">
-			<filename>index.html</filename>
 			<filename>access.xml</filename>
 			<filename>config.xml</filename>
 			<filename>controller.php</filename>
 			<filename>imprint.php</filename>
-			
+			<filename>index.html</filename>
 			<folder>controllers</folder>
 			<folder>help</folder>
 			<folder>helpers</folder>
@@ -79,6 +73,6 @@
 	</administration>
 	
 	<updateservers>
-		<server type="extension" priority="1" name="Imprint Update Site">https://github.com/downloads/joomla-imprint/imprint/imprint-update.xml</server>
+		<server type="extension" priority="1" name="Imprint Update Site"></server>
 	</updateservers>
 </extension>

@@ -1,28 +1,23 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * 
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// import Joomla modelform library
-jimport('joomla.application.component.modeladmin');
+defined('_JEXEC') or die;
 
 /**
  * Imprint model class.
  * 
- * @package		Joomal
- * @subpackage	Imprint
- * @since		3.0
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
 class ImprintModelImprint extends JModelAdmin
 {
-	
 	/**
 	 * Method override to check if you can edit an existing record.
 	 * 

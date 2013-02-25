@@ -1,67 +1,64 @@
 <?php
 /**
- * @version		3.1
- * @package		Joomla
- * @subpackage	Imprint
- * @copyright	(C) 2011 - 2013 Imprint Team
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * 
+ * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die;
 
-// load tooltip behavior
-JHtml::_('behavior.tooltip');
 ?>
 <form action="index.php" method="post" name="adminForm">
-<table class="adminform">
-	<tr>
-		<td width="55%" valign="top">
-			<div id="cpanel">
-			<?php		
-			$link = 'index.php?option=com_imprint&amp;view=imprints';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
-			
-			$link = 'index.php?option=com_imprint&amp;view=remarks';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-remarks.png', JText::_( 'COM_IMPRINT_REMARKS' ) );
-				
-			$link = 'index.php?option=com_imprint&amp;view=about';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-about.png', JText::_( 'COM_IMPRINT_ABOUT' ) );
-			?>
-<!--
-We can include ads if we want
+	<div id="j-sidebar-container" class="span2"><?php echo JHtmlSidebar::render(); ?></div>
+	<div id="j-main-container" class="span10">
+		<div class="adminform">
+			<div class="imprint-cpanel-left">
+				<div id="cpanel">
+					<?php
+					$link = 'index.php?option=com_imprint&amp;view=imprints';
+					echo ImprintHelper::quickIconButton($link, '48px/icon-48-imprints.png', JText::_('COM_IMPRINT_IMPRINTS'));
 
-				<div style="clear:both">&nbsp;</div>
-				<p>&nbsp;</p>
-				<div style="text-align:center;padding:0;margin:0;border:0">
-					<iframe style="padding:0;margin:0;border:0" src="http://sourceforge.net/projects/imprint/" noresize="noresize" frameborder="0" border="0" cellspacing="0" scrolling="no" width="500" marginwidth="0" marginheight="0" height="125">
-					<a href="http://sourceforge.net/projects/imprint/" target="_blank">Imprint</a>
-					</iframe>
+					$link = 'index.php?option=com_imprint&amp;view=remarks';
+					echo ImprintHelper::quickIconButton($link, '48px/icon-48-remarks.png', JText::_('COM_IMPRINT_REMARKS'));
+
+					$link = 'index.php?option=com_imprint&amp;view=about';
+					echo ImprintHelper::quickIconButton($link, '48px/icon-48-about.png', JText::_('COM_IMPRINT_ABOUT'));
+					?>
+					<div style="clear:both">&nbsp;</div>
+					<p>&nbsp;</p>
+					<div class="alert alert-block alert-info ph-w80">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<?php echo ImprintHelper::getLinks(); ?>
+					</div>
 				</div>
--->			</div>
-		</td>
-
-		<td width="45%" valign="top">
-			<div style="300px;border:1px solid #ccc;background:#fff;margin:15px;padding:15px">
-			<div style="float:right;margin:10px;">
-				<?php
-					echo JHTML::_('image.site', 'recht-48x48.png', '../media/com_imprint/images/', NULL, NULL, 'Imprint' )
-				?>
 			</div>
-
-			<h3><?php echo JText::_('JVERSION');?></h3>
-			<p><?php echo ImprintHelper::getVersion();?></p>
-
-			<h3><?php echo JText::_('COM_IMPRINT_COPYRIGHT');?></h3>
-			<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Team. All rights reserved.<br />
-			<br />
-			<a href="https://github.com/joomla-imprint" target="_blank"><?php echo JText::_('COM_IMPRINT_HOME');?></a></p>
-
-			<h3><?php echo JText::_('COM_IMPRINT_LICENSE');?></h3>
-			<p><a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></p>
-
+			<div class="imprint-cpanel-right">
+				<div class="well">
+					<div style="float:right;margin:10px;">
+						<?php echo JHTML::_('image', 'team-imprint.png', 'Team Imprint'); ?>
+					</div>
+					<h3><?php echo JText::_('JVERSION'); ?></h3>
+					<p><?php echo ImprintHelper::getVersion();?></p>'
+					<h3><?php echo JText::_('COM_IMPRINT_COPYRIGHT'); ?></h3>
+					<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Team</p>
+					<p><a href="http://joomla-imprint.github.com/imprint/" target="_blank">Homepage</a></p>
+					<h3><?php echo JText::_('COM_IMPRINT_LICENCE'); ?></h3>
+					<p><a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></p>
+					<div style="border-top:1px solid #c2c2c2"></div>
+					<p>&nbsp;</p>
+					<div class="btn-group">
+						<a class="btn btn-large btn-primary" href="http://joomla-imprint.github.com/imprint/" target="_blank">
+							<i class="icon-loop icon-white"></i>&nbsp;&nbsp;
+							<?php echo JText::_('COM_IMPRINT_CHECK_FOR_UPDATE'); ?>
+						</a>
+					</div>
+				</div>
 			</div>
-		</td>
-	</tr>
-</table>
+		</div>
+		<input type="hidden" name="option" value="com_imprint" />
+		<input type="hidden" name="view" value="cpanel" />
+		<?php echo JHtml::_('form.token'); ?>
+	</div>
 </form>

@@ -7,73 +7,60 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined( '_JEXEC' ) or die;
+defined('_JEXEC') or die;
 
 /**
- * About view clss.
+ * Imprint view class for About.
  * 
- * @package		Joomla
- * @subpackage	Imprint
- * @since		3.1
+ * @package     Joomla.Administrator
+ * @subpackage  com_imprint
+ * @since       4.0
  */
-class ImprintViewAbout extends JView
+class ImprintViewAbout extends JViewLegacy
 {
-
-	function display($tpl = null) 
+	/**
+	 * Display the About View
+	 * 
+	 * @param   string  $tpl  The special template name (default null)
+	 *
+	 * @return void
+	 */
+	public function display($tpl = null)
 	{
-		// get the Data
-		$form = $this->get('Form');
-		$item = $this->get('Item');
-		$script = $this->get('Script');
+		JHTML::_('behavior.tooltip');
+		JHTML::stylesheet(JUri::root() . 'media/com_imprint/css/com_imprint.css');
 
 		// Check for errors.
-		if (count($errors = $this->get('Errors'))) 
+		if (count($errors = $this->get('Errors')))
 		{
-			JError::raiseError(500, implode('<br />', $errors));
+			JError::raiseError(500, implode('\n', $errors));
+
 			return false;
 		}
-		// Assign the Data
-		$this->form = $form;
-		$this->item = $item;
-		$this->script = $script;
 
-		// Set the toolbar
 		$this->addToolBar();
 
-		// Display the template
 		parent::display($tpl);
-
-		// Set the document
-		$this->setDocument();
 	}
-	
+
 	/**
-	 * Method to create the toolbar.
+	 * Add the pagetitle and toolbar.
 	 *  
-	 * @author	mgebhardt
-	 * @since	3.1
+	 * @return  void
+	 * 
+	 * @since   4.0
 	 */
-	protected function addToolBar() 
+	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_ABOUT'), 'about');
-		JToolBarHelper::divider();
+		JToolBarHelper::title(JText::_('COM_IMPRINT_ABOUT_TITLE'), 'about');
+
 		if ($canDo->get('core.admin'))
 		{
 			JToolBarHelper::preferences('com_imprint');
+			JToolBarHelper::divider();
 		}
+
 		JToolBarHelper::help('screen.imprint', true);
-	}
-	
-	/**
-	* Method to set up the document properties
-	*
-	* @author	mgebhardt
-	* @since	3.1
-	*/
-	protected function setDocument()
-	{
-		$document = JFactory::getDocument();
-		$document->setTitle(JText::_('COM_IMPRINT_ADMINISTRATION'));
 	}
 }
