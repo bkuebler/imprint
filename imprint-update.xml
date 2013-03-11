@@ -1,5 +1,19 @@
 <?xml version="1.0" ?>
 <updates>
+	<update>
+		<name>Imprint</name>
+		<description>Imprint for Joomla! CMS</description>
+		<element>com_imprint</element>
+		<type>component</type>
+		<version>3.1.0</version>
+		<infourl title="OSBIT URL">https://github.com/joomla-imprint/imprint</infourl>
+		<downloads>
+			<downloadurl format="zip" type="full">https://github.com/joomla-imprint/imprint/archive/v3.1.0.zip</downloadurl>
+		</downloads>
+		<maintainer>Imprint Team</maintainer>
+		<maintainerurl>https://github.com/joomla-imprint</maintainerurl>
+		<targetplatform name="joomla" version="2.5"/>
+	</update>
     <update>
 		<name>Imprint</name>
 		<description>Imprint for Joomla! CMS</description>
@@ -41,6 +55,20 @@
 		<maintainer>Imprint Team</maintainer>
 		<maintainerurl>https://github.com/joomla-imprint</maintainerurl>
 		<targetplatform name="joomla" version="2.5"/>
+	</update>
+	<update>
+		<name>Imprint</name>
+		<description>Imprint for Joomla! CMS</description>
+		<element>com_imprint</element>
+		<type>component</type>
+		<version>3.1.0</version>
+		<infourl title="OSBIT URL">https://github.com/joomla-imprint/imprint</infourl>
+		<downloads>
+			<downloadurl format="zip" type="full">https://github.com/joomla-imprint/imprint/archive/v3.1.0.zip</downloadurl>
+		</downloads>
+		<maintainer>Imprint Team</maintainer>
+		<maintainerurl>https://github.com/joomla-imprint</maintainerurl>
+		<targetplatform name="joomla" version="1.7"/>
 	</update>
     <update>
 		<name>Imprint</name>
