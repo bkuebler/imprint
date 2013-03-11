@@ -55,12 +55,14 @@ JHtml::_('behavior.tooltip');
 			</div>
 			<h1><?php echo JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_ABOUT_CREDITS');?></h1>
 			<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Team. All rights reserved.<br /></p>
+			<p><?php echo JHTML::_('email.cloak', "dev-team-imprint@joomla.bksus.de"); ?></p>
 			<p><?php echo JText::_('COM_IMPRINT_LICENSE');?>: <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPLv2</a></p>
 
 			<h2><?php echo JText::_('COM_IMPRINT_ABOUT_CODE_CONTRIBUTERS');?>:</h2>
 			<p>
 				<a href="https://github.com/mgebhardt" target="_blank">Mathias Gebhardt</a><br />
-				<a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a>
+				<a href="https://github.com/joomla-imprint" target="_blank">Christopher Schmidt</a><br />
+				<a href="https://github.com/bkuebler" target="_blank">Benjamin Kübler</a>
 			</p>
 <!--		No documentation exists at this moment, for the future
 			<h3><?php echo JText::_('COM_IMPRINT_DOCUMENTAION_CONTRIBUTERS');?>:</h3>

@@ -2,12 +2,12 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRINT</name>
 	
-	<creationDate>22.02.2013</creationDate>
+	<creationDate>11.03.2013</creationDate>
 	<author>Imprint Team</author>
-	<authorEmail>gebhardtmathias@aol.com</authorEmail>
+	<authorEmail>dev-team-imprint@joomla.bksus.de</authorEmail>
 	<copyright>Copyright (c) 2011-2013 Imprint Team</copyright>
 	<license>GNU/GPLv2, see LICENSE.txt</license>
-	<version>3.1.0rc2</version>
+	<version>3.1.0</version>
 	<description>COM_IMPRINT_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
