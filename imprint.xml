@@ -2,7 +2,7 @@
 <extension type="component" version="1.7.0" method="upgrade">
 	<name>COM_IMPRINT</name>
 	
-	<creationDate>11.03.2013</creationDate>
+	<creationDate>19.03.2013</creationDate>
 	<author>Imprint Team</author>
 	<authorEmail>dev-team-imprint@joomla.bksus.de</authorEmail>
 	<copyright>Copyright (c) 2011-2013 Imprint Team</copyright>
