@@ -76,7 +76,7 @@ class ImprintViewImprint extends JView
 		$isNew = $this->item->id == 0;
 		$canDo = ImprintHelper::getActions($this->item->id);
 		
-		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_EDIT'), 'imprint');
+		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINT_EDIT'), 'imprint-imprint');
 		
 		// Built the actions for new and existing records.
 		if ($isNew) 

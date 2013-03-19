@@ -74,7 +74,7 @@ class ImprintViewRemark extends JView
 		$isNew = $this->item->id == 0;
 		$canDo = ImprintHelper::getActions($this->item->id);
 		
-		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_EDIT'), 'remark');
+		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_NEW') : JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_REMARK_EDIT'), 'imprint-remark');
 		
 		// Built the actions for new and existing records.
 		if ($isNew) 

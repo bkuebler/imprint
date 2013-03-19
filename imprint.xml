@@ -48,16 +48,16 @@
 		<menu img="../media/com_imprint/images/recht.png">COM_IMPRINT</menu>
 		<submenu>
 			<menu link="option=com_imprint&amp;view=cpanel" view="cpanel"
-					img="../media/com_imprint/images/assets/16px/icon-16-cpanel.png"
+					img="../media/com_imprint/images/assets/16px/icon-16-imprint-cpanel.png"
 					alt="COM_IMPRINT_CPANEL">COM_IMPRINT_CPANEL</menu>
 			<menu link="option=com_imprint&amp;view=imprints" view="imprints"
-					img="../media/com_imprint/images/assets/16px/icon-16-imprints.png"
+					img="../media/com_imprint/images/assets/16px/icon-16-imprint-imprints.png"
 					alt="COM_IMPRINT_IMPRINTS">COM_IMPRINT_IMPRINTS</menu>
 			<menu lint="option=com_imprint&amp;view=text" view="remarks"
-					img="../media/com_imprint/images/assets/16px/icon-16-remarks.png"
+					img="../media/com_imprint/images/assets/16px/icon-16-imprint-remarks.png"
 					alt="COM_IMPRINT_REMARKS">COM_IMPRINT_REMARKS</menu>
 			<menu link="option=com_imprint&amp;view=about" view="about"
-					img="../media/com_imprint/images/assets/16px/icon-16-about.png"
+					img="../media/com_imprint/images/assets/16px/icon-16-imprint-about.png"
 					alt="COM_IMPRINT_ABOUT">COM_IMPRINT_ABOUT</menu>
 		</submenu>
 		

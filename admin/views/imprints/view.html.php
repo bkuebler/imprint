@@ -69,7 +69,7 @@ class ImprintViewImprints extends JView
 	protected function addToolBar() 
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINTS'), 'imprints');
+		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_IMPRINTS'), 'imprint-imprints');
 		if ($canDo->get('core.create')) 
 		{
 			JToolBarHelper::addNew('imprint.add', 'JTOOLBAR_NEW');

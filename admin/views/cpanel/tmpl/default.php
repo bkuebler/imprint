@@ -20,16 +20,16 @@ JHtml::_('behavior.tooltip');
 			<div id="cpanel">
 			<?php		
 			$link = 'index.php?option=com_imprint&amp;view=imprints';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint-imprints.png', JText::_( 'COM_IMPRINT_IMPRINTS' ) );
 			
 			$link = 'index.php?option=com_imprint&amp;task=imprint.edit&amp;id=' . $this->defaultImprintID;
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint.png', JText::_( 'COM_IMPRINT_EDIT_DEFAULT_IMPRINT' ) );
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint-imprint.png', JText::_( 'COM_IMPRINT_EDIT_DEFAULT_IMPRINT' ) );
 			
 			$link = 'index.php?option=com_imprint&amp;view=remarks';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-remarks.png', JText::_( 'COM_IMPRINT_REMARKS' ) );
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint-remarks.png', JText::_( 'COM_IMPRINT_REMARKS' ) );
 				
 			$link = 'index.php?option=com_imprint&amp;view=about';
-			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-about.png', JText::_( 'COM_IMPRINT_ABOUT' ) );
+			echo ImprintHelper::quickIconButton( $link, '48px/icon-48-imprint-about.png', JText::_( 'COM_IMPRINT_ABOUT' ) );
 			?>
 			</div>
 		</td>

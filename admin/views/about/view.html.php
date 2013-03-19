@@ -60,7 +60,7 @@ class ImprintViewAbout extends JView
 	protected function addToolBar() 
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_ABOUT'), 'about');
+		JToolBarHelper::title(JText::_('COM_IMPRINT').' - '.JText::_('COM_IMPRINT_ABOUT'), 'imprint-about');
 		JToolBarHelper::divider();
 		if ($canDo->get('core.admin'))
 		{
