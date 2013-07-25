@@ -37,6 +37,8 @@ class ImprintViewAbout extends JViewLegacy
 
 			return false;
 		}
+		
+		ImprintHelper::addSubmenu('imprint');
 
 		$this->addToolBar();
 

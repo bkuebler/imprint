@@ -12,9 +12,9 @@ defined('_JEXEC') or die;
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_imprint'); ?>" method="post" name="adminForm">
         <table class="adminlist">
-                <thead><?php echo $this->loadTemplate('head');?></thead>
-                <tfoot><?php echo $this->loadTemplate('foot');?></tfoot>
-                <tbody><?php echo $this->loadTemplate('body');?></tbody>
+                <thead><?php echo $this->loadTemplate('thead');?></thead>
+                <tfoot><?php echo $this->loadTemplate('tfoot');?></tfoot>
+                <tbody><?php echo $this->loadTemplate('tbody');?></tbody>
         </table>
         <div>
         		<input type="hidden" name="view" value="imprints" />
