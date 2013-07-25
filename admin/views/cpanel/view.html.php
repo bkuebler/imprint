@@ -55,7 +55,7 @@ class ImprintViewCPanel extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT_CPANEL'), 'cpanel');
+		JToolBarHelper::title(JText::_('COM_IMPRINT') . ':' . JText::_('COM_IMPRINT_CPANEL'), 'cpanel');
 
 		if ($canDo->get('core.admin'))
 		{
