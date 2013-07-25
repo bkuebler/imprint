@@ -40,7 +40,7 @@ defined('_JEXEC') or die;
 						<?php echo JHTML::_('image', 'team-imprint.png', 'Team Imprint'); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
-					<p><?php echo ImprintHelper::getVersion();?></p>'
+					<p><?php echo ImprintHelper::getVersion();?></p>
 					<h3><?php echo JText::_('COM_IMPRINT_COPYRIGHT'); ?></h3>
 					<p>&copy; 2011 - <?php echo date("Y"); ?> Imprint Team</p>
 					<p><a href="http://joomla-imprint.github.com/imprint/" target="_blank">Homepage</a></p>

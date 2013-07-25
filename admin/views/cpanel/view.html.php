@@ -37,6 +37,8 @@ class ImprintViewCPanel extends JViewLegacy
 
 			return false;
 		}
+		
+		ImprintHelper::addSubmenu('imprint');
 
 		$this->addToolBar();
 
@@ -53,7 +55,7 @@ class ImprintViewCPanel extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT_CPANEL_TITLE'), 'cpanel');
+		JToolBarHelper::title(JText::_('COM_IMPRINT_CPANEL'), 'cpanel');
 
 		if ($canDo->get('core.admin'))
 		{
