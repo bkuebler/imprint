@@ -26,18 +26,18 @@ class ImprintController extends JControllerLegacy
 
 	/**
 	 * Method to display a view.
-	 *  
+	 *
 	 * @param   boolean  $cachable   If true, the view output will be cached
 	 * @param   array    $urlparams  An array of safe url parameters and their variable types, for valid values see {@link JFilterInput::clean()}.
 	 *
-	 * @return  JController  This object to support chaining. 
-	 * 
+	 * @return  JController  This object to support chaining.
+	 *
 	 * @since   4.0
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-		$view	= $this->input->get('view', 'cpanel');
-		$layout	= $this->input->get('layout', 'cpanel');
+// 		$view	= $this->input->get('view', 'cpanel');
+// 		$layout	= $this->input->get('layout', 'default');
 
 		parent::display();
 
