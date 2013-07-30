@@ -110,11 +110,6 @@ class ImprintHelper
 	public static function addSubmenu($vName)
 	{
 		JHtmlSidebar::addEntry(
-			JText::_('COM_IMPRINT_SUBMENU_CPANEL'),
-			'index.php?option=com_imprint&view=cpanel',
-			$vName == 'cpanel'
-		);
-		JHtmlSidebar::addEntry(
 			JText::_('COM_IMPRINT_SUBMENU_IMPRINTS'),
 			'index.php?option=com_imprint&view=imprints',
 			$vName == 'imprints'

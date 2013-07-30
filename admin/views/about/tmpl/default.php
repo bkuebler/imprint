@@ -34,12 +34,6 @@ defined('_JEXEC') or die;
 						<a href="http:///www.jgerman.de" target="_blank">
 							<?php echo JText::_('COM_IMPRINT_ABOUT_JGERMAN_DE');?>
 						</a>
-					</p>
-					<div style="border-top:1px solid #c2c2c2"></div>
-					<h3><?php echo JText::_('COM_IMPRINT_ABOUT_MYSQL_AND_PHP_VERSION');?></h3>
-					<p>
-						<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_PHP_VERSION') . ':' . phpversion(); ?><br />
-						<?php echo JText::_('COM_IMPRINT_ABOUT_INSTALLED_MYSQL_VERSION') . ':' . mysql_get_client_info(); ?>
 					</p>				
 					<div style="border-top:1px solid #c2c2c2"></div>
 					<h3><?php echo JText::_('COM_IMPRINT_ABOUT_IMPRINT_VERSION');?></h3>
