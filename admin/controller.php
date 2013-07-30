@@ -22,7 +22,7 @@ class ImprintController extends JControllerLegacy
 	 * @var   string  The default view.
 	 * @since   4.0
 	 */
-	protected $default_view = 'cpanel';
+	protected $default_view = 'imprints';
 
 	/**
 	 * Method to display a view.
@@ -36,8 +36,6 @@ class ImprintController extends JControllerLegacy
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-// 		$view	= $this->input->get('view', 'cpanel');
-// 		$layout	= $this->input->get('layout', 'default');
 
 		parent::display();
 

@@ -46,8 +46,6 @@
 	<administration>
 		<menu img="class:imprint">com_imprint</menu>
 		<submenu>
-			<menu link="option=com_imprint" view="cpanel" img="class:imprint-cpanel"
-					alt="Imprint/Cpanel">com_imprint_cpanel</menu>
 			<menu link="option=com_imprint&amp;view=imprints" view="imprints"
 					img="class:imprint-imprints" alt="Imprint/Imprints">com_imprint_imprints</menu>
 			<menu lint="option=com_imprint&amp;view=remarks" view="remarks"
