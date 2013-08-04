@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
- * 
+ *
  * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -11,43 +11,64 @@ defined('_JEXEC') or die;
 
 /**
  * Imprint view class for Imprints.
- * 
+ *
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
  * @since       4.0
+ * @author		mgebhardt
  */
 class ImprintViewImprints extends JViewLegacy
 {
 	/**
+	 * All imprints to list
+	 * @var 	array
+	 * @since	4.0
+	 * @author	mgebhardt
+	 */
+	protected $items;
+
+	/**
+	 * Used for pagination
+	 * @var		Joomla's pagination object
+	 * @since	4.0
+	 * @author	mgebhardt
+	 */
+	protected $pagination;
+
+	/**
+	 * Used for state
+	 * @var 	Joomla's state object
+	 * @since	4.0
+	 * @author 	mgebhardt
+	 */
+	protected $state;
+
+	/**
 	 * Display the Imprints View
-	 *  
+	 *
 	 * @param   string  $tpl  The special template name (default null)
-	 * 
+	 *
 	 * @return  void
+	 * @since	4.0
+	 * @author	mgebhardt
 	 */
 	public function display($tpl = null)
 	{
 		JHtml::_('behavior.tooltip');
 
 		// Get data from the model
-		$items		= $this->get('Items');
-		$pagination = $this->get('Pagination');
-		$state		= $this->get('State');
+		$this->items		= $this->get('Items');
+		$this->pagination = $this->get('Pagination');
+		$this->state		= $this->get('State');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
-			JError::raiseError(500, implode('\n', $errors));
-
+			JError::raiseError(500, implode("\n", $errors));
 			return false;
 		}
 
-		// Assign data to the view
-		$this->items		= $items;
-		$this->pagination	= $pagination;
-		$this->state		= $state;
-		$this->listOrder	= $this->state->get('list.ordering');
-		$this->listDirn		= $this->state->get('list.direction');
+		ImprintHelper::addSubmenu('imprints');
 
 		$this->addToolBar();
 
@@ -56,9 +77,9 @@ class ImprintViewImprints extends JViewLegacy
 
 	/**
 	 * Add the pagetitle and toolbar
-	 *  
+	 *
 	 * @return  void
-	 * 
+	 *
 	 * @since	4.0
 	 */
 	protected function addToolBar()

@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
- * 
+ *
  * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -13,10 +13,11 @@ JLoader::register('ImprintHelper', JPATH_COMPONENT . '/helpers/imprint.php');
 
 /**
  * Imprint view class to edit Imprint.
- * 
+ *
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
  * @since       4.0
+ * @author		mgebhardt
  */
 class ImprintViewImprint extends JViewLegacy
 {
@@ -32,9 +33,9 @@ class ImprintViewImprint extends JViewLegacy
 
 	/**
 	 * Display the Imprint edit view.
-	 * 
+	 *
 	 * @param   string  $tpl  The special template name (default null).
-	 * 
+	 *
 	 * @return  void
 	 */
 	public function display($tpl = null)
@@ -63,9 +64,9 @@ class ImprintViewImprint extends JViewLegacy
 
 	/**
 	 * Add the pagetitle and toolbar.
-	 *  
+	 *
 	 * @return  void
-	 * 
+	 *
 	 * @since	4.0
 	 */
 	protected function addToolBar()
@@ -75,13 +76,12 @@ class ImprintViewImprint extends JViewLegacy
 		$user		= JFactory::getUser();
 		$userId		= $user->get('id');
 		$isNew		= ($this->item->id == 0);
-		$checkedOut	= !($this->item->checked_out == 0 || $this->item->checked_out == $userId);
 		$canDo		= ImprintHelper::getActions($this->item->id, 0);
 
 		JToolBarHelper::title($isNew ? JText::_('COM_IMPRINT_IMPRINT_NEW') : JText::_('COM_IMPRINT_IMPRINT_EDIT'), 'imprint');
 
 		// If not checked out, can save the item.
-		if (!$checkedOut && ($canDo->get('core.edit') || count($user->getAuthorizedCategories('com_imprint', 'core.create')) > 0))
+		if ($canDo->get('core.edit') || count($user->getAuthorizedCategories('com_imprint', 'core.create')) > 0)
 		{
 			JToolBarHelper::apply('imprint.apply');
 			JToolBarHelper::save('imprint.save');
