@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
- * 
+ *
  * @copyright   Copyright (C) 2011 - 2013 Imprint Team. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 /**
  * Imprint view class for Remarks.
- * 
+ *
  * @package     Joomla.Administrator
  * @subpackage  com_imprint
  * @since       4.0
@@ -20,9 +20,9 @@ class ImprintViewRemarks extends JViewLegacy
 {
 	/**
 	 * Display the Remarks View
-	 *  
+	 *
 	 * @param   string  $tpl  The special template name (default null)
-	 * 
+	 *
 	 * @return  void
 	 */
 	public function display($tpl = null)
@@ -30,9 +30,9 @@ class ImprintViewRemarks extends JViewLegacy
 		JHTML::_('behavior.tooltip');
 
 		// Get data from the model
-		$items		= $this->get('Items');
-		$pagination = $this->get('Pagination');
-		$state		= $this->get('State');
+		$this->items		= $this->get('Items');
+		$this->pagination	= $this->get('Pagination');
+		$this->state		= $this->get('State');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -42,12 +42,7 @@ class ImprintViewRemarks extends JViewLegacy
 			return false;
 		}
 
-		// Assign data to the view
-		$this->items		= $items;
-		$this->pagination	= $pagination;
-		$this->state		= $state;
-		$this->listOrder	= $this->state->get('list.ordering');
-		$this->listDirn		= $this->state->get('list.direction');
+		ImprintHelper::addSubmenu('remarks');
 
 		$this->addToolBar();
 
@@ -56,9 +51,9 @@ class ImprintViewRemarks extends JViewLegacy
 
 	/**
 	 * Add the pagetitle and toolbar
-	 *  
+	 *
 	 * @return  void
-	 * 
+	 *
 	 * @since   4.0
 	 */
 	protected function addToolBar()
