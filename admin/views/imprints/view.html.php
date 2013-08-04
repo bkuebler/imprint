@@ -85,7 +85,7 @@ class ImprintViewImprints extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT_IMPRINTS_TITLE'), 'imprints');
+		JToolBarHelper::title(JText::_('COM_IMPRINT') . ':' . JText::_('COM_IMPRINT_IMPRINTS'), 'imprints');
 
 		if ($canDo->get('core.create'))
 		{
