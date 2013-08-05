@@ -10,6 +10,14 @@
 			description="COM_IMPRINT_IMPRINT_IMPRINT_NAME_DESC"
 			size="60" maxlength="255" required="true"
 		/>
+		<field name="show_image" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO"
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="image" type="media" 
 			label="COM_IMPRINT_IMPRINT_IMAGE" 
 			description="COM_IMPRINT_IMPRINT_IMAGE_DESC" 
@@ -19,6 +27,37 @@
 			description="COM_IMPRINT_IMPRINT_DIRECTLINK_DESC" 
 			size="60" maxlength="255"
 		/>
+		<field name="show_icons" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_ICONS" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_ICONS_DESC"
+			default="1" 
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="contact_icons" type="list"  
+			label="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT_DESC"
+			default="0"
+		>
+			<option value="0">COM_IMPRINT_IMPRINT_PARAMS_ICONS</option>
+			<option value="1">COM_IMPRINT_IMPRINT_PARAMS_TEXT</option>
+			<option value="2">COM_IMPRINT_IMPRINT_PARAMS_NO_ICONS_OR_TEXT</option>
+		</field>
+<!-- Not used jet -->
+<!-- 	<field name="icon_address" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB_DESC" /> -->
+<!-- 	<field name="icon_email" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_EMAIL" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_EMAIL_DESC" /> -->
+<!-- 	<field name="icon_telephone" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_TELEFON" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_TELEFON_DESC" /> -->
+<!-- 	<field name="icon_mobile" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_MOBILE" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_MOBILE_DESC" /> -->
+<!-- 	<field name="icon_fax" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_FAX" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_FAX_DESC" /> -->
+		<field name="show_info" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_INFORMATION" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_INFORMATION_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 	</fieldset>
 	
 	<fieldset name="kontakt" label="COM_IMPRINT_IMPRINT_CONTACT">
@@ -97,6 +136,14 @@
 			description="COM_IMPRINT_IMPRINT_EMAIL_DESC"
 			size="60" maxlength="255" 
 		/>
+		<field name="show_contacturl" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="contacturl" type="text" 
 			label="COM_IMPRINT_IMPRINT_DIRECTLINK" 
 			description="COM_IMPRINT_IMPRINT_DIRECTLINK_DESC" 
@@ -108,6 +155,14 @@
 		<field name="spacerRecht1Person" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_RECHT_1_PERSON"
 		/>
+		<field name="show_recht" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS"
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="vertretertitel" type="text" 
 			label="COM_IMPRINT_IMPRINT_VERTRETERTITEL" 
 			description="COM_IMPRINT_IMPRINT_VERTRETERTITEL_DESC"
@@ -159,6 +214,14 @@
 		<field name="spacerRecht2Person" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_RECHT_2_PERSON"
 		/>
+		<field name="show_recht2" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2"
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2_DESC"
+			default="0" 
+		>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
 		<field name="recht2grund" type="text" 
 			label="COM_IMPRINT_IMPRINT_RECHT2GRUND" 
 			description="COM_IMPRINT_IMPRINT_RECHT2GRUND_DESC"
@@ -215,6 +278,14 @@
 		<field name="spacerWeiterePerson1" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_WEITERE_PERSON_1"
 		/>
+		<field name="show_extra1" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE1" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE1_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="extra1titel" type="text" 
 			label="COM_IMPRINT_IMPRINT_EXTRATITEL" 
 			description="COM_IMPRINT_IMPRINT_EXTRATITEL_DESC"
@@ -238,6 +309,14 @@
 		<field name="spacerWeiterePerson2" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_WEITERE_PERSON_2"
 		/>
+		<field name="show_extra2" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE2" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE2_DESC"
+			default="0" 
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="extra2titel" type="text" 
 			label="COM_IMPRINT_IMPRINT_EXTRATITEL" 
 			description="COM_IMPRINT_IMPRINT_EXTRATITEL_DESC"
@@ -261,6 +340,14 @@
 		<field name="spacerWeiterePerson3" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_WEITERE_PERSON_3"
 		/>
+		<field name="show_extra3" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE3" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE3_DESC"
+			default="0" 
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="extra3titel" type="text" 
 			label="COM_IMPRINT_IMPRINT_EXTRATITEL" 
 			description="COM_IMPRINT_IMPRINT_EXTRATITEL_DESC"
@@ -284,6 +371,22 @@
 	</fieldset>
 	
 	<fieldset name="bank" label="COM_IMPRINT_IMPRINT_BANK">
+		<field name="show_bank" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_bankguests" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS_DESC"
+			default="0" 
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 	<!-- first bank account -->
 		<field name="account_holder" type="text" 
 			label="COM_IMPRINT_IMPRINT_ACCOUNT_HOLDER" 
@@ -316,6 +419,14 @@
 			size="60" maxlength="255" 
 		/>
 	<!-- second bank account -->
+		<field name="show_bank2" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK2" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK2_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="spacerBank2" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_2"
 		/>
@@ -350,6 +461,14 @@
 			size="60" maxlength="255" 
 		/>
 	<!-- third bank account -->
+		<field name="show_bank3" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK3"
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK3_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="spacerBank3" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_3"
 		/>
@@ -384,6 +503,14 @@
 			size="60" maxlength="255" 
 		/>
 	<!-- forth bank account -->
+		<field name="show_bank4" type="radio" class="btn-group" 
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK4" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK4_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="spacerBank4" type="spacer"
 			label="COM_IMPRINT_IMPRINT_SPACER_BANK_4"
 		/>
@@ -420,6 +547,14 @@
 	</fieldset>
 
 	<fieldset name="technik" label="COM_IMPRINT_IMPRINT_TECHNICAL_DETAILS">
+		<field name="show_technik" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="technikperson" type="text" 
 			label="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_IN_CHARGE" 
 			description="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_IN_CHARGE_DESC"
@@ -435,7 +570,14 @@
 			description="COM_IMPRINT_IMPRINT_TECHNICAL_PERSON_EMAIL_DESC"
 			size="60" maxlength="255" 
 		/>
-
+		<field name="show_design" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DESIGN" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DESIGN_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="template_name" type="text" 
 			label='COM_IMPRINT_IMPRINT_TEMPLATE_NAME' 
 			description="COM_IMPRINT_IMPRINT_TEMPLATE_NAME_DESC"
@@ -456,7 +598,14 @@
 			description="COM_IMPRINT_IMPRINT_TEMPLATE_CREATOR_WEBSITE_DESC"
 			size="60" maxlength="255" 
 		/>
-
+		<field name="show_image_rights" type="radio" class="btn-group"
+			label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS" 
+			description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS_DESC"
+			default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
 		<field name="image_sources" type="textarea" 
 			label="COM_IMPRINT_IMPRINT_IMAGE_SOURCES" 
 			description="COM_IMPRINT_IMPRINT_IMAGE_SOURCES_DESC" 
@@ -481,123 +630,4 @@
 			buttons="article,pagebreak,readmore" filter="safehtml"
 		/>
 	</fieldset>
-	
-	<fields name="params"
-		addfieldpath="/administrator/components/com_imprint/models/fields">
-		<fieldset name="params_basic" label="COM_IMPRINT_IMPRINT_PARAMS_BASIC">
-			<field name="show_image" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_LOGO_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_icons" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_ICONS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_ICONS_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_contacturl" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_CONTACT_LINK_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>		
-			<field name="show_info" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_INFORMAIION" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_INFORMAIION_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_bank" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_bankguests" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANKING_CONNECTION_FOR_GUESTS_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_bank2" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK2" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK2_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_bank3" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK3" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK3_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>	
-			<field name="show_bank4" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK4" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_BANK4_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>			
-			<field name="show_recht" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_recht2" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_RIGHTS2_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>		
-			<field name="show_technik" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_TECHNICAL_DETAILS_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_design" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DESIGN" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DESIGN_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_extra1" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE1" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE1_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>		
-			<field name="show_extra2" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE2" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE2_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>		
-			<field name="show_extra3" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE3" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WEITERE3_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>		    		
-			<field name="show_image_rights" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_IMAGE_SOURCES_AND_RIGHTS_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-	  <!-- <field name="show_datenschutz" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_googleanalytics" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ_GOOGLE" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ_GOOGLE_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_facebookplugins" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ_FACEBOOK" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DATENSCHUTZ_FACEBOOK_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>    		
-			<field name="show_nutzungsbedingungen" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_NUTZUNG" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_NUTZUNG_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>    
-			<field name="show_verhaltensregeln" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_VERHALTEN" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_VERHALTEN_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>       	
-			<field name="show_widerrufsrecht" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WIDERRUF" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_WIDERRUF_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>    	
-			<field name="show_agb" type="radio" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_AGB" description="COM_IMPRINT_IMPRINT_PARAMS_AGB_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field>
-			<field name="show_disclaimer" type="radio" default="1" label="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DISCLAIMER" description="COM_IMPRINT_IMPRINT_PARAMS_SHOW_DISCLAIMER_DESC">
-				<option value="0">JHIDE</option>
-				<option value="1">JSHOW</option>
-			</field> -->	
-		</fieldset>
-		<fieldset name="params_advanced" label="COM_IMPRINT_IMPRINT_PARAMS_ADVANCED">
-			<field name="contact_icons" type="list" default="0" label="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT" description="COM_IMPRINT_IMPRINT_PARAMS_ICONS_OR_TEXT_DESC">
-				<option value="0">COM_IMPRINT_IMPRINT_PARAMS_ICONS</option>
-				<option value="1">COM_IMPRINT_IMPRINT_PARAMS_TEXT</option>
-				<option value="2">COM_IMPRINT_IMPRINT_PARAMS_NO_ICONS_OR_TEXT</option>
-			</field>
-<!-- 			Not used jet -->
-<!-- 			<field name="icon_address" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_WEB_DESC" /> -->
-<!-- 			<field name="icon_email" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_EMAIL" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_EMAIL_DESC" /> -->
-<!-- 			<field name="icon_telephone" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_TELEFON" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_TELEFON_DESC" /> -->
-<!-- 			<field name="icon_mobile" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_MOBILE" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_MOBILE_DESC" /> -->
-<!-- 			<field name="icon_fax" type="imagelist" directory="/images" hide_none="1" default="" label="COM_IMPRINT_IMPRINT_PARAMS_ICON_FAX" description="COM_IMPRINT_IMPRINT_PARAMS_ICON_FAX_DESC" /> -->
-		</fieldset>
-	</fields>
 </form>
