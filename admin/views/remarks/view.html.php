@@ -59,7 +59,7 @@ class ImprintViewRemarks extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = ImprintHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_IMPRINT_REMARKS_TITLE'), 'remarks');
+		JToolBarHelper::title(JText::_('COM_IMPRINT') . ':' . JText::_('COM_IMPRINT_REMARKS'), 'remarks');
 
 		if ($canDo->get('core.create'))
 		{
