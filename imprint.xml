@@ -71,6 +71,6 @@
 	</administration>
 	
 	<updateservers>
-		<server type="extension" priority="1" name="Imprint Update Site"></server>
+		<server type="extension" priority="1" name="Imprint Update Site">https://raw.github.com/joomla-imprint/imprint/master/imprint4-update.xml</server>
 	</updateservers>
 </extension>
